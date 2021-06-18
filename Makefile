@@ -1,12 +1,13 @@
 NAME		= minishell
 
 SRCS	= \
-			srcs/main.c
+			srcs/main.c \
+			srcs/builtins.c
 
 OBJS		= $(patsubst %.c, %.o, $(SRCS))
 
 CC			= gcc
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= #-Wall -Wextra -Werror
 HEADER		= srcs/minishell.h
 
 RM			= rm -f
@@ -21,7 +22,7 @@ $(NAME):	$(OBJS) $(HEADER)
 			$(CC) $(FLAGS) $(OBJS) -ltermcap -o $(NAME)
 
 #Lnx:
-			#$(CC) $(FLAGS) $? $(HEADER) -Llibft -lft -Llibmlx -lmlx -lXext -lX11 -lbsd -lm -o $(NAME)
+			#$(CC) $(FLAGS) $? $(HEADER) -ltermcap -o $(NAME)
 
 %.o : %.c
 			${CC} $(FLAGS) -c $< -o $@
