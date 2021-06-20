@@ -5,6 +5,10 @@ CMakeFiles/minishell.dir/srcs/builtins.c.o: ../srcs/builtins.c
 CMakeFiles/minishell.dir/srcs/builtins.c.o: ../srcs/libft/libft.h
 CMakeFiles/minishell.dir/srcs/builtins.c.o: ../srcs/minishell.h
 
+CMakeFiles/minishell.dir/srcs/handle_error.c.o: ../srcs/handle_error.c
+CMakeFiles/minishell.dir/srcs/handle_error.c.o: ../srcs/libft/libft.h
+CMakeFiles/minishell.dir/srcs/handle_error.c.o: ../srcs/minishell.h
+
 CMakeFiles/minishell.dir/srcs/main.c.o: ../srcs/libft/libft.h
 CMakeFiles/minishell.dir/srcs/main.c.o: ../srcs/main.c
 CMakeFiles/minishell.dir/srcs/main.c.o: ../srcs/minishell.h

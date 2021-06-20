@@ -207,6 +207,12 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //Value Computed by CMake
+libft_BINARY_DIR:STATIC=/Users/rchalmer/c/minishell/cmake-build-debug/srcs/libft
+
+//Value Computed by CMake
+libft_SOURCE_DIR:STATIC=/Users/rchalmer/c/minishell/srcs/libft
+
+//Value Computed by CMake
 minishell_BINARY_DIR:STATIC=/Users/rchalmer/c/minishell/cmake-build-debug
 
 //Value Computed by CMake
@@ -299,7 +305,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

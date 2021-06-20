@@ -142,32 +142,45 @@ minishell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
 
-srcs/builtins.o: srcs/builtins.c.o
+#=============================================================================
+# Target rules for targets named libft
 
-.PHONY : srcs/builtins.o
+# Build rule for target.
+libft: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft
+.PHONY : libft
+
+# fast build rule for target.
+libft/fast:
+	$(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/build
+.PHONY : libft/fast
+
+srcs/handle_error.o: srcs/handle_error.c.o
+
+.PHONY : srcs/handle_error.o
 
 # target to build an object file
-srcs/builtins.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/builtins.c.o
-.PHONY : srcs/builtins.c.o
+srcs/handle_error.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.o
+.PHONY : srcs/handle_error.c.o
 
-srcs/builtins.i: srcs/builtins.c.i
+srcs/handle_error.i: srcs/handle_error.c.i
 
-.PHONY : srcs/builtins.i
+.PHONY : srcs/handle_error.i
 
 # target to preprocess a source file
-srcs/builtins.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/builtins.c.i
-.PHONY : srcs/builtins.c.i
+srcs/handle_error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.i
+.PHONY : srcs/handle_error.c.i
 
-srcs/builtins.s: srcs/builtins.c.s
+srcs/handle_error.s: srcs/handle_error.c.s
 
-.PHONY : srcs/builtins.s
+.PHONY : srcs/handle_error.s
 
 # target to generate assembly for a file
-srcs/builtins.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/builtins.c.s
-.PHONY : srcs/builtins.c.s
+srcs/handle_error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.s
+.PHONY : srcs/handle_error.c.s
 
 srcs/main.o: srcs/main.c.o
 
@@ -196,6 +209,60 @@ srcs/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
 
+srcs/my_cd.o: srcs/my_cd.c.o
+
+.PHONY : srcs/my_cd.o
+
+# target to build an object file
+srcs/my_cd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_cd.c.o
+.PHONY : srcs/my_cd.c.o
+
+srcs/my_cd.i: srcs/my_cd.c.i
+
+.PHONY : srcs/my_cd.i
+
+# target to preprocess a source file
+srcs/my_cd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_cd.c.i
+.PHONY : srcs/my_cd.c.i
+
+srcs/my_cd.s: srcs/my_cd.c.s
+
+.PHONY : srcs/my_cd.s
+
+# target to generate assembly for a file
+srcs/my_cd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_cd.c.s
+.PHONY : srcs/my_cd.c.s
+
+srcs/my_echo.o: srcs/my_echo.c.o
+
+.PHONY : srcs/my_echo.o
+
+# target to build an object file
+srcs/my_echo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_echo.c.o
+.PHONY : srcs/my_echo.c.o
+
+srcs/my_echo.i: srcs/my_echo.c.i
+
+.PHONY : srcs/my_echo.i
+
+# target to preprocess a source file
+srcs/my_echo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_echo.c.i
+.PHONY : srcs/my_echo.c.i
+
+srcs/my_echo.s: srcs/my_echo.c.s
+
+.PHONY : srcs/my_echo.s
+
+# target to generate assembly for a file
+srcs/my_echo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_echo.c.s
+.PHONY : srcs/my_echo.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -204,13 +271,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... libft"
 	@echo "... minishell"
-	@echo "... srcs/builtins.o"
-	@echo "... srcs/builtins.i"
-	@echo "... srcs/builtins.s"
+	@echo "... srcs/handle_error.o"
+	@echo "... srcs/handle_error.i"
+	@echo "... srcs/handle_error.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/my_cd.o"
+	@echo "... srcs/my_cd.i"
+	@echo "... srcs/my_cd.s"
+	@echo "... srcs/my_echo.o"
+	@echo "... srcs/my_echo.i"
+	@echo "... srcs/my_echo.s"
 .PHONY : help
 
 

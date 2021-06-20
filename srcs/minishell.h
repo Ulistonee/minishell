@@ -21,5 +21,6 @@ typedef struct			s_all
 
 int						main();
 void					my_echo(t_all *all);
-void					my_cd(t_all *all, char const *envp[]);
+void					my_cd(int argc, t_all *all, char const *envp[]);
+void					handle_error(char *message, t_all *all);
 

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/rchalmer/c/minishell/srcs/builtins.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/handle_error.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
 /Users/rchalmer/c/minishell/srcs/libft/libft.h
 stddef.h
 -
