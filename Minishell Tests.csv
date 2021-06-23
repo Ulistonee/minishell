@@ -1,0 +1,161 @@
+Test;Command;Bash OP/Expected OP;Your OP
+Executable;./a.out;Hello world :)bash-3.2$;OK
+;../a.out;Hello world - test2 :)bash-3.2$;OK
+;./efwufkk;bash: ./efwufkk: No such file or directory;OK
+;/bin/ls;Same output displayed;OK
+;/bin/ls -lrt;Same output displayed;OK
+;ls qwerty;ls: qwerty: No such file or directory;OK
+;/binn/ls;bash: /binn/ls: No such file or directory;OK
+;;;
+;;;
+echo;echo abcd;abcd;OK
+;"echo a""bc""d";abcd;OK
+;echo a'bcd'e;abcde;OK
+;echo 'abc;*Prompts for multiline command*;OK
+;echo $HOME;/Users/mashar;OK
+;echo '$HOME';$HOME;OK
+;"echo ""$HOME""";/Users/mashar;OK
+;"echo $HO""ME""";ME;OK
+;"echo $""HOME""";HOME;OK
+;"echo ""'$HOME'""";/Users/mashar';OK
+;"echo '""$HOME""'";"""$HOME""";OK
+;echo -n lalalal;lalalalbash-3.2$;OK
+;echo -n;*nothing printed*;OK
+;echo -nABC;-nABC;OK
+;echo $ a;$ a;OK
+;"echo ""$     a""";$     a;OK
+;echo ;;OK
+;"echo """"";;OK
+;echo '';;OK
+;"echo ""\\\\$HOME""";\\/Users/smephest;OK
+;"echo ""\\\\\$HOME""";\\$HOME;OK
+;"echo ""\\$HOME \\\$HOME \\\\$HOME $HOME $HOME $HOME""";;OK
+;;;
+;;;
+;;;
+;;;
+pwd;pwd;/Users/mashar/Desktop/school/minishell/ms;OK
+;pwd lalala;/Users/mashar/Desktop/school/minishell/ms;OK
+;;;
+;;;
+env;env;Same output displayed: displays the environment;
+;**env to be done without options or arguments**;Do we have to handle args? ex. env 22;
+;;;
+;;$?;OK
+exit;exit;0;OK
+;exit 0;0;OK
+;exit 1;1;OK
+;exit -1;255;OK
+;exit 999999;63;OK
+;exit -999999;193;OK
+;exit -abc;255;OK
+;exit abc;255;OK
+;exit -18abc;255;OK
+;"exit 12; ls";12;OK
+;"exit 12; exit 123";12;OK
+;"exit 12; exit -a123";12;OK
+;exit 1 2 3 a;1 //minishell will not exit;OK
+;exit -;255;OK
+;;;
+export;export a=10;adds a=10 to environment;OK
+;export 111=222;bash: export: `111=222': not a valid identifier;OK
+;export 1abc=123;bash: export: `1abc=123': not a valid identifier;OK
+;export;prints all env with declare -x;OK
+; export _abc=10;adds _abc=10 to environment;OK
+;"export ""111=222""";bash: export: `111=222': not a valid identifier;OK
+;"export ""111""=""222""";bash: export: `111=222': not a valid identifier;OK
+;export 'a'='b';A gets added to env, if a exits, the value is overridden;OK
+;export a=6 b=8 c=9;;
+;export a=5 a=7 a=8;;
+;;;
+unset;unset a1;"Removes a1 from Envionment without
+displaying any outout";OK
+;unset a1=10;bash: unset: `a1=10': not a valid identifier;OK
+;unset 1_aa;bash: unset: `1_aa': not a valid identifier;OK
+;unset a c;;OK
+;unset a c=10;;OK
+;"unset """"";;OK
+;"unset """" a";;OK
+;"unset a """"";;OK
+;;;
+cd;cd ../../..;Goes up 3 directories;
+;cd ms<spaces>;trims the spaces at the back and goes to ms;
+;cd;goes to home;
+;cd $var;"goes to directory in ""var""";
+;cd var1 var2 var...;goes to var1 directory;
+;"cd ""minishell          """;bash: cd: minishell          : No such file or directory;
+;;;
+;;;
+"Token (;)";"echo a; echo b; echo c";"a
+b
+c
+";
+;"echo ""a ; echo b"";echo c";"a ; echo b
+c";
+;";;";check echo $? after this;OK
+;";";;OK
+;;;
+Redirections;ls > abc;contents of ls are put into abc;
+;sort < abc;"contents of abc are displayed in a sorted form
+(the file is not sorted)";
+;ls >> abc;contents of ls are concatenated to abc;
+;ls><abc;bash: syntax error near unexpected token `<';
+;ls <> abc;only input redirection works, output redirection is ignored;KO
+;cat >file;*need to test in minishell*;
+;;;
+;;;
+Pipe;ls | grep t;displays all files with a 't';
+;" pwd; ls | grep t";"displays current working directory and
+ displays all files with a 't""";
+;"ls | grep t; pwd";"displays all files with a 't"" and
+displays current working directory";
+;sort < abc | grep t;"displays all files with a 't' by taking input
+as sorted contents of abc";
+;cat abc | grep t > pqr;output of grep by using cat on abc is stored in file pqr;
+;"Print error message when exec fails; hello|world";"bash: hello: command not found
+bash: world: command not found";
+;;;
+Signals;ctrl + c;goes to a new line;
+;ctrl + \;does nothing. try this signal after wrinting something;
+;ctrl + d;"exits with a ""exit"" message";
+;"Control-D or Control-C does not exit immediately when
+invalid commands are preceeded";;
+;;;
+Invalid command;adsfsg;bash: adsfsg: command not found;
+;echo $? after the above command;127;
+;sdfs > abc;"bash: sdfs: command not found
+(in this case, the file 'abc' is created)";
+;;;
+;;;
+"Error status
+echo $?";"After correctly
+ executed commands";0;
+;After file/dir not found;1;
+;After incorrect export cmd;1;
+;"After accessing a file 
+without required permissions";126;
+;After command not found;127;
+;"After not finding executable
+ to execute in ./executable";127;
+;;;
+Error Handling;File not found;;
+;Command does not exit;;
+;;;
+Cat;"cat file1
+○ cat < file1
+○ cat > file1
+○ cat < file1 > file2
+○ cat > file1 < file2";;
+;;;
+;;;
+Special cases;" cat < input.txt | wc
+ if input.txt does not exist";;
+;" ifcat < f2| wc - this works, don't know why?
+";;
+;cat<f2|wc -> doesn't work like bash;;
+;     ls             -l      -all     (tabs and spaces n between 2 options);;
+;only spaces;;
+;only tabs;;
+;"unset HOME; cd";;
+;"unsetenv PATH ; /bin/ls /";;
+;only \0;;

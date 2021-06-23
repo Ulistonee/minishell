@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/rchalmer/c/minishell/srcs/handle_error.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/handle_error.c.o"
-  "/Users/rchalmer/c/minishell/srcs/main.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/main.c.o"
-  "/Users/rchalmer/c/minishell/srcs/my_cd.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o"
-  "/Users/rchalmer/c/minishell/srcs/my_echo.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/handle_error.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/handle_error.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/main.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/main.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/my_cd.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/my_echo.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -18,7 +18,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/rchalmer/c/minishell/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/DependInfo.cmake"
+  "/home/ulistonee/Desktop/minishell/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

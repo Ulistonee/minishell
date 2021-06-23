@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/rchalmer/c/minishell/srcs/builtins.c
-minishell.h
-/Users/rchalmer/c/minishell/srcs/minishell.h
-
-/Users/rchalmer/c/minishell/srcs/handle_error.c
-minishell.h
-/Users/rchalmer/c/minishell/srcs/minishell.h
-
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 stddef.h
 -
 stdlib.h
@@ -22,11 +14,11 @@ stdlib.h
 unistd.h
 -
 
-/Users/rchalmer/c/minishell/srcs/main.c
+/home/ulistonee/Desktop/minishell/srcs/main.c
 minishell.h
-/Users/rchalmer/c/minishell/srcs/minishell.h
+/home/ulistonee/Desktop/minishell/srcs/minishell.h
 
-/Users/rchalmer/c/minishell/srcs/minishell.h
+/home/ulistonee/Desktop/minishell/srcs/minishell.h
 stdio.h
 -
 unistd.h
@@ -42,5 +34,9 @@ termcap.h
 stdlib.h
 -
 libft/libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
+
+/home/ulistonee/Desktop/minishell/srcs/my_cd.c
+minishell.h
+/home/ulistonee/Desktop/minishell/srcs/minishell.h
 
