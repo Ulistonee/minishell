@@ -5,6 +5,7 @@
 #include <curses.h>
 #include <termcap.h>
 #include <stdlib.h>
+#include <errno.h>
 #include "libft/libft.h"
 
 typedef struct			s_cmd

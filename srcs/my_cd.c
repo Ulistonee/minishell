@@ -15,10 +15,11 @@ char			*get_home_path(char **envp_cp)
             home_path = ft_substr(envp_cp[n], 5, 100);
             return (home_path);
         }
+		else if (ft_strncmp(envp_cp[n], "HOME=", ft_strlen("HOME=")) != 0)
+
 		n++;
 	}
 	return (NULL);
-
 }
 
 void			go_home(char **envp_cp)
@@ -32,7 +33,8 @@ void			go_home(char **envp_cp)
 	free(pwd);
 	home_path = get_home_path(envp_cp);
 //	home_path = "/home/ulistonee";
-	i = chdir(home_path);
+	if ((i = chdir(home_path)) == -1)
+		printf("%s\n", strerror(errno));
 	printf("chdir status - %d\n", i);
     char *wd = (char *)malloc(sizeof (char) * 400);
 	pwd = getwd(wd);
@@ -49,7 +51,8 @@ char			**read_envp(t_all *all, char const *envp[])
 	while (envp[n] != NULL)
 		n++;
 	if (!(envp_cp = (char **) malloc(sizeof (char*) * n)))
-		handle_error("Memory allocation error\n", all);
+//		handle_error("Memory allocation error\n", all);
+		printf("%s\n", strerror(errno));
 	n = 0;
 	while (envp[n] != NULL)
 	{
@@ -80,7 +83,9 @@ void			my_cd(int argc, t_all *all, char const *envp[])
             printf("%s\n", pwd);
             free(pwd);
             int i = 0;
-            i = chdir(all->cmd.argument);
+//          i = chdir(all->cmd.argument);
+			if ((i = chdir(all->cmd.argument)) == -1)
+				printf("%s\n", strerror(errno));
             printf("chdir status - %d\n", i);
             char *wd = (char *)malloc(sizeof (char) * 400);
             pwd = getwd(wd);
