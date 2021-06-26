@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/minishell.dir/srcs/main.c.o CMakeFiles/minishell.dir/srcs/my_echo.c.o CMakeFiles/minishell.dir/srcs/handle_error.c.o CMakeFiles/minishell.dir/srcs/my_cd.c.o CMakeFiles/minishell.dir/srcs/my_pwd.c.o CMakeFiles/minishell.dir/srcs/my_export.c.o  -o minishell  -ltermcap srcs/libft/liblibft.a 

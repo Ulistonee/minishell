@@ -4,7 +4,9 @@ SRCS	= \
 			main.c \
 			my_echo.c \
 			my_cd.c \
-			handle_error.c
+			handle_error.c \
+			my_pwd.c \
+			my_export.c
 
 OBJS		= $(patsubst %.c, %.o, $(SRCS))
 

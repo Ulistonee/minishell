@@ -263,6 +263,60 @@ srcs/my_echo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_echo.c.s
 .PHONY : srcs/my_echo.c.s
 
+srcs/my_export.o: srcs/my_export.c.o
+
+.PHONY : srcs/my_export.o
+
+# target to build an object file
+srcs/my_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_export.c.o
+.PHONY : srcs/my_export.c.o
+
+srcs/my_export.i: srcs/my_export.c.i
+
+.PHONY : srcs/my_export.i
+
+# target to preprocess a source file
+srcs/my_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_export.c.i
+.PHONY : srcs/my_export.c.i
+
+srcs/my_export.s: srcs/my_export.c.s
+
+.PHONY : srcs/my_export.s
+
+# target to generate assembly for a file
+srcs/my_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_export.c.s
+.PHONY : srcs/my_export.c.s
+
+srcs/my_pwd.o: srcs/my_pwd.c.o
+
+.PHONY : srcs/my_pwd.o
+
+# target to build an object file
+srcs/my_pwd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_pwd.c.o
+.PHONY : srcs/my_pwd.c.o
+
+srcs/my_pwd.i: srcs/my_pwd.c.i
+
+.PHONY : srcs/my_pwd.i
+
+# target to preprocess a source file
+srcs/my_pwd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_pwd.c.i
+.PHONY : srcs/my_pwd.c.i
+
+srcs/my_pwd.s: srcs/my_pwd.c.s
+
+.PHONY : srcs/my_pwd.s
+
+# target to generate assembly for a file
+srcs/my_pwd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_pwd.c.s
+.PHONY : srcs/my_pwd.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -285,6 +339,12 @@ help:
 	@echo "... srcs/my_echo.o"
 	@echo "... srcs/my_echo.i"
 	@echo "... srcs/my_echo.s"
+	@echo "... srcs/my_export.o"
+	@echo "... srcs/my_export.i"
+	@echo "... srcs/my_export.s"
+	@echo "... srcs/my_pwd.o"
+	@echo "... srcs/my_pwd.i"
+	@echo "... srcs/my_pwd.s"
 .PHONY : help
 
 

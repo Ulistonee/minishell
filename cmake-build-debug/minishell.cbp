@@ -250,6 +250,12 @@
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_echo.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_export.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_pwd.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/home/ulistonee/Desktop/minishell/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

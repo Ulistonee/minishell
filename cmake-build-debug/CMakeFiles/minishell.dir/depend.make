@@ -17,3 +17,11 @@ CMakeFiles/minishell.dir/srcs/my_echo.c.o: ../srcs/libft/libft.h
 CMakeFiles/minishell.dir/srcs/my_echo.c.o: ../srcs/minishell.h
 CMakeFiles/minishell.dir/srcs/my_echo.c.o: ../srcs/my_echo.c
 
+CMakeFiles/minishell.dir/srcs/my_export.c.o: ../srcs/libft/libft.h
+CMakeFiles/minishell.dir/srcs/my_export.c.o: ../srcs/minishell.h
+CMakeFiles/minishell.dir/srcs/my_export.c.o: ../srcs/my_export.c
+
+CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/libft/libft.h
+CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/minishell.h
+CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/my_pwd.c
+

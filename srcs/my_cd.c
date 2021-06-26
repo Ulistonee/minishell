@@ -1,28 +1,28 @@
 #include "minishell.h"
 
-// обработать случай, когда нет переменной HOME
-
-char			*get_home_path(char **envp_cp)
+char			*get_home_path(t_all *all)
 {
 	int			n;
 	char        *home_path;
 
 	n = 0;
-	while (envp_cp[n] != NULL)
+	while (all->envp_cp.envp_cp[n] != NULL)
 	{
-		if (ft_strncmp(envp_cp[n], "HOME=", ft_strlen("HOME=")) == 0)
+		if (ft_strncmp(all->envp_cp.envp_cp[n], "HOME=", ft_strlen("HOME=")) == 0)
         {
-            home_path = ft_substr(envp_cp[n], 5, 100);
+            home_path = ft_substr(all->envp_cp.envp_cp[n], 5, 100);
             return (home_path);
         }
-		else if (ft_strncmp(envp_cp[n], "HOME=", ft_strlen("HOME=")) != 0)
-
+//		else if (ft_strncmp(envp_cp[n], "HOME=", ft_strlen("HOME=")) != 0)
+//        {
+//            printf("%s\n", strerror(errno));
+//        }
 		n++;
 	}
 	return (NULL);
 }
 
-void			go_home(char **envp_cp)
+void			go_home(t_all *all)
 {
 	int			i;
 	char		*home_path;
@@ -31,10 +31,9 @@ void			go_home(char **envp_cp)
 	pwd = getwd(pwd);
 	printf("%s\n", pwd);
 	free(pwd);
-	home_path = get_home_path(envp_cp);
-//	home_path = "/home/ulistonee";
+	home_path = get_home_path(all);
 	if ((i = chdir(home_path)) == -1)
-		printf("%s\n", strerror(errno));
+		printf("bash: cd: HOME not set\n");
 	printf("chdir status - %d\n", i);
     char *wd = (char *)malloc(sizeof (char) * 400);
 	pwd = getwd(wd);
@@ -42,7 +41,7 @@ void			go_home(char **envp_cp)
 	free(wd);
 }
 
-char			**read_envp(t_all *all, char const *envp[])
+void 			read_envp(t_all *all, char const *envp[])
 {
 	char		**envp_cp;
 	int			n;
@@ -59,31 +58,27 @@ char			**read_envp(t_all *all, char const *envp[])
 		envp_cp[n] = ft_strdup(envp[n]);
 		n++;
 	}
-	return (envp_cp);
+	all->envp_cp.envp_cp = envp_cp;
 }
 
 void			my_cd(int argc, t_all *all, char const *envp[])
 {
-	char		**envp_cp;
 	int			i;
 
-	envp_cp = read_envp(all, envp);
 	if (argc < 2)
 	{
-		go_home(envp_cp);
+		go_home(all);
 	}
-	else if (argc == 2)
+	else if (argc == 2 && all->cmd.argument != NULL)
 	{
 	    if (ft_strncmp(all->cmd.argument, "~", ft_strlen("~")) == 0)
-            go_home(envp_cp);
+            go_home(all);
 	    else
         {
             char *pwd = (char *)malloc(sizeof (char) * 400);
             pwd = getwd(pwd);
             printf("%s\n", pwd);
             free(pwd);
-            int i = 0;
-//          i = chdir(all->cmd.argument);
 			if ((i = chdir(all->cmd.argument)) == -1)
 				printf("%s\n", strerror(errno));
             printf("chdir status - %d\n", i);
