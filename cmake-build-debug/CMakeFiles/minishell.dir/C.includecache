@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
+/Users/rchalmer/c/minishell/srcs/libft/libft.h
 stddef.h
 -
 stdlib.h
@@ -14,7 +14,11 @@ stdlib.h
 unistd.h
 -
 
-/home/ulistonee/Desktop/minishell/srcs/minishell.h
+/Users/rchalmer/c/minishell/srcs/main.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/minishell.h
 stdio.h
 -
 unistd.h
@@ -36,9 +40,29 @@ stdlib.h
 errno.h
 -
 libft/libft.h
-/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
+/Users/rchalmer/c/minishell/srcs/libft/libft.h
 
-/home/ulistonee/Desktop/minishell/srcs/my_export.c
+/Users/rchalmer/c/minishell/srcs/my_cd.c
 minishell.h
-/home/ulistonee/Desktop/minishell/srcs/minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/my_echo.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/my_export.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/my_fork.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/my_pwd.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
+
+/Users/rchalmer/c/minishell/srcs/utils.c
+minishell.h
+/Users/rchalmer/c/minishell/srcs/minishell.h
 

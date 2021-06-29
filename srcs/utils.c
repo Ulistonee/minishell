@@ -1,5 +1,24 @@
 #include "minishell.h"
 
+char			*get_value(char **envs, char *key)
+{
+	char		**tmp;
+	int			key_len;
+
+	tmp = envs;
+	if (!key)
+		return NULL;
+	key_len = (int)ft_strlen(key);
+	while(*tmp != NULL)
+	{
+		if (!ft_strncmp(*tmp, key, key_len) &&
+			*(*tmp + key_len) == '=')
+			return (*tmp + key_len + 1);
+		tmp++;
+	}
+	return (NULL);
+}
+
 void 			read_envp(t_all *all, char const *envp[])
 {
     char		**envp_cp;
