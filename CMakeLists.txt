@@ -7,5 +7,5 @@ include_directories(.)
 
 add_subdirectory(./srcs/libft)
 
-add_executable(minishell srcs/main.c srcs/my_echo.c srcs/handle_error.c srcs/my_cd.c srcs/my_pwd.c srcs/my_export.c)
+add_executable(minishell srcs/main.c srcs/my_echo.c srcs/my_cd.c srcs/my_pwd.c srcs/my_export.c srcs/my_fork.c srcs/utils.c)
 target_link_libraries(minishell termcap libft)

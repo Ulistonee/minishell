@@ -2,9 +2,9 @@
 
 void				processor(int argc, char *argv[], char const *envp[], t_all *all) {
 //	all->cmd.name = 'E'; // echo
-	all->cmd.name = 'C'; // cd
+//	all->cmd.name = 'C'; // cd
 //	all->cmd.name = 'P'; // pwd
-//    all->cmd.name = 'X'; // export
+    all->cmd.name = 'X'; // export
 //	all->cmd.flag = 'n';
 	all->cmd.argument = ((char*)malloc(sizeof(char) * 25));
 	all->cmd.argument = NULL;

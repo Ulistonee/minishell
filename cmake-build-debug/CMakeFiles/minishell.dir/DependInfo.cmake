@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ulistonee/Desktop/minishell/srcs/handle_error.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/handle_error.c.o"
   "/home/ulistonee/Desktop/minishell/srcs/main.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/main.c.o"
   "/home/ulistonee/Desktop/minishell/srcs/my_cd.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o"
   "/home/ulistonee/Desktop/minishell/srcs/my_echo.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o"
   "/home/ulistonee/Desktop/minishell/srcs/my_export.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/my_fork.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_fork.c.o"
   "/home/ulistonee/Desktop/minishell/srcs/my_pwd.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
+  "/home/ulistonee/Desktop/minishell/srcs/utils.c" "/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

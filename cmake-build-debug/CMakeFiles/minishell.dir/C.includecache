@@ -19,6 +19,10 @@ stdio.h
 -
 unistd.h
 -
+sys/types.h
+-
+sys/wait.h
+-
 term.h
 -
 string.h
@@ -34,7 +38,7 @@ errno.h
 libft/libft.h
 /home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/home/ulistonee/Desktop/minishell/srcs/my_cd.c
+/home/ulistonee/Desktop/minishell/srcs/my_export.c
 minishell.h
 /home/ulistonee/Desktop/minishell/srcs/minishell.h
 

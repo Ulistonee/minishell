@@ -155,33 +155,6 @@ libft/fast:
 	$(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/build
 .PHONY : libft/fast
 
-srcs/handle_error.o: srcs/handle_error.c.o
-
-.PHONY : srcs/handle_error.o
-
-# target to build an object file
-srcs/handle_error.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.o
-.PHONY : srcs/handle_error.c.o
-
-srcs/handle_error.i: srcs/handle_error.c.i
-
-.PHONY : srcs/handle_error.i
-
-# target to preprocess a source file
-srcs/handle_error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.i
-.PHONY : srcs/handle_error.c.i
-
-srcs/handle_error.s: srcs/handle_error.c.s
-
-.PHONY : srcs/handle_error.s
-
-# target to generate assembly for a file
-srcs/handle_error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/handle_error.c.s
-.PHONY : srcs/handle_error.c.s
-
 srcs/main.o: srcs/main.c.o
 
 .PHONY : srcs/main.o
@@ -290,6 +263,33 @@ srcs/my_export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_export.c.s
 .PHONY : srcs/my_export.c.s
 
+srcs/my_fork.o: srcs/my_fork.c.o
+
+.PHONY : srcs/my_fork.o
+
+# target to build an object file
+srcs/my_fork.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.o
+.PHONY : srcs/my_fork.c.o
+
+srcs/my_fork.i: srcs/my_fork.c.i
+
+.PHONY : srcs/my_fork.i
+
+# target to preprocess a source file
+srcs/my_fork.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.i
+.PHONY : srcs/my_fork.c.i
+
+srcs/my_fork.s: srcs/my_fork.c.s
+
+.PHONY : srcs/my_fork.s
+
+# target to generate assembly for a file
+srcs/my_fork.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.s
+.PHONY : srcs/my_fork.c.s
+
 srcs/my_pwd.o: srcs/my_pwd.c.o
 
 .PHONY : srcs/my_pwd.o
@@ -317,6 +317,33 @@ srcs/my_pwd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_pwd.c.s
 .PHONY : srcs/my_pwd.c.s
 
+srcs/utils.o: srcs/utils.c.o
+
+.PHONY : srcs/utils.o
+
+# target to build an object file
+srcs/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils.c.o
+.PHONY : srcs/utils.c.o
+
+srcs/utils.i: srcs/utils.c.i
+
+.PHONY : srcs/utils.i
+
+# target to preprocess a source file
+srcs/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils.c.i
+.PHONY : srcs/utils.c.i
+
+srcs/utils.s: srcs/utils.c.s
+
+.PHONY : srcs/utils.s
+
+# target to generate assembly for a file
+srcs/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils.c.s
+.PHONY : srcs/utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,9 +354,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... libft"
 	@echo "... minishell"
-	@echo "... srcs/handle_error.o"
-	@echo "... srcs/handle_error.i"
-	@echo "... srcs/handle_error.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
@@ -342,9 +366,15 @@ help:
 	@echo "... srcs/my_export.o"
 	@echo "... srcs/my_export.i"
 	@echo "... srcs/my_export.s"
+	@echo "... srcs/my_fork.o"
+	@echo "... srcs/my_fork.i"
+	@echo "... srcs/my_fork.s"
 	@echo "... srcs/my_pwd.o"
 	@echo "... srcs/my_pwd.i"
 	@echo "... srcs/my_pwd.s"
+	@echo "... srcs/utils.o"
+	@echo "... srcs/utils.i"
+	@echo "... srcs/utils.s"
 .PHONY : help
 
 

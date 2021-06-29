@@ -118,9 +118,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/handle_error.c">
-			<Option target="minishell"/>
-		</Unit>
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/libft/ft_atoi.c">
 			<Option target="libft"/>
 		</Unit>
@@ -253,7 +250,13 @@
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_export.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_fork.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_pwd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/utils.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/home/ulistonee/Desktop/minishell/CMakeLists.txt">

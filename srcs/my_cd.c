@@ -41,26 +41,6 @@ void			go_home(t_all *all)
 	free(wd);
 }
 
-void 			read_envp(t_all *all, char const *envp[])
-{
-	char		**envp_cp;
-	int			n;
-
-	n = 0;
-	while (envp[n] != NULL)
-		n++;
-	if (!(envp_cp = (char **) malloc(sizeof (char*) * n)))
-//		handle_error("Memory allocation error\n", all);
-		printf("%s\n", strerror(errno));
-	n = 0;
-	while (envp[n] != NULL)
-	{
-		envp_cp[n] = ft_strdup(envp[n]);
-		n++;
-	}
-	all->envp_cp.envp_cp = envp_cp;
-}
-
 void			my_cd(int argc, t_all *all, char const *envp[])
 {
 	int			i;

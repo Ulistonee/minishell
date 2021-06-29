@@ -13,6 +13,7 @@
 typedef struct          s_envp_cp
 {
     char                **envp_cp;
+    int                 num_of_lines;
 }                       t_envp_cp;
 
 typedef struct			s_cmd
@@ -35,4 +36,6 @@ void					handle_error(char *message, t_all *all);
 void                    my_pwd(t_all *all);
 void                    my_export(t_all *all);
 void			        read_envp(t_all *all, char const *envp[]);
+void                    my_fork(t_all *all);
+void                    print_arr_2x(char **array);
 

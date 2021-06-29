@@ -102,22 +102,9 @@ CMakeFiles/minishell.dir/srcs/my_echo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_echo.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ulistonee/Desktop/minishell/srcs/my_echo.c -o CMakeFiles/minishell.dir/srcs/my_echo.c.s
 
-CMakeFiles/minishell.dir/srcs/handle_error.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/srcs/handle_error.c.o: ../srcs/handle_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minishell.dir/srcs/handle_error.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/handle_error.c.o -c /home/ulistonee/Desktop/minishell/srcs/handle_error.c
-
-CMakeFiles/minishell.dir/srcs/handle_error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/handle_error.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ulistonee/Desktop/minishell/srcs/handle_error.c > CMakeFiles/minishell.dir/srcs/handle_error.c.i
-
-CMakeFiles/minishell.dir/srcs/handle_error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/handle_error.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ulistonee/Desktop/minishell/srcs/handle_error.c -o CMakeFiles/minishell.dir/srcs/handle_error.c.s
-
 CMakeFiles/minishell.dir/srcs/my_cd.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/my_cd.c.o: ../srcs/my_cd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minishell.dir/srcs/my_cd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minishell.dir/srcs/my_cd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_cd.c.o -c /home/ulistonee/Desktop/minishell/srcs/my_cd.c
 
 CMakeFiles/minishell.dir/srcs/my_cd.c.i: cmake_force
@@ -130,7 +117,7 @@ CMakeFiles/minishell.dir/srcs/my_cd.c.s: cmake_force
 
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/my_pwd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_pwd.c.o -c /home/ulistonee/Desktop/minishell/srcs/my_pwd.c
 
 CMakeFiles/minishell.dir/srcs/my_pwd.c.i: cmake_force
@@ -143,7 +130,7 @@ CMakeFiles/minishell.dir/srcs/my_pwd.c.s: cmake_force
 
 CMakeFiles/minishell.dir/srcs/my_export.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/my_export.c.o: ../srcs/my_export.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minishell.dir/srcs/my_export.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minishell.dir/srcs/my_export.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_export.c.o -c /home/ulistonee/Desktop/minishell/srcs/my_export.c
 
 CMakeFiles/minishell.dir/srcs/my_export.c.i: cmake_force
@@ -154,28 +141,56 @@ CMakeFiles/minishell.dir/srcs/my_export.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_export.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ulistonee/Desktop/minishell/srcs/my_export.c -o CMakeFiles/minishell.dir/srcs/my_export.c.s
 
+CMakeFiles/minishell.dir/srcs/my_fork.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/my_fork.c.o: ../srcs/my_fork.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minishell.dir/srcs/my_fork.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_fork.c.o -c /home/ulistonee/Desktop/minishell/srcs/my_fork.c
+
+CMakeFiles/minishell.dir/srcs/my_fork.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/my_fork.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ulistonee/Desktop/minishell/srcs/my_fork.c > CMakeFiles/minishell.dir/srcs/my_fork.c.i
+
+CMakeFiles/minishell.dir/srcs/my_fork.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_fork.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ulistonee/Desktop/minishell/srcs/my_fork.c -o CMakeFiles/minishell.dir/srcs/my_fork.c.s
+
+CMakeFiles/minishell.dir/srcs/utils.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/utils.c.o: ../srcs/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/minishell.dir/srcs/utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/utils.c.o -c /home/ulistonee/Desktop/minishell/srcs/utils.c
+
+CMakeFiles/minishell.dir/srcs/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ulistonee/Desktop/minishell/srcs/utils.c > CMakeFiles/minishell.dir/srcs/utils.c.i
+
+CMakeFiles/minishell.dir/srcs/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ulistonee/Desktop/minishell/srcs/utils.c -o CMakeFiles/minishell.dir/srcs/utils.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/srcs/main.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_echo.c.o" \
-"CMakeFiles/minishell.dir/srcs/handle_error.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_cd.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_pwd.c.o" \
-"CMakeFiles/minishell.dir/srcs/my_export.c.o"
+"CMakeFiles/minishell.dir/srcs/my_export.c.o" \
+"CMakeFiles/minishell.dir/srcs/my_fork.c.o" \
+"CMakeFiles/minishell.dir/srcs/utils.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
 
 minishell: CMakeFiles/minishell.dir/srcs/main.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_echo.c.o
-minishell: CMakeFiles/minishell.dir/srcs/handle_error.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_cd.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_pwd.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_export.c.o
+minishell: CMakeFiles/minishell.dir/srcs/my_fork.c.o
+minishell: CMakeFiles/minishell.dir/srcs/utils.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: srcs/libft/liblibft.a
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
