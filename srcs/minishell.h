@@ -38,5 +38,5 @@ void                    my_export(t_all *all);
 void			        read_envp(t_all *all, char const *envp[]);
 void                    my_fork(t_all *all);
 void                    print_arr_2x(char **array);
-char					*get_value(char **envs, char *key);
+char					*get_value(char **envp_cp, char *key);
 

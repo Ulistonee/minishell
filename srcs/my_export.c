@@ -1,8 +1,49 @@
 #include "minishell.h"
 
+char			*check_arg(char **envp_cp, char *key)
+{
+	char		**tmp;
+	int			key_len;
+
+	tmp = envp_cp;
+	if (!key)
+		return NULL;
+	key_len = (int)ft_strlen(key);
+	while(*tmp != NULL)
+	{
+		if (!ft_strncmp(*tmp, key, key_len) && *(*tmp + key_len) == '=')
+			return (*tmp);
+		if (!ft_strncmp(*tmp, key, key_len + 1))
+			return (*tmp);
+		tmp++;
+	}
+	return (NULL);
+}
+
+void			replace_var(char **envp_cp, char *new_var, char *dup_key)
+{
+	free(dup_key);
+	dup_key = (char *) malloc(sizeof (char) * ft_strlen(new_var) + 1);
+	dup_key = new_var;
+}
+
 void			add_to_envp(t_all *all)
 {
-	
+	char		**res;
+	int			n;
+
+	res = (char **) malloc(sizeof (char *) * all->envp_cp.num_of_lines + 2);
+	n = 0;
+	while (all->envp_cp.envp_cp[n] != NULL)
+	{
+		res[n] = ft_strdup(all->envp_cp.envp_cp[n]);
+		n++;
+	}
+	res[n] = all->cmd.argument;
+	res[n + 1] = NULL;
+	free(all->envp_cp.envp_cp);
+	all->envp_cp.envp_cp = res;
+	print_arr_2x(all->envp_cp.envp_cp);
 }
 
 void			add_quotes(t_all *all)
@@ -37,7 +78,6 @@ void			add_quotes(t_all *all)
 	}
 }
 
-
 void            sort_envp_cp(t_all *all)
 {
     int					i;
@@ -71,16 +111,21 @@ void            sort_envp_cp(t_all *all)
     }
 }
 
-void            my_export(t_all *all)
+void			my_export(t_all *all)
 {
-    if (all->cmd.argument == NULL)
-    {
-        sort_envp_cp(all);
-        add_quotes(all);
-        print_arr_2x(all->envp_cp.envp_cp);
-    }
-//    else if (all->cmd.argument != NULL)
-//    {
-//        add_to_envp();
-//    }
+	char		*key;
+
+	if (all->cmd.argument == NULL)
+	{
+		sort_envp_cp(all);
+		add_quotes(all);
+		print_arr_2x(all->envp_cp.envp_cp);
+	}
+	else if (all->cmd.argument != NULL)
+	{
+		if ((key = check_arg(all->envp_cp.envp_cp, all->cmd.argument)))
+			replace_var(all->envp_cp.envp_cp, all->cmd.argument, key);
+		else
+			add_to_envp(all);
+	}
 }

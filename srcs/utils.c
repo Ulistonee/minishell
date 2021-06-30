@@ -1,19 +1,27 @@
 #include "minishell.h"
 
-char			*get_value(char **envs, char *key)
+/**
+**
+** @param envs
+** @param key
+** @return
+*/
+
+char			*get_value(char **envp_cp, char *key)
 {
 	char		**tmp;
 	int			key_len;
 
-	tmp = envs;
+	tmp = envp_cp;
 	if (!key)
 		return NULL;
 	key_len = (int)ft_strlen(key);
 	while(*tmp != NULL)
 	{
-		if (!ft_strncmp(*tmp, key, key_len) &&
-			*(*tmp + key_len) == '=')
+		if (!ft_strncmp(*tmp, key, key_len) && *(*tmp + key_len) == '=')
 			return (*tmp + key_len + 1);
+		if (!ft_strncmp(*tmp, key, key_len + 1))
+			return (*tmp + key_len);
 		tmp++;
 	}
 	return (NULL);
@@ -23,7 +31,6 @@ void 			read_envp(t_all *all, char const *envp[])
 {
     char		**envp_cp;
     int			n;
-    int         i;
 
     n = 0;
     while (envp[n] != NULL)
