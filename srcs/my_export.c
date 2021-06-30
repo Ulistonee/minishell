@@ -27,6 +27,7 @@ void			replace_var(char **envp_cp, char *new_var, char *dup_key)
 	dup_key = new_var;
 }
 
+
 void			add_to_envp(t_all *all)
 {
 	char		**res;
