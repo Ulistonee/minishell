@@ -251,6 +251,9 @@
 		<Unit filename="/Users/rchalmer/c/minishell/srcs/my_echo.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/srcs/my_env.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/srcs/my_export.c">
 			<Option target="minishell"/>
 		</Unit>

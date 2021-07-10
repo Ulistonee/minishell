@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rchalmer/c/minishell/srcs/main.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/main.c.o"
   "/Users/rchalmer/c/minishell/srcs/my_cd.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o"
   "/Users/rchalmer/c/minishell/srcs/my_echo.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o"
+  "/Users/rchalmer/c/minishell/srcs/my_env.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o"
   "/Users/rchalmer/c/minishell/srcs/my_export.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o"
   "/Users/rchalmer/c/minishell/srcs/my_fork.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_fork.c.o"
   "/Users/rchalmer/c/minishell/srcs/my_pwd.c" "/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o"

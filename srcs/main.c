@@ -4,12 +4,12 @@ void				processor(int argc, char *argv[], char const *envp[], t_all *all) {
 //	all->cmd.name = 'E'; // echo
 //	all->cmd.name = 'C'; // cd
 //	all->cmd.name = 'P'; // pwd
-    all->cmd.name = 'X'; // export
+//    all->cmd.name = 'X'; // export
+	all->cmd.name = 'N'; // env
 //	all->cmd.flag = 'n';
 	all->cmd.argument = ((char*)malloc(sizeof(char) * 25));
 //	all->cmd.argument = NULL;
 //	all->cmd.argument = "/Users/rchalmer";
-	all->cmd.argument = "a=1";
 //	printf("%s\n", all->cmd.argument);
     read_envp(all, envp);
 	if (all->cmd.name == 'E' && all->cmd.argument != NULL)
@@ -20,6 +20,10 @@ void				processor(int argc, char *argv[], char const *envp[], t_all *all) {
         my_pwd(all);
 	else if (all->cmd.name == 'X')
 	    my_export(all);
+	else if (all->cmd.name == 'N')
+	{
+		my_env(all);
+	}
 }
 
 int				main(int argc, char *argv[], char const *envp[])
