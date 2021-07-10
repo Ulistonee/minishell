@@ -6,163 +6,163 @@
 
 #IncludeRegexTransform: 
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_atoi.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_atoi.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_bzero.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_bzero.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_calloc.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_calloc.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_free_mem.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_free_mem.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_isalnum.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_isalnum.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_isalpha.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_isalpha.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_isascii.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_isascii.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_isdigit.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_isdigit.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_isprint.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_isprint.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_itoa.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_itoa.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_itoa_base.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_itoa_base.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_itoa_u.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_itoa_u.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_itoa_uhex.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_itoa_uhex.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_lstnew.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_lstnew.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memccpy.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memccpy.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memchr.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memchr.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memcmp.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memcmp.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memcpy.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memcpy.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memmove.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memmove.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_memset.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_memset.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_putchar_fd.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_putchar_fd.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_putendl_fd.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_putendl_fd.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_putnbr_fd.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_putnbr_fd.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_putstr_fd.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_putstr_fd.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_split.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_split.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strchr.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strchr.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strdup.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strdup.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strjoin.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strjoin.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strlcat.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strlcat.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strlcpy.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strlcpy.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strlen.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strlen.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strmapi.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strmapi.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strncmp.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strncmp.c
 string.h
 -
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strnstr.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strnstr.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strrchr.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strrchr.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_strtrim.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_strtrim.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_substr.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_substr.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_tolower.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_tolower.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/ft_toupper.c
+/home/ulistonee/Desktop/minishell/srcs/libft/ft_toupper.c
 libft.h
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 
-/Users/rchalmer/c/minishell/srcs/libft/libft.h
+/home/ulistonee/Desktop/minishell/srcs/libft/libft.h
 stddef.h
 -
 stdlib.h

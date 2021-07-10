@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/158/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/158/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rchalmer/c/minishell
+CMAKE_SOURCE_DIR = /home/ulistonee/Desktop/minishell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rchalmer/c/minishell/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ulistonee/Desktop/minishell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/rchalmer/c/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/158/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/158/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles /Users/rchalmer/c/minishell/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles /home/ulistonee/Desktop/minishell/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -317,6 +317,33 @@ srcs/my_pwd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_pwd.c.s
 .PHONY : srcs/my_pwd.c.s
 
+srcs/my_unset.o: srcs/my_unset.c.o
+
+.PHONY : srcs/my_unset.o
+
+# target to build an object file
+srcs/my_unset.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_unset.c.o
+.PHONY : srcs/my_unset.c.o
+
+srcs/my_unset.i: srcs/my_unset.c.i
+
+.PHONY : srcs/my_unset.i
+
+# target to preprocess a source file
+srcs/my_unset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_unset.c.i
+.PHONY : srcs/my_unset.c.i
+
+srcs/my_unset.s: srcs/my_unset.c.s
+
+.PHONY : srcs/my_unset.s
+
+# target to generate assembly for a file
+srcs/my_unset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_unset.c.s
+.PHONY : srcs/my_unset.c.s
+
 srcs/utils.o: srcs/utils.c.o
 
 .PHONY : srcs/utils.o
@@ -372,6 +399,9 @@ help:
 	@echo "... srcs/my_pwd.o"
 	@echo "... srcs/my_pwd.i"
 	@echo "... srcs/my_pwd.s"
+	@echo "... srcs/my_unset.o"
+	@echo "... srcs/my_unset.i"
+	@echo "... srcs/my_unset.s"
 	@echo "... srcs/utils.o"
 	@echo "... srcs/utils.i"
 	@echo "... srcs/utils.s"

@@ -25,6 +25,10 @@ CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/libft/libft.h
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/minishell.h
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/my_pwd.c
 
+CMakeFiles/minishell.dir/srcs/my_unset.c.o: ../srcs/libft/libft.h
+CMakeFiles/minishell.dir/srcs/my_unset.c.o: ../srcs/minishell.h
+CMakeFiles/minishell.dir/srcs/my_unset.c.o: ../srcs/my_unset.c
+
 CMakeFiles/minishell.dir/srcs/utils.c.o: ../srcs/libft/libft.h
 CMakeFiles/minishell.dir/srcs/utils.c.o: ../srcs/minishell.h
 CMakeFiles/minishell.dir/srcs/utils.c.o: ../srcs/utils.c

@@ -5,3 +5,4 @@
 5. отработать OLDPWD and PWD in cd function
 6. почитать про двумерные массивы
 7. переделать  get_value function
+8. сделать ft_strdup(key)

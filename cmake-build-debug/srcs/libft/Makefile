@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/158/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/158/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rchalmer/c/minishell
+CMAKE_SOURCE_DIR = /home/ulistonee/Desktop/minishell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rchalmer/c/minishell/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ulistonee/Desktop/minishell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/rchalmer/c/minishell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/158/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/158/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles /Users/rchalmer/c/minishell/cmake-build-debug/srcs/libft//CMakeFiles/progress.marks
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles 0
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles /home/ulistonee/Desktop/minishell/cmake-build-debug/srcs/libft//CMakeFiles/progress.marks
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/clean
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,22 +116,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/preinstall
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/preinstall
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srcs/libft/CMakeFiles/libft.dir/rule:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/CMakeFiles/libft.dir/rule
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 srcs/libft/CMakeFiles/libft.dir/rule
 .PHONY : srcs/libft/CMakeFiles/libft.dir/rule
 
 # Convenience name for target.
@@ -141,7 +141,7 @@ libft: srcs/libft/CMakeFiles/libft.dir/rule
 
 # fast build rule for target.
 libft/fast:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/build
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/build
 .PHONY : libft/fast
 
 ft_atoi.o: ft_atoi.c.o
@@ -150,7 +150,7 @@ ft_atoi.o: ft_atoi.c.o
 
 # target to build an object file
 ft_atoi.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.o
 .PHONY : ft_atoi.c.o
 
 ft_atoi.i: ft_atoi.c.i
@@ -159,7 +159,7 @@ ft_atoi.i: ft_atoi.c.i
 
 # target to preprocess a source file
 ft_atoi.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.i
 .PHONY : ft_atoi.c.i
 
 ft_atoi.s: ft_atoi.c.s
@@ -168,7 +168,7 @@ ft_atoi.s: ft_atoi.c.s
 
 # target to generate assembly for a file
 ft_atoi.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.s
 .PHONY : ft_atoi.c.s
 
 ft_bzero.o: ft_bzero.c.o
@@ -177,7 +177,7 @@ ft_bzero.o: ft_bzero.c.o
 
 # target to build an object file
 ft_bzero.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.o
 .PHONY : ft_bzero.c.o
 
 ft_bzero.i: ft_bzero.c.i
@@ -186,7 +186,7 @@ ft_bzero.i: ft_bzero.c.i
 
 # target to preprocess a source file
 ft_bzero.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.i
 .PHONY : ft_bzero.c.i
 
 ft_bzero.s: ft_bzero.c.s
@@ -195,7 +195,7 @@ ft_bzero.s: ft_bzero.c.s
 
 # target to generate assembly for a file
 ft_bzero.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.s
 .PHONY : ft_bzero.c.s
 
 ft_calloc.o: ft_calloc.c.o
@@ -204,7 +204,7 @@ ft_calloc.o: ft_calloc.c.o
 
 # target to build an object file
 ft_calloc.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.o
 .PHONY : ft_calloc.c.o
 
 ft_calloc.i: ft_calloc.c.i
@@ -213,7 +213,7 @@ ft_calloc.i: ft_calloc.c.i
 
 # target to preprocess a source file
 ft_calloc.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.i
 .PHONY : ft_calloc.c.i
 
 ft_calloc.s: ft_calloc.c.s
@@ -222,7 +222,7 @@ ft_calloc.s: ft_calloc.c.s
 
 # target to generate assembly for a file
 ft_calloc.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.s
 .PHONY : ft_calloc.c.s
 
 ft_free_mem.o: ft_free_mem.c.o
@@ -231,7 +231,7 @@ ft_free_mem.o: ft_free_mem.c.o
 
 # target to build an object file
 ft_free_mem.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.o
 .PHONY : ft_free_mem.c.o
 
 ft_free_mem.i: ft_free_mem.c.i
@@ -240,7 +240,7 @@ ft_free_mem.i: ft_free_mem.c.i
 
 # target to preprocess a source file
 ft_free_mem.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.i
 .PHONY : ft_free_mem.c.i
 
 ft_free_mem.s: ft_free_mem.c.s
@@ -249,7 +249,7 @@ ft_free_mem.s: ft_free_mem.c.s
 
 # target to generate assembly for a file
 ft_free_mem.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.s
 .PHONY : ft_free_mem.c.s
 
 ft_isalnum.o: ft_isalnum.c.o
@@ -258,7 +258,7 @@ ft_isalnum.o: ft_isalnum.c.o
 
 # target to build an object file
 ft_isalnum.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.o
 .PHONY : ft_isalnum.c.o
 
 ft_isalnum.i: ft_isalnum.c.i
@@ -267,7 +267,7 @@ ft_isalnum.i: ft_isalnum.c.i
 
 # target to preprocess a source file
 ft_isalnum.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.i
 .PHONY : ft_isalnum.c.i
 
 ft_isalnum.s: ft_isalnum.c.s
@@ -276,7 +276,7 @@ ft_isalnum.s: ft_isalnum.c.s
 
 # target to generate assembly for a file
 ft_isalnum.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.s
 .PHONY : ft_isalnum.c.s
 
 ft_isalpha.o: ft_isalpha.c.o
@@ -285,7 +285,7 @@ ft_isalpha.o: ft_isalpha.c.o
 
 # target to build an object file
 ft_isalpha.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.o
 .PHONY : ft_isalpha.c.o
 
 ft_isalpha.i: ft_isalpha.c.i
@@ -294,7 +294,7 @@ ft_isalpha.i: ft_isalpha.c.i
 
 # target to preprocess a source file
 ft_isalpha.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.i
 .PHONY : ft_isalpha.c.i
 
 ft_isalpha.s: ft_isalpha.c.s
@@ -303,7 +303,7 @@ ft_isalpha.s: ft_isalpha.c.s
 
 # target to generate assembly for a file
 ft_isalpha.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.s
 .PHONY : ft_isalpha.c.s
 
 ft_isascii.o: ft_isascii.c.o
@@ -312,7 +312,7 @@ ft_isascii.o: ft_isascii.c.o
 
 # target to build an object file
 ft_isascii.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.o
 .PHONY : ft_isascii.c.o
 
 ft_isascii.i: ft_isascii.c.i
@@ -321,7 +321,7 @@ ft_isascii.i: ft_isascii.c.i
 
 # target to preprocess a source file
 ft_isascii.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.i
 .PHONY : ft_isascii.c.i
 
 ft_isascii.s: ft_isascii.c.s
@@ -330,7 +330,7 @@ ft_isascii.s: ft_isascii.c.s
 
 # target to generate assembly for a file
 ft_isascii.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.s
 .PHONY : ft_isascii.c.s
 
 ft_isdigit.o: ft_isdigit.c.o
@@ -339,7 +339,7 @@ ft_isdigit.o: ft_isdigit.c.o
 
 # target to build an object file
 ft_isdigit.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.o
 .PHONY : ft_isdigit.c.o
 
 ft_isdigit.i: ft_isdigit.c.i
@@ -348,7 +348,7 @@ ft_isdigit.i: ft_isdigit.c.i
 
 # target to preprocess a source file
 ft_isdigit.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.i
 .PHONY : ft_isdigit.c.i
 
 ft_isdigit.s: ft_isdigit.c.s
@@ -357,7 +357,7 @@ ft_isdigit.s: ft_isdigit.c.s
 
 # target to generate assembly for a file
 ft_isdigit.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.s
 .PHONY : ft_isdigit.c.s
 
 ft_isprint.o: ft_isprint.c.o
@@ -366,7 +366,7 @@ ft_isprint.o: ft_isprint.c.o
 
 # target to build an object file
 ft_isprint.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.o
 .PHONY : ft_isprint.c.o
 
 ft_isprint.i: ft_isprint.c.i
@@ -375,7 +375,7 @@ ft_isprint.i: ft_isprint.c.i
 
 # target to preprocess a source file
 ft_isprint.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.i
 .PHONY : ft_isprint.c.i
 
 ft_isprint.s: ft_isprint.c.s
@@ -384,7 +384,7 @@ ft_isprint.s: ft_isprint.c.s
 
 # target to generate assembly for a file
 ft_isprint.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.s
 .PHONY : ft_isprint.c.s
 
 ft_itoa.o: ft_itoa.c.o
@@ -393,7 +393,7 @@ ft_itoa.o: ft_itoa.c.o
 
 # target to build an object file
 ft_itoa.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.o
 .PHONY : ft_itoa.c.o
 
 ft_itoa.i: ft_itoa.c.i
@@ -402,7 +402,7 @@ ft_itoa.i: ft_itoa.c.i
 
 # target to preprocess a source file
 ft_itoa.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.i
 .PHONY : ft_itoa.c.i
 
 ft_itoa.s: ft_itoa.c.s
@@ -411,7 +411,7 @@ ft_itoa.s: ft_itoa.c.s
 
 # target to generate assembly for a file
 ft_itoa.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.s
 .PHONY : ft_itoa.c.s
 
 ft_itoa_base.o: ft_itoa_base.c.o
@@ -420,7 +420,7 @@ ft_itoa_base.o: ft_itoa_base.c.o
 
 # target to build an object file
 ft_itoa_base.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.o
 .PHONY : ft_itoa_base.c.o
 
 ft_itoa_base.i: ft_itoa_base.c.i
@@ -429,7 +429,7 @@ ft_itoa_base.i: ft_itoa_base.c.i
 
 # target to preprocess a source file
 ft_itoa_base.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.i
 .PHONY : ft_itoa_base.c.i
 
 ft_itoa_base.s: ft_itoa_base.c.s
@@ -438,7 +438,7 @@ ft_itoa_base.s: ft_itoa_base.c.s
 
 # target to generate assembly for a file
 ft_itoa_base.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.s
 .PHONY : ft_itoa_base.c.s
 
 ft_itoa_u.o: ft_itoa_u.c.o
@@ -447,7 +447,7 @@ ft_itoa_u.o: ft_itoa_u.c.o
 
 # target to build an object file
 ft_itoa_u.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.o
 .PHONY : ft_itoa_u.c.o
 
 ft_itoa_u.i: ft_itoa_u.c.i
@@ -456,7 +456,7 @@ ft_itoa_u.i: ft_itoa_u.c.i
 
 # target to preprocess a source file
 ft_itoa_u.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.i
 .PHONY : ft_itoa_u.c.i
 
 ft_itoa_u.s: ft_itoa_u.c.s
@@ -465,7 +465,7 @@ ft_itoa_u.s: ft_itoa_u.c.s
 
 # target to generate assembly for a file
 ft_itoa_u.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.s
 .PHONY : ft_itoa_u.c.s
 
 ft_itoa_uhex.o: ft_itoa_uhex.c.o
@@ -474,7 +474,7 @@ ft_itoa_uhex.o: ft_itoa_uhex.c.o
 
 # target to build an object file
 ft_itoa_uhex.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.o
 .PHONY : ft_itoa_uhex.c.o
 
 ft_itoa_uhex.i: ft_itoa_uhex.c.i
@@ -483,7 +483,7 @@ ft_itoa_uhex.i: ft_itoa_uhex.c.i
 
 # target to preprocess a source file
 ft_itoa_uhex.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.i
 .PHONY : ft_itoa_uhex.c.i
 
 ft_itoa_uhex.s: ft_itoa_uhex.c.s
@@ -492,7 +492,7 @@ ft_itoa_uhex.s: ft_itoa_uhex.c.s
 
 # target to generate assembly for a file
 ft_itoa_uhex.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.s
 .PHONY : ft_itoa_uhex.c.s
 
 ft_lstnew.o: ft_lstnew.c.o
@@ -501,7 +501,7 @@ ft_lstnew.o: ft_lstnew.c.o
 
 # target to build an object file
 ft_lstnew.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.o
 .PHONY : ft_lstnew.c.o
 
 ft_lstnew.i: ft_lstnew.c.i
@@ -510,7 +510,7 @@ ft_lstnew.i: ft_lstnew.c.i
 
 # target to preprocess a source file
 ft_lstnew.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.i
 .PHONY : ft_lstnew.c.i
 
 ft_lstnew.s: ft_lstnew.c.s
@@ -519,7 +519,7 @@ ft_lstnew.s: ft_lstnew.c.s
 
 # target to generate assembly for a file
 ft_lstnew.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.s
 .PHONY : ft_lstnew.c.s
 
 ft_memccpy.o: ft_memccpy.c.o
@@ -528,7 +528,7 @@ ft_memccpy.o: ft_memccpy.c.o
 
 # target to build an object file
 ft_memccpy.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.o
 .PHONY : ft_memccpy.c.o
 
 ft_memccpy.i: ft_memccpy.c.i
@@ -537,7 +537,7 @@ ft_memccpy.i: ft_memccpy.c.i
 
 # target to preprocess a source file
 ft_memccpy.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.i
 .PHONY : ft_memccpy.c.i
 
 ft_memccpy.s: ft_memccpy.c.s
@@ -546,7 +546,7 @@ ft_memccpy.s: ft_memccpy.c.s
 
 # target to generate assembly for a file
 ft_memccpy.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.s
 .PHONY : ft_memccpy.c.s
 
 ft_memchr.o: ft_memchr.c.o
@@ -555,7 +555,7 @@ ft_memchr.o: ft_memchr.c.o
 
 # target to build an object file
 ft_memchr.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.o
 .PHONY : ft_memchr.c.o
 
 ft_memchr.i: ft_memchr.c.i
@@ -564,7 +564,7 @@ ft_memchr.i: ft_memchr.c.i
 
 # target to preprocess a source file
 ft_memchr.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.i
 .PHONY : ft_memchr.c.i
 
 ft_memchr.s: ft_memchr.c.s
@@ -573,7 +573,7 @@ ft_memchr.s: ft_memchr.c.s
 
 # target to generate assembly for a file
 ft_memchr.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.s
 .PHONY : ft_memchr.c.s
 
 ft_memcmp.o: ft_memcmp.c.o
@@ -582,7 +582,7 @@ ft_memcmp.o: ft_memcmp.c.o
 
 # target to build an object file
 ft_memcmp.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.o
 .PHONY : ft_memcmp.c.o
 
 ft_memcmp.i: ft_memcmp.c.i
@@ -591,7 +591,7 @@ ft_memcmp.i: ft_memcmp.c.i
 
 # target to preprocess a source file
 ft_memcmp.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.i
 .PHONY : ft_memcmp.c.i
 
 ft_memcmp.s: ft_memcmp.c.s
@@ -600,7 +600,7 @@ ft_memcmp.s: ft_memcmp.c.s
 
 # target to generate assembly for a file
 ft_memcmp.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.s
 .PHONY : ft_memcmp.c.s
 
 ft_memcpy.o: ft_memcpy.c.o
@@ -609,7 +609,7 @@ ft_memcpy.o: ft_memcpy.c.o
 
 # target to build an object file
 ft_memcpy.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.o
 .PHONY : ft_memcpy.c.o
 
 ft_memcpy.i: ft_memcpy.c.i
@@ -618,7 +618,7 @@ ft_memcpy.i: ft_memcpy.c.i
 
 # target to preprocess a source file
 ft_memcpy.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.i
 .PHONY : ft_memcpy.c.i
 
 ft_memcpy.s: ft_memcpy.c.s
@@ -627,7 +627,7 @@ ft_memcpy.s: ft_memcpy.c.s
 
 # target to generate assembly for a file
 ft_memcpy.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.s
 .PHONY : ft_memcpy.c.s
 
 ft_memmove.o: ft_memmove.c.o
@@ -636,7 +636,7 @@ ft_memmove.o: ft_memmove.c.o
 
 # target to build an object file
 ft_memmove.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.o
 .PHONY : ft_memmove.c.o
 
 ft_memmove.i: ft_memmove.c.i
@@ -645,7 +645,7 @@ ft_memmove.i: ft_memmove.c.i
 
 # target to preprocess a source file
 ft_memmove.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.i
 .PHONY : ft_memmove.c.i
 
 ft_memmove.s: ft_memmove.c.s
@@ -654,7 +654,7 @@ ft_memmove.s: ft_memmove.c.s
 
 # target to generate assembly for a file
 ft_memmove.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.s
 .PHONY : ft_memmove.c.s
 
 ft_memset.o: ft_memset.c.o
@@ -663,7 +663,7 @@ ft_memset.o: ft_memset.c.o
 
 # target to build an object file
 ft_memset.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.o
 .PHONY : ft_memset.c.o
 
 ft_memset.i: ft_memset.c.i
@@ -672,7 +672,7 @@ ft_memset.i: ft_memset.c.i
 
 # target to preprocess a source file
 ft_memset.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.i
 .PHONY : ft_memset.c.i
 
 ft_memset.s: ft_memset.c.s
@@ -681,7 +681,7 @@ ft_memset.s: ft_memset.c.s
 
 # target to generate assembly for a file
 ft_memset.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_memset.c.s
 .PHONY : ft_memset.c.s
 
 ft_putchar_fd.o: ft_putchar_fd.c.o
@@ -690,7 +690,7 @@ ft_putchar_fd.o: ft_putchar_fd.c.o
 
 # target to build an object file
 ft_putchar_fd.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.o
 .PHONY : ft_putchar_fd.c.o
 
 ft_putchar_fd.i: ft_putchar_fd.c.i
@@ -699,7 +699,7 @@ ft_putchar_fd.i: ft_putchar_fd.c.i
 
 # target to preprocess a source file
 ft_putchar_fd.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.i
 .PHONY : ft_putchar_fd.c.i
 
 ft_putchar_fd.s: ft_putchar_fd.c.s
@@ -708,7 +708,7 @@ ft_putchar_fd.s: ft_putchar_fd.c.s
 
 # target to generate assembly for a file
 ft_putchar_fd.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.s
 .PHONY : ft_putchar_fd.c.s
 
 ft_putendl_fd.o: ft_putendl_fd.c.o
@@ -717,7 +717,7 @@ ft_putendl_fd.o: ft_putendl_fd.c.o
 
 # target to build an object file
 ft_putendl_fd.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.o
 .PHONY : ft_putendl_fd.c.o
 
 ft_putendl_fd.i: ft_putendl_fd.c.i
@@ -726,7 +726,7 @@ ft_putendl_fd.i: ft_putendl_fd.c.i
 
 # target to preprocess a source file
 ft_putendl_fd.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.i
 .PHONY : ft_putendl_fd.c.i
 
 ft_putendl_fd.s: ft_putendl_fd.c.s
@@ -735,7 +735,7 @@ ft_putendl_fd.s: ft_putendl_fd.c.s
 
 # target to generate assembly for a file
 ft_putendl_fd.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.s
 .PHONY : ft_putendl_fd.c.s
 
 ft_putnbr_fd.o: ft_putnbr_fd.c.o
@@ -744,7 +744,7 @@ ft_putnbr_fd.o: ft_putnbr_fd.c.o
 
 # target to build an object file
 ft_putnbr_fd.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.o
 .PHONY : ft_putnbr_fd.c.o
 
 ft_putnbr_fd.i: ft_putnbr_fd.c.i
@@ -753,7 +753,7 @@ ft_putnbr_fd.i: ft_putnbr_fd.c.i
 
 # target to preprocess a source file
 ft_putnbr_fd.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.i
 .PHONY : ft_putnbr_fd.c.i
 
 ft_putnbr_fd.s: ft_putnbr_fd.c.s
@@ -762,7 +762,7 @@ ft_putnbr_fd.s: ft_putnbr_fd.c.s
 
 # target to generate assembly for a file
 ft_putnbr_fd.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.s
 .PHONY : ft_putnbr_fd.c.s
 
 ft_putstr_fd.o: ft_putstr_fd.c.o
@@ -771,7 +771,7 @@ ft_putstr_fd.o: ft_putstr_fd.c.o
 
 # target to build an object file
 ft_putstr_fd.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.o
 .PHONY : ft_putstr_fd.c.o
 
 ft_putstr_fd.i: ft_putstr_fd.c.i
@@ -780,7 +780,7 @@ ft_putstr_fd.i: ft_putstr_fd.c.i
 
 # target to preprocess a source file
 ft_putstr_fd.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.i
 .PHONY : ft_putstr_fd.c.i
 
 ft_putstr_fd.s: ft_putstr_fd.c.s
@@ -789,7 +789,7 @@ ft_putstr_fd.s: ft_putstr_fd.c.s
 
 # target to generate assembly for a file
 ft_putstr_fd.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.s
 .PHONY : ft_putstr_fd.c.s
 
 ft_split.o: ft_split.c.o
@@ -798,7 +798,7 @@ ft_split.o: ft_split.c.o
 
 # target to build an object file
 ft_split.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.o
 .PHONY : ft_split.c.o
 
 ft_split.i: ft_split.c.i
@@ -807,7 +807,7 @@ ft_split.i: ft_split.c.i
 
 # target to preprocess a source file
 ft_split.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.i
 .PHONY : ft_split.c.i
 
 ft_split.s: ft_split.c.s
@@ -816,7 +816,7 @@ ft_split.s: ft_split.c.s
 
 # target to generate assembly for a file
 ft_split.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_split.c.s
 .PHONY : ft_split.c.s
 
 ft_strchr.o: ft_strchr.c.o
@@ -825,7 +825,7 @@ ft_strchr.o: ft_strchr.c.o
 
 # target to build an object file
 ft_strchr.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.o
 .PHONY : ft_strchr.c.o
 
 ft_strchr.i: ft_strchr.c.i
@@ -834,7 +834,7 @@ ft_strchr.i: ft_strchr.c.i
 
 # target to preprocess a source file
 ft_strchr.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.i
 .PHONY : ft_strchr.c.i
 
 ft_strchr.s: ft_strchr.c.s
@@ -843,7 +843,7 @@ ft_strchr.s: ft_strchr.c.s
 
 # target to generate assembly for a file
 ft_strchr.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.s
 .PHONY : ft_strchr.c.s
 
 ft_strdup.o: ft_strdup.c.o
@@ -852,7 +852,7 @@ ft_strdup.o: ft_strdup.c.o
 
 # target to build an object file
 ft_strdup.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.o
 .PHONY : ft_strdup.c.o
 
 ft_strdup.i: ft_strdup.c.i
@@ -861,7 +861,7 @@ ft_strdup.i: ft_strdup.c.i
 
 # target to preprocess a source file
 ft_strdup.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.i
 .PHONY : ft_strdup.c.i
 
 ft_strdup.s: ft_strdup.c.s
@@ -870,7 +870,7 @@ ft_strdup.s: ft_strdup.c.s
 
 # target to generate assembly for a file
 ft_strdup.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
 
 ft_strjoin.o: ft_strjoin.c.o
@@ -879,7 +879,7 @@ ft_strjoin.o: ft_strjoin.c.o
 
 # target to build an object file
 ft_strjoin.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.o
 .PHONY : ft_strjoin.c.o
 
 ft_strjoin.i: ft_strjoin.c.i
@@ -888,7 +888,7 @@ ft_strjoin.i: ft_strjoin.c.i
 
 # target to preprocess a source file
 ft_strjoin.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.i
 .PHONY : ft_strjoin.c.i
 
 ft_strjoin.s: ft_strjoin.c.s
@@ -897,7 +897,7 @@ ft_strjoin.s: ft_strjoin.c.s
 
 # target to generate assembly for a file
 ft_strjoin.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.s
 .PHONY : ft_strjoin.c.s
 
 ft_strlcat.o: ft_strlcat.c.o
@@ -906,7 +906,7 @@ ft_strlcat.o: ft_strlcat.c.o
 
 # target to build an object file
 ft_strlcat.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.o
 .PHONY : ft_strlcat.c.o
 
 ft_strlcat.i: ft_strlcat.c.i
@@ -915,7 +915,7 @@ ft_strlcat.i: ft_strlcat.c.i
 
 # target to preprocess a source file
 ft_strlcat.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.i
 .PHONY : ft_strlcat.c.i
 
 ft_strlcat.s: ft_strlcat.c.s
@@ -924,7 +924,7 @@ ft_strlcat.s: ft_strlcat.c.s
 
 # target to generate assembly for a file
 ft_strlcat.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.s
 .PHONY : ft_strlcat.c.s
 
 ft_strlcpy.o: ft_strlcpy.c.o
@@ -933,7 +933,7 @@ ft_strlcpy.o: ft_strlcpy.c.o
 
 # target to build an object file
 ft_strlcpy.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.o
 .PHONY : ft_strlcpy.c.o
 
 ft_strlcpy.i: ft_strlcpy.c.i
@@ -942,7 +942,7 @@ ft_strlcpy.i: ft_strlcpy.c.i
 
 # target to preprocess a source file
 ft_strlcpy.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.i
 .PHONY : ft_strlcpy.c.i
 
 ft_strlcpy.s: ft_strlcpy.c.s
@@ -951,7 +951,7 @@ ft_strlcpy.s: ft_strlcpy.c.s
 
 # target to generate assembly for a file
 ft_strlcpy.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.s
 .PHONY : ft_strlcpy.c.s
 
 ft_strlen.o: ft_strlen.c.o
@@ -960,7 +960,7 @@ ft_strlen.o: ft_strlen.c.o
 
 # target to build an object file
 ft_strlen.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.o
 .PHONY : ft_strlen.c.o
 
 ft_strlen.i: ft_strlen.c.i
@@ -969,7 +969,7 @@ ft_strlen.i: ft_strlen.c.i
 
 # target to preprocess a source file
 ft_strlen.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.i
 .PHONY : ft_strlen.c.i
 
 ft_strlen.s: ft_strlen.c.s
@@ -978,7 +978,7 @@ ft_strlen.s: ft_strlen.c.s
 
 # target to generate assembly for a file
 ft_strlen.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.s
 .PHONY : ft_strlen.c.s
 
 ft_strmapi.o: ft_strmapi.c.o
@@ -987,7 +987,7 @@ ft_strmapi.o: ft_strmapi.c.o
 
 # target to build an object file
 ft_strmapi.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.o
 .PHONY : ft_strmapi.c.o
 
 ft_strmapi.i: ft_strmapi.c.i
@@ -996,7 +996,7 @@ ft_strmapi.i: ft_strmapi.c.i
 
 # target to preprocess a source file
 ft_strmapi.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.i
 .PHONY : ft_strmapi.c.i
 
 ft_strmapi.s: ft_strmapi.c.s
@@ -1005,7 +1005,7 @@ ft_strmapi.s: ft_strmapi.c.s
 
 # target to generate assembly for a file
 ft_strmapi.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.s
 .PHONY : ft_strmapi.c.s
 
 ft_strncmp.o: ft_strncmp.c.o
@@ -1014,7 +1014,7 @@ ft_strncmp.o: ft_strncmp.c.o
 
 # target to build an object file
 ft_strncmp.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.o
 .PHONY : ft_strncmp.c.o
 
 ft_strncmp.i: ft_strncmp.c.i
@@ -1023,7 +1023,7 @@ ft_strncmp.i: ft_strncmp.c.i
 
 # target to preprocess a source file
 ft_strncmp.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.i
 .PHONY : ft_strncmp.c.i
 
 ft_strncmp.s: ft_strncmp.c.s
@@ -1032,7 +1032,7 @@ ft_strncmp.s: ft_strncmp.c.s
 
 # target to generate assembly for a file
 ft_strncmp.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.s
 .PHONY : ft_strncmp.c.s
 
 ft_strnstr.o: ft_strnstr.c.o
@@ -1041,7 +1041,7 @@ ft_strnstr.o: ft_strnstr.c.o
 
 # target to build an object file
 ft_strnstr.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.o
 .PHONY : ft_strnstr.c.o
 
 ft_strnstr.i: ft_strnstr.c.i
@@ -1050,7 +1050,7 @@ ft_strnstr.i: ft_strnstr.c.i
 
 # target to preprocess a source file
 ft_strnstr.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.i
 .PHONY : ft_strnstr.c.i
 
 ft_strnstr.s: ft_strnstr.c.s
@@ -1059,7 +1059,7 @@ ft_strnstr.s: ft_strnstr.c.s
 
 # target to generate assembly for a file
 ft_strnstr.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.s
 .PHONY : ft_strnstr.c.s
 
 ft_strrchr.o: ft_strrchr.c.o
@@ -1068,7 +1068,7 @@ ft_strrchr.o: ft_strrchr.c.o
 
 # target to build an object file
 ft_strrchr.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.o
 .PHONY : ft_strrchr.c.o
 
 ft_strrchr.i: ft_strrchr.c.i
@@ -1077,7 +1077,7 @@ ft_strrchr.i: ft_strrchr.c.i
 
 # target to preprocess a source file
 ft_strrchr.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.i
 .PHONY : ft_strrchr.c.i
 
 ft_strrchr.s: ft_strrchr.c.s
@@ -1086,7 +1086,7 @@ ft_strrchr.s: ft_strrchr.c.s
 
 # target to generate assembly for a file
 ft_strrchr.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.s
 .PHONY : ft_strrchr.c.s
 
 ft_strtrim.o: ft_strtrim.c.o
@@ -1095,7 +1095,7 @@ ft_strtrim.o: ft_strtrim.c.o
 
 # target to build an object file
 ft_strtrim.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.o
 .PHONY : ft_strtrim.c.o
 
 ft_strtrim.i: ft_strtrim.c.i
@@ -1104,7 +1104,7 @@ ft_strtrim.i: ft_strtrim.c.i
 
 # target to preprocess a source file
 ft_strtrim.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.i
 .PHONY : ft_strtrim.c.i
 
 ft_strtrim.s: ft_strtrim.c.s
@@ -1113,7 +1113,7 @@ ft_strtrim.s: ft_strtrim.c.s
 
 # target to generate assembly for a file
 ft_strtrim.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.s
 .PHONY : ft_strtrim.c.s
 
 ft_substr.o: ft_substr.c.o
@@ -1122,7 +1122,7 @@ ft_substr.o: ft_substr.c.o
 
 # target to build an object file
 ft_substr.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.o
 .PHONY : ft_substr.c.o
 
 ft_substr.i: ft_substr.c.i
@@ -1131,7 +1131,7 @@ ft_substr.i: ft_substr.c.i
 
 # target to preprocess a source file
 ft_substr.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.i
 .PHONY : ft_substr.c.i
 
 ft_substr.s: ft_substr.c.s
@@ -1140,7 +1140,7 @@ ft_substr.s: ft_substr.c.s
 
 # target to generate assembly for a file
 ft_substr.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_substr.c.s
 .PHONY : ft_substr.c.s
 
 ft_tolower.o: ft_tolower.c.o
@@ -1149,7 +1149,7 @@ ft_tolower.o: ft_tolower.c.o
 
 # target to build an object file
 ft_tolower.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.o
 .PHONY : ft_tolower.c.o
 
 ft_tolower.i: ft_tolower.c.i
@@ -1158,7 +1158,7 @@ ft_tolower.i: ft_tolower.c.i
 
 # target to preprocess a source file
 ft_tolower.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.i
 .PHONY : ft_tolower.c.i
 
 ft_tolower.s: ft_tolower.c.s
@@ -1167,7 +1167,7 @@ ft_tolower.s: ft_tolower.c.s
 
 # target to generate assembly for a file
 ft_tolower.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.s
 .PHONY : ft_tolower.c.s
 
 ft_toupper.o: ft_toupper.c.o
@@ -1176,7 +1176,7 @@ ft_toupper.o: ft_toupper.c.o
 
 # target to build an object file
 ft_toupper.c.o:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.o
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.o
 .PHONY : ft_toupper.c.o
 
 ft_toupper.i: ft_toupper.c.i
@@ -1185,7 +1185,7 @@ ft_toupper.i: ft_toupper.c.i
 
 # target to preprocess a source file
 ft_toupper.c.i:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.i
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.i
 .PHONY : ft_toupper.c.i
 
 ft_toupper.s: ft_toupper.c.s
@@ -1194,7 +1194,7 @@ ft_toupper.s: ft_toupper.c.s
 
 # target to generate assembly for a file
 ft_toupper.c.s:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.s
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(MAKE) $(MAKESILENT) -f srcs/libft/CMakeFiles/libft.dir/build.make srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.s
 .PHONY : ft_toupper.c.s
 
 # Help Target
@@ -1334,6 +1334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/rchalmer/c/minishell/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ulistonee/Desktop/minishell/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
