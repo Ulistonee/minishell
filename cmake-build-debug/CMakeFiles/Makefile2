@@ -113,12 +113,20 @@ srcs/libft/clean: srcs/libft/CMakeFiles/libft.dir/clean
 CMakeFiles/minishell.dir/all: srcs/libft/CMakeFiles/libft.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49 "Built target minishell"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49 "Built target minishell"
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 .PHONY : CMakeFiles/minishell.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/minishell.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles 49
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/cmake-build-debug/CMakeFiles 49
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minishell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ulistonee/Desktop/minishell/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/minishell.dir/rule

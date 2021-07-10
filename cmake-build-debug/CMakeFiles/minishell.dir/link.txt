@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/cc -g CMakeFiles/minishell.dir/srcs/main.c.o CMakeFiles/minishell.dir/srcs/my_echo.c.o CMakeFiles/minishell.dir/srcs/my_cd.c.o CMakeFiles/minishell.dir/srcs/my_pwd.c.o CMakeFiles/minishell.dir/srcs/my_export.c.o CMakeFiles/minishell.dir/srcs/my_fork.c.o CMakeFiles/minishell.dir/srcs/utils.c.o CMakeFiles/minishell.dir/srcs/my_unset.c.o -o minishell  -ltermcap srcs/libft/liblibft.a 
+=======
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/minishell.dir/srcs/main.c.o CMakeFiles/minishell.dir/srcs/my_echo.c.o CMakeFiles/minishell.dir/srcs/my_cd.c.o CMakeFiles/minishell.dir/srcs/my_pwd.c.o CMakeFiles/minishell.dir/srcs/my_export.c.o CMakeFiles/minishell.dir/srcs/my_fork.c.o CMakeFiles/minishell.dir/srcs/utils.c.o CMakeFiles/minishell.dir/srcs/my_env.c.o -o minishell  -ltermcap srcs/libft/liblibft.a 
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706

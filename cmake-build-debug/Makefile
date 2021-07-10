@@ -236,6 +236,33 @@ srcs/my_echo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_echo.c.s
 .PHONY : srcs/my_echo.c.s
 
+srcs/my_env.o: srcs/my_env.c.o
+
+.PHONY : srcs/my_env.o
+
+# target to build an object file
+srcs/my_env.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_env.c.o
+.PHONY : srcs/my_env.c.o
+
+srcs/my_env.i: srcs/my_env.c.i
+
+.PHONY : srcs/my_env.i
+
+# target to preprocess a source file
+srcs/my_env.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_env.c.i
+.PHONY : srcs/my_env.c.i
+
+srcs/my_env.s: srcs/my_env.c.s
+
+.PHONY : srcs/my_env.s
+
+# target to generate assembly for a file
+srcs/my_env.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_env.c.s
+.PHONY : srcs/my_env.c.s
+
 srcs/my_export.o: srcs/my_export.c.o
 
 .PHONY : srcs/my_export.o
@@ -390,6 +417,9 @@ help:
 	@echo "... srcs/my_echo.o"
 	@echo "... srcs/my_echo.i"
 	@echo "... srcs/my_echo.s"
+	@echo "... srcs/my_env.o"
+	@echo "... srcs/my_env.i"
+	@echo "... srcs/my_env.s"
 	@echo "... srcs/my_export.o"
 	@echo "... srcs/my_export.i"
 	@echo "... srcs/my_export.s"

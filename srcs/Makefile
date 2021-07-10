@@ -7,8 +7,13 @@ SRCS	= \
 			my_pwd.c \
 			my_export.c \
 			my_fork.c \
+<<<<<<< HEAD
 			my_unset.c \
 			utils.c \
+=======
+			my_env.c \
+			utils.c
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 
 OBJS		= $(patsubst %.c, %.o, $(SRCS))
 

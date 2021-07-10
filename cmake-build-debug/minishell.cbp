@@ -247,7 +247,14 @@
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_echo.c">
 			<Option target="minishell"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_export.c">
+=======
+		<Unit filename="/Users/rchalmer/c/minishell/srcs/my_env.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/srcs/my_export.c">
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/home/ulistonee/Desktop/minishell/srcs/my_fork.c">

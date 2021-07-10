@@ -39,7 +39,11 @@ void			        read_envp(t_all *all, char const *envp[]);
 void                    my_fork(t_all *all);
 void                    print_arr_2x(char **array);
 char					*get_value(char **envp_cp, char *key);
+<<<<<<< HEAD
 void                    my_unset(t_all *all);
 char			        *check_arg(char **envp_cp, char **key);
 void                    sort_envp_cp(t_all *all);
+=======
+void 					my_env(t_all *all);
+>>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 
