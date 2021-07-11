@@ -1,38 +1,38 @@
 #include "minishell.h"
 
-void            replace_var(char *key, char **envp_cp, char *argument)
+void            replace_var(char **key, char *argument)
 {
     char        *dup;
 
 //    dup = (char *) malloc(sizeof (char) * ft_strlen(argument));
-    free(key);
+    free(*key);
     dup = ft_strdup(argument);
-    key = dup;
+    *key = dup;
 }
 
-void			add_to_envp(t_all *all)
+void			add_to_envp(char **envp_cp, char *argument)
 {
 	char		**res;
 	int			n;
-	int         count;
+	int			count;
 
-	count = count_envp(all->envp_cp.envp_cp);
+	count = count_envp(envp_cp);
 	res = (char **) malloc(sizeof (char *) * (count + 2)); // перезаписать number of lines, т.к. массив увеличивается
 	n = 0;
-	while (all->envp_cp.envp_cp[n] != NULL)
+	while (envp_cp[n] != NULL)
 	{
-		res[n] = ft_strdup(all->envp_cp.envp_cp[n]);
-		free(all->envp_cp.envp_cp[n]);
+		res[n] = ft_strdup(envp_cp[n]);
+		free(envp_cp[n]);
 		n++;
 	}
-	res[n] = ft_strdup(all->cmd.argument);
+	res[n] = ft_strdup(argument);
 	res[n + 1] = NULL;
-	free(all->envp_cp.envp_cp);
-	all->envp_cp.envp_cp = res;
-	print_arr_2x(all->envp_cp.envp_cp);
+	free(envp_cp);
+	envp_cp = res;
+	print_arr_2x(envp_cp);
 }
 
-void			add_quotes(t_all *all)
+void			add_quotes(char **envp_cp)
 {
 	int			i;
 	int			j;
@@ -41,30 +41,31 @@ void			add_quotes(t_all *all)
 	char		*res;
 
 	i = 0;
-	while (all->envp_cp.envp_cp[i] != NULL)
+	while (envp_cp[i] != NULL)
 	{
-		equal = ft_strchr(all->envp_cp.envp_cp[i], '=');
-		res = (char *)ft_calloc(ft_strlen(all->envp_cp.envp_cp[i]) + 3, sizeof(char));
+		equal = ft_strchr(envp_cp[i], '=');
+		res = (char *)ft_calloc(ft_strlen(envp_cp[i]) + 3, sizeof(char));
 		j = 0;
 		k = 0;
-		while (all->envp_cp.envp_cp[i][j] != 0)
+		while (envp_cp[i][j] != 0)
 		{
-			if (&(all->envp_cp.envp_cp[i][j]) == equal + 1)
+			if (&(envp_cp[i][j]) == equal + 1)
 			{
 				k++;
 			}
-			res[k] = all->envp_cp.envp_cp[i][j];
+			res[k] = envp_cp[i][j];
 			j++;
 			k++;
 		}
-		res[(equal - all->envp_cp.envp_cp[i]) + 1] = '"';
-		res[ft_strlen(all->envp_cp.envp_cp[i]) + 1] = '"';
-		all->envp_cp.envp_cp[i] = res;
+		res[(equal - envp_cp[i]) + 1] = '"';
+		res[ft_strlen(envp_cp[i]) + 1] = '"';
+		free(envp_cp[i]);
+		envp_cp[i] = res;
 		i++;
 	}
 }
 
-void            sort_envp_cp(t_all *all)
+void            sort_envp_cp(char **envp_cp)
 {
     int					i;
     int					j;
@@ -72,51 +73,48 @@ void            sort_envp_cp(t_all *all)
     char                *temp_2;
     int                 count;
 
-    count = count_envp(all->envp_cp.envp_cp);
+    count = count_envp(envp_cp);
     i = 0;
-    while (all->envp_cp.envp_cp[i] != NULL)
+    while (envp_cp[i] != NULL)
     {
         j = count - 1;
         while (j > i)
         {
-            if (ft_strncmp(all->envp_cp.envp_cp[j - 1], all->envp_cp.envp_cp[j], (ft_strlen(all->envp_cp.envp_cp[0]) + 1)) > 0)
+            if (ft_strncmp(envp_cp[j - 1], envp_cp[j], (ft_strlen(envp_cp[0]) + 1)) > 0)
             {
-                temp = all->envp_cp.envp_cp[j - 1];
-                all->envp_cp.envp_cp[j - 1] = all->envp_cp.envp_cp[j];
-                all->envp_cp.envp_cp[j] = temp;
+                temp = envp_cp[j - 1];
+                envp_cp[j - 1] = envp_cp[j];
+                envp_cp[j] = temp;
             }
             j--;
         }
         i++;
     }
     i = 0;
-    while (all->envp_cp.envp_cp[i] != NULL)
+    while (envp_cp[i] != NULL)
     {
-        temp_2 = all->envp_cp.envp_cp[i];
-        all->envp_cp.envp_cp[i] = ft_strjoin("declare -x ", all->envp_cp.envp_cp[i]);
+        temp_2 = envp_cp[i];
+        envp_cp[i] = ft_strjoin("declare -x ", envp_cp[i]);
         free(temp_2);
         i++;
     }
 }
 
-void			my_export(t_all *all)
+void			my_export(char *argument, char **envp_cp)
 {
-	char		*key;
-	char        *var;
+	char		**key;
 
-	if (all->cmd.argument == NULL)
+	if (argument == NULL)
 	{
-		sort_envp_cp(all);
-		add_quotes(all);
-		print_arr_2x(all->envp_cp.envp_cp);
+		sort_envp_cp(envp_cp);
+		add_quotes(envp_cp);
+		print_arr_2x(envp_cp);
 	}
-	else if (all->cmd.argument != NULL)
-	{
-		if ((key = check_arg(all->envp_cp.envp_cp, &(all->cmd.argument))))
-        {
-            replace_var(key, all->envp_cp.envp_cp, all->cmd.argument);
-        }
-		else
-			add_to_envp(all);
+	else {
+		if ((key = check_arg(envp_cp, &(argument)))) {
+			replace_var(key, argument);
+			print_arr_2x(envp_cp);
+		} else
+			add_to_envp(envp_cp, argument);
 	}
 }

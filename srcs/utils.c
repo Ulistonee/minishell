@@ -17,13 +17,13 @@ int             count_envp(char **envp_cp)
     return (i);
 }
 
-char			*check_arg(char **envp_cp, char **key)
+char			**check_arg(char **envp_cp, char **key)
 {
     char		**tmp;
     int			key_len;
     char        *eq;
 
-    print_arr_2x(envp_cp);
+//    print_arr_2x(envp_cp);
     eq = NULL;
     tmp = envp_cp;
     if (!*key)
@@ -38,7 +38,7 @@ char			*check_arg(char **envp_cp, char **key)
         {
             if (eq)
                 *eq = '=';
-            return (*tmp);
+            return (tmp);
         }
 //		if (!ft_strncmp(*tmp, key, key_len + 1))
 //			return (*tmp);
@@ -73,6 +73,7 @@ void 			read_envp(t_all *all, char const *envp[])
 {
     char		**envp_cp;
     int			n;
+    int 		count;
 
     n = 0;
     while (envp[n] != NULL)
@@ -88,6 +89,10 @@ void 			read_envp(t_all *all, char const *envp[])
     }
     envp_cp[n] = NULL;
     all->envp_cp.envp_cp = envp_cp;
+//	print_arr_2x(all->envp_cp.envp_cp);
+//	printf("-------------------------------------\n");
+	count = count_envp(all->envp_cp.envp_cp);
+	printf("count - %d\n", count);
 }
 
 void            print_arr_2x(char **array)
@@ -95,13 +100,13 @@ void            print_arr_2x(char **array)
     int         i;
 
     i = 0;
-    printf("\n=================================\n");
+//    printf("\n=================================\n");
     while (array[i] != NULL)
     {
         printf("%s\n", array[i]);
         i++;
     }
-    printf("=================================\n");
+//    printf("=================================\n");
 //    printf("%d\n", i);
 //    printf("%s\n", array[i]);
 }
