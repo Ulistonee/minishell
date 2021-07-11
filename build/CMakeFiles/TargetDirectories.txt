@@ -1,6 +1,0 @@
-/home/ulistonee/Desktop/minishell/build/CMakeFiles/rebuild_cache.dir
-/home/ulistonee/Desktop/minishell/build/CMakeFiles/edit_cache.dir
-/home/ulistonee/Desktop/minishell/build/CMakeFiles/minishell.dir
-/home/ulistonee/Desktop/minishell/build/srcs/libft/CMakeFiles/edit_cache.dir
-/home/ulistonee/Desktop/minishell/build/srcs/libft/CMakeFiles/rebuild_cache.dir
-/home/ulistonee/Desktop/minishell/build/srcs/libft/CMakeFiles/libft.dir

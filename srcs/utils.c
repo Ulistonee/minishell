@@ -7,6 +7,16 @@
 ** @return
 */
 
+int             count_envp(char **envp_cp)
+{
+    int         i;
+
+    i = 0;
+    while (envp_cp[i] != NULL)
+        i++;
+    return (i);
+}
+
 char			*check_arg(char **envp_cp, char **key)
 {
     char		**tmp;
@@ -78,7 +88,6 @@ void 			read_envp(t_all *all, char const *envp[])
     }
     envp_cp[n] = NULL;
     all->envp_cp.envp_cp = envp_cp;
-    all->envp_cp.num_of_lines = n;
 }
 
 void            print_arr_2x(char **array)

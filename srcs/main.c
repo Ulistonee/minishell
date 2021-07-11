@@ -1,32 +1,26 @@
 #include "minishell.h"
 
-void				processor(int argc, char *argv[], char const *envp[], t_all *all)
+void				executor(t_all *all)
 {
 //	all->cmd.name = 'E'; // echo
-//	all->cmd.name = 'C'; // cd
+	all->cmd.name = 'C'; // cd
 //	all->cmd.name = 'P'; // pwd
 //    all->cmd.name = 'X'; // export
-<<<<<<< HEAD
-    all->cmd.name = 'U'; // unset
+//    all->cmd.name = 'U'; // unset
+//    all->cmd.name = 'N'; // env
 //	all->cmd.flag = 'n';
-	all->cmd.argument = ft_strdup("aa");
-=======
-	all->cmd.name = 'N'; // env
-//	all->cmd.flag = 'n';
-	all->cmd.argument = ((char*)malloc(sizeof(char) * 25));
-//	all->cmd.argument = NULL;
+    all->cmd.argument = ft_strdup("/Desktop");
+	all->cmd.flag = 'n';
 //	all->cmd.argument = "/Users/rchalmer";
->>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 //	printf("%s\n", all->cmd.argument);
-	if (all->cmd.name == 'E' && all->cmd.argument != NULL) {
-        my_echo(all);
+	if (all->cmd.name == 'E') {
+        my_echo(all->cmd.flag, all->cmd.argument);
     }
 	else if (all->cmd.name == 'C') {
-        my_cd(argc, all, envp);
+        my_cd(all->cmd.argc, all->cmd.argument, all->envp_cp.envp_cp);
     }
 	else if (all->cmd.name == 'P') {
         my_pwd(all);
-<<<<<<< HEAD
     }
 	else if (all->cmd.name == 'X') {
         my_export(all);
@@ -35,17 +29,15 @@ void				processor(int argc, char *argv[], char const *envp[], t_all *all)
     {
         my_unset(all);
     }
-=======
 	else if (all->cmd.name == 'X')
 	    my_export(all);
 	else if (all->cmd.name == 'N')
 	{
 		my_env(all);
 	}
->>>>>>> 0a8ac813bd0805cce57a445b76b4554d97a9c706
 }
 
-int				main(int argc, char *argv[], char const *envp[])
+int				main(int argc, char **argv, char const *envp[])
 {
 	t_all		all;
 
@@ -53,5 +45,5 @@ int				main(int argc, char *argv[], char const *envp[])
     read_envp(&all, envp);
 //    while(readline)
 //        parser()
-    processor(argc, argv, envp, &all);
+    executor(&all);
 }

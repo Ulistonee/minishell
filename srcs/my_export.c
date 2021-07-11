@@ -14,8 +14,10 @@ void			add_to_envp(t_all *all)
 {
 	char		**res;
 	int			n;
+	int         count;
 
-	res = (char **) malloc(sizeof (char *) * (all->envp_cp.num_of_lines + 2)); // перезаписать number of lines, т.к. массив увеличивается
+	count = count_envp(all->envp_cp.envp_cp);
+	res = (char **) malloc(sizeof (char *) * (count + 2)); // перезаписать number of lines, т.к. массив увеличивается
 	n = 0;
 	while (all->envp_cp.envp_cp[n] != NULL)
 	{
@@ -68,11 +70,13 @@ void            sort_envp_cp(t_all *all)
     int					j;
     char    			*temp;
     char                *temp_2;
+    int                 count;
 
+    count = count_envp(all->envp_cp.envp_cp);
     i = 0;
     while (all->envp_cp.envp_cp[i] != NULL)
     {
-        j = all->envp_cp.num_of_lines - 1;
+        j = count - 1;
         while (j > i)
         {
             if (ft_strncmp(all->envp_cp.envp_cp[j - 1], all->envp_cp.envp_cp[j], (ft_strlen(all->envp_cp.envp_cp[0]) + 1)) > 0)
@@ -108,14 +112,9 @@ void			my_export(t_all *all)
 	}
 	else if (all->cmd.argument != NULL)
 	{
-//	    var = extract_var(all->cmd.argument);
 		if ((key = check_arg(all->envp_cp.envp_cp, &(all->cmd.argument))))
         {
-//            printf("key - %s\n", key);
-//            print_arr_2x(all->envp_cp.envp_cp);
             replace_var(key, all->envp_cp.envp_cp, all->cmd.argument);
-//            sort_envp_cp(all);
-//            print_arr_2x(all->envp_cp.envp_cp);
         }
 		else
 			add_to_envp(all);

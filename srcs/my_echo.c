@@ -1,21 +1,11 @@
 #include "minishell.h"
 
-//void            promt_multiline()
-//{
-//
-//}
-
-void			my_echo(t_all *all)
+void			my_echo(char flag, char *argument)
 {
-//    int         n;
-//
-//    n = 0;
-//    if (all->cmd.argument[n] == 27)
-//        promt_multiline();
-	if (all->cmd.flag == 'n')
-		printf("%s", all->cmd.argument);
-	else if (all->cmd.argument == NULL)
+	if (flag == 'n')
+		printf("%s", argument);
+	else if (argument == NULL)
 		printf("");
 	else
-		printf("%s\n", all->cmd.argument);
+		printf("%s\n", argument);
 }
