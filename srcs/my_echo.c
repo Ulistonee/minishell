@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void			my_echo(char flag, char *argument)
+int			my_echo(char flag, char *argument)
 {
 	if (flag == 'n')
 		printf("%s", argument);
@@ -8,4 +8,5 @@ void			my_echo(char flag, char *argument)
 		printf("");
 	else
 		printf("%s\n", argument);
+    return (1);
 }

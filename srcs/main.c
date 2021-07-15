@@ -1,40 +1,125 @@
 #include "minishell.h"
 
+int                builtins(t_all *all)
+{
+    if(!(ft_strncmp(all->cmd.name, "echo", ft_strlen(all->cmd.name) + 1)))
+    {
+        return (my_echo(all->cmd.flag, all->cmd.argument));
+    }
+    else if(!(ft_strncmp(all->cmd.name, "cd", ft_strlen(all->cmd.name) + 1)))
+    {
+        return (my_cd(all->cmd.argc, all->cmd.argument, all->envp_cp.envp_cp));
+    }
+    else if(!(ft_strncmp(all->cmd.name, "pwd", ft_strlen(all->cmd.name) + 1)))
+    {
+        return (my_pwd(all));
+    }
+    else if(!(ft_strncmp(all->cmd.name, "export", ft_strlen(all->cmd.name) + 1)))
+    {
+        return(my_export(all));
+    }
+    else if(!(ft_strncmp(all->cmd.name, "unset", ft_strlen(all->cmd.name) + 1)))
+    {
+        return(my_unset(all));
+    }
+    else if(!(ft_strncmp(all->cmd.name, "env", ft_strlen(all->cmd.name) + 1)))
+    {
+        return(my_env(all));
+    }
+    else
+        return (0);
+}
+
+void                execute_binary(char *binary_path, char **argv, char **envp_cp)
+{
+    pid_t       pid;
+    pid_t       wpid;
+    int         status;
+
+    pid = fork();
+    status = 0;
+    printf("pid - %d\n", pid);
+    if (pid == 0)
+    {
+        printf("CHILD PROCESS IS WORKING\n");
+        execve(binary_path, argv, envp_cp);
+    }
+    else if (pid < 0)
+    {
+        printf("%s\n", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+    else
+    {
+            printf("PARENT PROCESS IS WORKING\n");
+            wpid = waitpid(pid, &status, WUNTRACED);
+    }
+}
+
 void				executor(t_all *all)
 {
+    t_command       *cmd1;
+    t_command       *cmd2;
+    t_command       *tmp;
+    pid_t           pid;
+    pid_t           wpid;
+    int             status;
+
+    status = 0;
+    cmd1 = (t_command*) malloc(sizeof (t_command));
+    cmd2 = (t_command*) malloc(sizeof (t_command));
+    tmp = cmd1;
+    cmd1->way = ft_strdup("/bin/ls");
+    cmd1->argv = (char *[3]){"ls", "-la", NULL};
+    cmd1->next = cmd2;
+    cmd2->way = ft_strdup("/usr/bin/grep");
+    cmd2->argv = (char *[3]){"grep", "my", NULL};
+    cmd2->next = NULL;
 //	all->cmd.name = 'E'; // echo
-	all->cmd.name = 'C'; // cd
+//	all->cmd.name = "cd"; // cd
 //	all->cmd.name = 'P'; // pwd
 //    all->cmd.name = 'X'; // export
 //    all->cmd.name = 'U'; // unset
 //    all->cmd.name = 'N'; // env
 //	all->cmd.flag = 'n';
-    all->cmd.argument = ft_strdup("/Desktop");
-	all->cmd.flag = 'n';
+//    all->cmd.argc = 2;
+//    all->cmd.argument = ft_strdup("~/Desktop");
+//	all->cmd.flag = 'n';
 //	all->cmd.argument = "/Users/rchalmer";
 //	printf("%s\n", all->cmd.argument);
-	if (all->cmd.name == 'E') {
-        my_echo(all->cmd.flag, all->cmd.argument);
-    }
-	else if (all->cmd.name == 'C') {
-        my_cd(all->cmd.argc, all->cmd.argument, all->envp_cp.envp_cp);
-    }
-	else if (all->cmd.name == 'P') {
-        my_pwd(all);
-    }
-	else if (all->cmd.name == 'X') {
-        my_export(all);
-    }
-	else if (all->cmd.name == 'U')
+    while (tmp)
     {
-        my_unset(all);
+        if (tmp->next == NULL)
+        {
+            if (!(builtins(all)))
+                execute_binary(tmp->way, tmp->argv, all->envp_cp.envp_cp);
+        }
+        else if (tmp->next != NULL)
+        {
+            while (tmp->next != NULL)
+            {
+                pipe();
+                pid = fork();
+                if (pid == 0)
+                {
+                    printf("CHILD PROCESS IS WORKING\n");
+                    execve(binary_path, argv, envp_cp);
+                }
+                else if (pid < 0)
+                {
+                    printf("%s\n", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                else
+                {
+                    printf("PARENT PROCESS IS WORKING\n");
+                    wpid = waitpid(pid, &status, WUNTRACED);
+                }
+
+            }
+        }
+        tmp = tmp->next;
     }
-	else if (all->cmd.name == 'X')
-	    my_export(all);
-	else if (all->cmd.name == 'N')
-	{
-		my_env(all);
-	}
 }
 
 int				main(int argc, char **argv, char const *envp[])

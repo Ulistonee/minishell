@@ -99,7 +99,7 @@ void            sort_envp_cp(t_all *all)
     }
 }
 
-void			my_export(t_all *all)
+int			my_export(t_all *all)
 {
 	char		*key;
 	char        *var;
@@ -119,4 +119,5 @@ void			my_export(t_all *all)
 		else
 			add_to_envp(all);
 	}
+    return (1);
 }
