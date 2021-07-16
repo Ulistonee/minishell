@@ -278,6 +278,7 @@ void parse_line(char *line, t_all **all)
     i = 0;
     m = 0;
     (*all)->f = 0;
+	(*all)->to_red = NULL;
     (*all)->cmd = ft_listnew();
     first = (*all)->cmd;
     (*all)->cmd->count = count_argv(line, i);
