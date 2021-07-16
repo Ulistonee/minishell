@@ -49,6 +49,7 @@ t_redirect *new_redirect()
 
 	if (!(new = malloc(sizeof(t_redirect))))
 		return (NULL);
+	new->redirect = -1;
     new->next = NULL;
 	return (new);
 }

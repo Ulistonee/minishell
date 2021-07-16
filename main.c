@@ -69,8 +69,8 @@ int main(int argc, char const *argv[], char *env[])
     signal(SIGINT, wait_signal);
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
-   // parse_line("cat file0 > | echo abc << 123 > 121 ce", &all);
-   // output_all(all);
+    //parse_line("ewl,l;qdw qdwkljqkwndknj  qdqwdqwd 12 12 ceqw  dqw cq | clm;qwdl; qdwm;ldkmq cjnw12kojdub | ewckwc 2dlnl 122 >cqw| d2l,k 1232 < d312 > 3d12l,", &all);
+    //output_all(all);
     line = readline("bash-3.2$ ");
     if (!line)
         ctrl_D();
