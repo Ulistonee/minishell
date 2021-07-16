@@ -86,6 +86,7 @@ int main(int argc, char const *argv[], char *env[])
         ctrl_D();
         add_history(line);
         parse_line(line, &all);
+        executor(&all);
         output_all(all);
     }
     return (0);

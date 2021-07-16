@@ -1,4 +1,5 @@
 cmake-build-debug
+kirill/cmake-build-debug
 a.out
 *.o
-srcs/minishell
+kirill/srcs/minishell

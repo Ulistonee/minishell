@@ -10,11 +10,20 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = my_bash
+NAME = minishell
 
-SRC = main.c parser.c ft_list.c utils.c add_redirect.c
+SRC = main.c parser.c ft_list.c utils.c add_redirect.c \
+			srcs/executor.c \
+			srcs/my_echo.c \
+			srcs/my_cd.c \
+			srcs/my_pwd.c \
+			srcs/my_export.c \
+			srcs/my_fork.c \
+			srcs/my_unset.c \
+			srcs/utils.c \
+			srcs/my_env.c
 
-OBJ = main.o parser.o ft_list.o utils.o add_redirect.o
+OBJ = $(patsubst %.c, %.o, $(SRC))
 
 INCLUDE = minishell.h
 

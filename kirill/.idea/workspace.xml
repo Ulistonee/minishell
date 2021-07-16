@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="minishell" targetName="libft" />
+      <config projectName="minishell" targetName="minishell" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_atoi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_bzero.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_calloc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_calloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_free_mem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_free_mem.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isalnum.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isalnum.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isalpha.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isalpha.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isascii.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isascii.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isdigit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isdigit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isprint.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_isprint.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_base.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_base.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_u.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_u.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_uhex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_itoa_uhex.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_lstnew.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memccpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memccpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memcmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memcmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memcpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memmove.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memmove.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memset.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putchar_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putchar_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putendl_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putendl_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putnbr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putnbr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putstr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_putstr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_split.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strdup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strjoin.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strjoin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlcat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlcat.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlcpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlen.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strmapi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strmapi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strncmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strncmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strnstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strnstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strrchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strrchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strtrim.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_strtrim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_substr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_substr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_tolower.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_tolower.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_toupper.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/ft_toupper.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/libft.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/libft/libft.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/minishell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/minishell.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_cd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_cd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_echo.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_echo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_env.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_env.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_export.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_export.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_fork.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_fork.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_pwd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_pwd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_unset.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/my_unset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/utils.o" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1vB1CYbLcQoWDV7EBlAH59m3num" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="CMake Application.minishell">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.minishell" />
+      <item itemvalue="CMake Application.libft" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="" />
+      <created>1626020541476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626020541476</updated>
+      <workItem from="1626020543891" duration="2000" />
+      <workItem from="1626462334424" duration="1897000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

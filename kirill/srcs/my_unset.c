@@ -1,15 +1,15 @@
-#include "minishell.h"
+#include "../minishell.h"
 
-void            my_unset(t_all *all)
+int            my_unset(t_all *all)
 {
-    char		**dup;
-    char		**dup_var;
-    int			i;
-    int			j;
-    int			count;
+    char        **dup;
+    int         count;
+    char        *dup_var;
+    int         i;
+    int         j;
 
-    count = count_envp(all->envp_cp.envp_cp);
     dup_var = NULL;
+    count = count_envp(all->envp_cp.envp_cp);
     dup = (char **) malloc(sizeof (char *) * count);
     if ((dup_var = check_arg(all->envp_cp.envp_cp, &all->cmd.argument)))
     {
@@ -17,7 +17,7 @@ void            my_unset(t_all *all)
         j = 0;
         while (all->envp_cp.envp_cp[i] != NULL)
         {
-            if (all->envp_cp.envp_cp[i] == *dup_var) {
+            if (all->envp_cp.envp_cp[i] == dup_var) {
                 i++;
                 continue;
             }
@@ -25,18 +25,11 @@ void            my_unset(t_all *all)
             i++;
             j++;
         }
-        i = 0;
-		while (all->envp_cp.envp_cp[i] != NULL)
-		{
-			if (all->envp_cp.envp_cp[i])
-			{
-				free(all->envp_cp.envp_cp[i]);
-			}
-			i++;
-		}
         free(all->envp_cp.envp_cp); // надо зафришить all.envp_cp[i]
         all->envp_cp.envp_cp = dup;
     }
-    sort_envp_cp(all->envp_cp.envp_cp);
+//    all->envp_cp.num_of_lines--;
+    sort_envp_cp(all);
     print_arr_2x(dup);
+    return (1);
 }

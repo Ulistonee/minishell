@@ -29,9 +29,6 @@ static int		count(int n)
 
 static char		*copyofint(char *str, int n, int k)
 {
-	int		i;
-
-	i = 0;
 	str[k] = '\0';
 	while (k--)
 	{

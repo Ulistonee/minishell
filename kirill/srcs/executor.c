@@ -1,4 +1,4 @@
-#include "minishell.h"
+#include "../minishell.h"
 
 int                builtins(t_all *all)
 {
@@ -65,6 +65,8 @@ void				executor(t_all *all)
     pid_t           wpid;
     int             status;
 
+    printf("executor\n");
+    return ;
     status = 0;
     cmd1 = (t_command*) malloc(sizeof (t_command));
     cmd2 = (t_command*) malloc(sizeof (t_command));
@@ -121,14 +123,14 @@ void				executor(t_all *all)
         tmp = tmp->next;
     }
 }
-
-int				main(int argc, char **argv, char const *envp[])
-{
-	t_all		all;
-
-//	init(&all);
-    read_envp(&all, envp);
-//    while(readline)
-//        parser()
-    executor(&all);
-}
+//
+//int				main(int argc, char **argv, char const *envp[])
+//{
+//	t_all		all;
+//
+////	init(&all);
+//    read_envp(&all, envp);
+////    while(readline)
+////        parser()
+//    executor(&all);
+//}

@@ -1,6 +1,6 @@
-#include "minishell.h"
+#include "../minishell.h"
 
-void            my_pwd(void)
+int             my_pwd(t_all *all)
 {
     char        *pwd;
 
@@ -8,4 +8,5 @@ void            my_pwd(void)
     pwd = getwd(pwd);
     printf("%s\n", pwd);
     free(pwd);
+    return (1);
 }

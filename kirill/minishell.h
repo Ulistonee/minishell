@@ -8,6 +8,9 @@
 #include <errno.h>
 #include "libft/libft.h"
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
 typedef struct			s_redirect{
 	int					redirect;
 	char				*argv;
@@ -37,9 +40,6 @@ typedef struct			s_all
 
 
 int						main();
-void					my_echo(t_all *all);
-void					my_cd(int argc, t_all *all, char const *envp[]);
-void					handle_error(char *message, t_all *all);
 char					*ft_realloc(char *ptr, size_t size);
 char					*str_add_to_end(char *str, char c);
 size_t					ft_strlen2(const char *s);
@@ -58,3 +58,20 @@ t_redirect				*redirect_last(t_redirect *lst);
 void redirect2(char *line, int *i, t_all **all);
 void redirect3(char *line, int *i, t_all **all);
 void redirect4(char *line, int *i, t_all **all);
+
+// new below:
+int			        my_echo(char flag, char *argument);
+int			        my_cd(int argc, char *argument, char **envp_cp);
+void				handle_error(char *message, t_all *all);
+int                 my_pwd(t_all *all);
+int                 my_export(t_all *all);
+void		        read_envp(t_all *all, char const *envp[]);
+void                my_fork(t_all *all);
+void                print_arr_2x(char **array);
+char				*get_value(char **envp_cp, char *key);
+int                 my_unset(t_all *all);
+char			    *check_arg(char **envp_cp, char **key);
+void                sort_envp_cp(t_all *all);
+int 				my_env(t_all *all);
+int                 count_envp(char **envp_cp);
+
