@@ -47,7 +47,7 @@ typedef struct			s_all
 int			        my_echo(char flag, char *argument);
 int			        my_cd(int argc, char *argument, char **envp_cp);
 void				handle_error(char *message, t_all *all);
-int                 my_pwd(t_all *all);
+int                 my_pwd(void);
 int                 my_export(t_all *all);
 void		        read_envp(t_all *all, char const *envp[]);
 void                my_fork(t_all *all);

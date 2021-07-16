@@ -1,5 +1,10 @@
 #include "minishell.h"
 
+int                is_builtin(t_command *tmp)
+{
+
+}
+
 int                builtins(t_all *all)
 {
     if(!(ft_strncmp(all->cmd.name, "echo", ft_strlen(all->cmd.name) + 1)))
@@ -12,7 +17,7 @@ int                builtins(t_all *all)
     }
     else if(!(ft_strncmp(all->cmd.name, "pwd", ft_strlen(all->cmd.name) + 1)))
     {
-        return (my_pwd(all));
+        return (my_pwd());
     }
     else if(!(ft_strncmp(all->cmd.name, "export", ft_strlen(all->cmd.name) + 1)))
     {
@@ -56,37 +61,17 @@ void                execute_binary(char *binary_path, char **argv, char **envp_c
     }
 }
 
-void				executor(t_all *all)
+void				executor(t_all *all, t_command *cmd)
 {
-    t_command       *cmd1;
-    t_command       *cmd2;
-    t_command       *tmp;
+
     pid_t           pid;
     pid_t           wpid;
     int             status;
+    int             fd[2];
+    t_command       *tmp;
 
     status = 0;
-    cmd1 = (t_command*) malloc(sizeof (t_command));
-    cmd2 = (t_command*) malloc(sizeof (t_command));
-    tmp = cmd1;
-    cmd1->way = ft_strdup("/bin/ls");
-    cmd1->argv = (char *[3]){"ls", "-la", NULL};
-    cmd1->next = cmd2;
-    cmd2->way = ft_strdup("/usr/bin/grep");
-    cmd2->argv = (char *[3]){"grep", "my", NULL};
-    cmd2->next = NULL;
-//	all->cmd.name = 'E'; // echo
-//	all->cmd.name = "cd"; // cd
-//	all->cmd.name = 'P'; // pwd
-//    all->cmd.name = 'X'; // export
-//    all->cmd.name = 'U'; // unset
-//    all->cmd.name = 'N'; // env
-//	all->cmd.flag = 'n';
-//    all->cmd.argc = 2;
-//    all->cmd.argument = ft_strdup("~/Desktop");
-//	all->cmd.flag = 'n';
-//	all->cmd.argument = "/Users/rchalmer";
-//	printf("%s\n", all->cmd.argument);
+    tmp = cmd;
     while (tmp)
     {
         if (tmp->next == NULL)
@@ -98,12 +83,17 @@ void				executor(t_all *all)
         {
             while (tmp->next != NULL)
             {
-                pipe();
+                pipe(fd);
                 pid = fork();
                 if (pid == 0)
                 {
+                    dup2(fd[1], 1);
+                    close(fd[0]);
+                    close(fd[1]);
                     printf("CHILD PROCESS IS WORKING\n");
-                    execve(binary_path, argv, envp_cp);
+                    if (!(builtins(all)))
+                        execute_binary(tmp->way, tmp->argv, all->envp_cp.envp_cp);
+//                    execve(tmp->way, tmp->argv, all->envp_cp.envp_cp);
                 }
                 else if (pid < 0)
                 {
@@ -124,11 +114,38 @@ void				executor(t_all *all)
 
 int				main(int argc, char **argv, char const *envp[])
 {
-	t_all		all;
+	t_all		    all;
+    t_command       *cmd1;
+    t_command       *cmd2;
+    t_command       *tmp;
+
+    cmd1 = (t_command*) malloc(sizeof (t_command));
+    cmd2 = (t_command*) malloc(sizeof (t_command));
+    tmp = cmd1;
+    cmd1->way = ft_strdup("/bin/ls");
+    cmd1->argv = (char *[3]){"ls", "-la", NULL};
+    cmd1->next = cmd2;
+
+    cmd2->way = ft_strdup("/usr/bin/grep");
+    cmd2->argv = (char *[3]){"grep", "my", NULL};
+    cmd2->next = NULL;
+
+//	all->cmd.name = 'E'; // echo
+//	all->cmd.name = "cd"; // cd
+//	all->cmd.name = 'P'; // pwd
+//  all->cmd.name = 'X'; // export
+//  all->cmd.name = 'U'; // unset
+//  all->cmd.name = 'N'; // env
+//	all->cmd.flag = 'n';
+//  all->cmd.argc = 2;
+//  all->cmd.argument = ft_strdup("~/Desktop");
+//	all->cmd.flag = 'n';
+//	all->cmd.argument = "/Users/rchalmer";
+//	printf("%s\n", all->cmd.argument);
 
 //	init(&all);
     read_envp(&all, envp);
 //    while(readline)
 //        parser()
-    executor(&all);
+    executor(&all, cmd1);
 }
