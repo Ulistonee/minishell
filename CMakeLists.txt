@@ -5,7 +5,21 @@ set(CMAKE_C_STANDARD 99)
 
 include_directories(.)
 
-add_subdirectory(./srcs/libft)
+add_subdirectory(kirill/libft)
 
-add_executable(minishell srcs/main.c srcs/my_echo.c srcs/my_cd.c srcs/my_pwd.c srcs/my_export.c srcs/my_fork.c srcs/utils.c srcs/my_unset.c srcs/my_env.c)
-target_link_libraries(minishell termcap libft)
+add_executable(minishell
+        kirill/main.c
+        kirill/parser.c
+        kirill/ft_list.c
+        kirill/utils.c
+        kirill/add_redirect.c
+        kirill/srcs/executor.c
+        kirill/srcs/my_echo.c
+        kirill/srcs/my_cd.c
+        kirill/srcs/my_pwd.c
+        kirill/srcs/my_export.c
+        kirill/srcs/my_fork.c
+        kirill/srcs/utils.c
+        kirill/srcs/my_unset.c
+        kirill/srcs/my_env.c)
+target_link_libraries(minishell termcap libft readline)
