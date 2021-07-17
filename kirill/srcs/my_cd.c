@@ -1,5 +1,15 @@
 #include "../minishell.h"
 
+int             count_arguments(char **argv)
+{
+    int res;
+
+    res = 0;
+    while(*argv++)
+        res++;
+    return res;
+}
+
 //нужно фришить abs_path
 char            *get_absolute_path(char **envp_cp, char *relative_path)
 {
@@ -53,34 +63,36 @@ void			go_home(char **envp_cp)
 	free(wd);
 }
 
-int			my_cd(int argc, char *argument, char **envp_cp)
+int			my_cd(char **argument, char ***envp_cp)
 {
 	int			i;
 	char        *abs_path;
+	int         argc;
 
+	argc = count_arguments(argument);
 	if (argc < 2)
 	{
-		go_home(envp_cp);
+		go_home(*envp_cp);
 	}
 	else if (argc == 2 && argument != NULL)
 	{
-	    if (ft_strncmp(argument, "~", ft_strlen("~") + 1) == 0)
-            go_home(envp_cp);
+	    if (ft_strncmp(argument[1], "~", 2) == 0)
+            go_home(*envp_cp);
 	    else
         {
             char *pwd = (char *)malloc(sizeof (char) * 400);
             pwd = getwd(pwd);
             printf("%s\n", pwd);
             free(pwd);
-            if (*argument == '~')
+            if (*(argument[1]) == '~')
             {
-                abs_path = get_absolute_path(envp_cp, argument);
+                abs_path = get_absolute_path(*envp_cp, argument[1]);
                 if ((i = chdir(abs_path)) == -1)
                     printf("%s\n", strerror(errno));
                 if (abs_path)
                     free(abs_path);
             }
-            else if ((i = chdir(argument)) == -1)
+            else if ((i = chdir(argument[1])) == -1)
 				printf("%s\n", strerror(errno));
             printf("chdir status - %d\n", i);
             char *wd = (char *)malloc(sizeof (char) * 400);

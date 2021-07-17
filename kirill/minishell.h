@@ -35,6 +35,7 @@ typedef struct			s_all
 	int					f;
 	char				*old;
 	char				*to_red;
+	int                 exit_code;
 }						t_all;
 
 
@@ -55,23 +56,26 @@ void					find_path(t_all **all);
 void					redirect_back(t_redirect **lst, t_redirect *new);
 t_redirect				*new_redirect();
 t_redirect				*redirect_last(t_redirect *lst);
-void redirect2(char *line, int *i, t_all **all);
-void redirect3(char *line, int *i, t_all **all);
-void redirect4(char *line, int *i, t_all **all);
+void                    redirect2(char *line, int *i, t_all **all);
+void                    redirect3(char *line, int *i, t_all **all);
+void                    redirect4(char *line, int *i, t_all **all);
 
 // new below:
-int			        my_echo(char flag, char *argument);
-int			        my_cd(int argc, char *argument, char **envp_cp);
-void				handle_error(char *message, t_all *all);
-int                 my_pwd();
-int                 my_export(t_all *all);
-void		        read_envp(t_all *all, char const *envp[]);
-void                my_fork(t_all *all);
-void                print_arr_2x(char **array);
-char				*get_value(char **envp_cp, char *key);
-int                 my_unset(t_all *all);
-char			    *check_arg(char **envp_cp, char **key);
-void                sort_envp_cp(t_all *all);
-int 				my_env(t_all *all);
-int                 count_envp(char **envp_cp);
+int                     my_echo(char **argv);
+int			            my_cd(char **argument, char ***envp_cp);
+void				    handle_error(char *message, t_all *all);
+int                     my_pwd();
+int                     my_export(t_all *all);
+void		            read_envp(t_all *all, char const *envp[]);
+void                    my_fork(t_all *all);
+void                    print_arr_2x(char **array);
+char				    *get_value(char **envp_cp, char *key);
+int                     my_unset(t_all *all);
+char			        *check_arg(char **envp_cp, char **key);
+void                    sort_envp_cp(t_all *all);
+int 				    my_env(t_all *all);
+int                     count_envp(char **envp_cp);
+void				    executor(t_all **all);
+int                     execute_binary(char *binary_path, char **argv, char ***envp_cp);
+int                     builtins(t_cmd *tmp, char ***envp);
 
