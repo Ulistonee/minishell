@@ -284,7 +284,7 @@ void parse_line(char *line, t_all **all)
     (*all)->cmd->count = count_argv(line, i);
     (*all)->cmd->argv = (char**)malloc(sizeof(char*) * (*all)->cmd->count);
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
-    (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env);
+    (*all)->path = try_find("PATH", (*all)->my_env);
     while (line[i])
     {
         parse_line2(line, &i, &m, all);

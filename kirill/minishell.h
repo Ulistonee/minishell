@@ -78,4 +78,5 @@ int                     count_envp(char **envp_cp);
 void				    executor(t_all **all);
 int                     execute_binary(char *binary_path, char **argv, char ***envp_cp);
 int                     builtins(t_cmd *tmp, char ***envp);
+int                     fail(char *str, int res);
 

@@ -1,5 +1,10 @@
 #include "../minishell.h"
-//
+
+int             fail(char *str, int res)
+{
+    printf("%s\n", str);
+    return (res);
+}
 ///**
 //**
 //** @param envs

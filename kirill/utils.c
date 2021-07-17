@@ -54,7 +54,7 @@ char *try_find(char *path, char **env)
     }
     else
         str = ft_strdup("");
-    free(path);
+//    free(path);
     return (str);
 }
 

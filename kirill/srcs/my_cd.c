@@ -74,7 +74,7 @@ int			my_cd(char **argument, char ***envp_cp)
 	{
 		go_home(*envp_cp);
 	}
-	else if (argc == 2 && argument != NULL)
+	else if (argc == 2 && argument[1] != NULL)
 	{
 	    if (ft_strncmp(argument[1], "~", 2) == 0)
             go_home(*envp_cp);
@@ -101,5 +101,7 @@ int			my_cd(char **argument, char ***envp_cp)
             free(wd);
         }
 	}
-    return (1);
+	else if (argc != 2)
+        fail("bash: cd: too many arguments", 1);
+    return (EXIT_SUCCESS);
 }

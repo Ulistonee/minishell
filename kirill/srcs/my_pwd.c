@@ -8,5 +8,5 @@ int             my_pwd(void)
     pwd = getwd(pwd);
     printf("%s\n", pwd);
     free(pwd);
-    return (1);
+    return (EXIT_SUCCESS);
 }

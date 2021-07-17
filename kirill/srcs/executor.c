@@ -23,8 +23,8 @@ int                builtins(t_cmd *tmp, char ***envp)
         return (my_echo(tmp->argv));
     else if(!(ft_strncmp(tmp->argv[0], "cd", ft_strlen(tmp->argv[0]) + 1)))
         return (my_cd(tmp->argv, envp));
-//    else if(!(ft_strncmp(tmp->argv[0], "pwd", ft_strlen(tmp->argv[0]) + 1)))
-//        return (my_pwd(all));
+    else if(!(ft_strncmp(tmp->argv[0], "pwd", ft_strlen(tmp->argv[0]) + 1)))
+        return (my_pwd(tmp->argv));
 //    else if(!(ft_strncmp(tmp->argv[0], "export", ft_strlen(tmp->argv[0]) + 1)))
 //        return(my_export(all));
 //    else if(!(ft_strncmp(tmp->argv[0], "unset", ft_strlen(tmp->argv[0]) + 1)))

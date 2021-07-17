@@ -78,17 +78,23 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     parse_line(line, &all);
+    executor(&all);
     output_all(all);
+    printf("check02\n");
     while (strcmp(line, "exit"))
     {
+        printf("check\n");
         line = readline("bash-3.2$ ");
-        if (!line)
-        ctrl_D();
+        if (!line) {
+            ctrl_D();
+        }
+        printf("check1\n");
         add_history(line);
         parse_line(line, &all);
         executor(&all);
         output_all(all);
     }
+    printf("CHECK\n");
     return (0);
 }
 
