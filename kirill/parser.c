@@ -122,11 +122,11 @@ void parse_line3_1(char *line, int *i, int *m, t_all **all)
                          (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]); 
                         (*i)++;
                     }
-                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env);
+                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env, all);
                      (*all)->old =  (*all)->cmd->argv[*m];
                     if (!(*all)->cmd->argv[*m])
                         (*all)->cmd->argv[*m] = ft_strdup("");
-                     (*all)->cmd->argv[*m] = ft_strjoin( (*all)->cmd->argv[*m],  (*all)->dollar);
+                     (*all)->cmd->argv[*m] = ft_strjoin( (*all)->cmd->argv[*m], (*all)->dollar);
                     free( (*all)->old);
                     free( (*all)->dollar);
                      (*all)->dollar = NULL;
@@ -162,7 +162,7 @@ void parse_line4_1(char *line, int *i, int *m, t_all **all)
                         (*all)->dollar = ft_realloc((*all)->dollar, ft_strlen2((*all)->dollar) + 2);
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]); 
                     }
-                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env);
+                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env, all);
                     (*all)->old = (*all)->cmd->argv[*m];
                     if (!(*all)->cmd->argv[*m])
                         (*all)->cmd->argv[*m] = ft_strdup("");
@@ -214,7 +214,7 @@ void parse_line5_1(char *line, int *i, int *m, t_all **all)
     if (line[*i] == '|')
     {
                 *m = 0;
-                (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env);
+                (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env, all);
                 (*all)->cmd->way = find_binary((*all)->cmd->argv[0], (*all)->path);
                 ft_listadd_back(&(*all)->cmd, ft_listnew());
                 (*all)->cmd = ft_listlast((*all)->cmd);
@@ -283,10 +283,8 @@ void parse_line(char *line, t_all **all)
     first = (*all)->cmd;
     (*all)->cmd->count = count_argv(line, i);
     (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
-//    ft_strdup("hello1");
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
-//    strdup("hello");
-    (*all)->path = try_find("PATH", (*all)->my_env);
+    (*all)->path = try_find("PATH", (*all)->my_env, all);
     while (line[i])
     {
         parse_line2(line, &i, &m, all);
