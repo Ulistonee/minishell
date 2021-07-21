@@ -56,6 +56,16 @@ char **copy_env(char **env)
     return (dst);
 }
 
+void         check_fd()
+{
+    int     fd;
+
+    fd = dup(0);
+    printf("leaked fd - %d\n", fd);
+    close(fd);
+}
+
+
 int main(int argc, char const *argv[], char *env[])
 {
     char *line;
@@ -70,7 +80,7 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     //parse_line("ewl,l;qdw qdwkljqkwndknj  qdqwdqwd 12 12 ceqw  dqw cq | clm;qwdl; qdwm;ldkmq cjnw12kojdub | ewckwc 2dlnl 122 >cqw| d2l,k 1232 < d312 > 3d12l,", &all);
-    //output_all(all);
+    output_all(all);
     line = readline("bash-3.2$ ");
     if (!line)
         ctrl_D();
@@ -78,23 +88,21 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     parse_line(line, &all);
-    executor(&all);
     output_all(all);
-    printf("check02\n");
-    while (strcmp(line, "exit"))
+//    executor(&all);
+    while (strcmp(line, "exit")) // исправить функцию на свою
     {
-        printf("check\n");
         line = readline("bash-3.2$ ");
         if (!line) {
             ctrl_D();
         }
-        printf("check1\n");
         add_history(line);
         parse_line(line, &all);
-        executor(&all);
         output_all(all);
+//        executor(&all);
+//        check_fd();
+//        printf("exit_code - %d\n", all->exit_code);
     }
-    printf("CHECK\n");
     return (0);
 }
 

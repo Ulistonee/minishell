@@ -24,7 +24,7 @@ int             my_echo(char **argv)
     int         flag;
     int         i;
 
-    i = 0;
+    i = 1;
     if ((flag = is_flag(argv[1]) == 1))
         argv++;
     while(argv[i])
@@ -32,8 +32,9 @@ int             my_echo(char **argv)
         printf("%s", argv[i]);
         if (argv[i + 1])
             printf(" ");
+        i++;
     }
     if (!flag)
         printf("\n");
-    return (0);
+    return (EXIT_SUCCESS);
 }

@@ -21,5 +21,6 @@ add_executable(minishell
         kirill/srcs/my_fork.c
         kirill/srcs/utils.c
         kirill/srcs/my_unset.c
+        kirill/srcs/another_exit.c
         kirill/srcs/my_env.c)
 target_link_libraries(minishell termcap libft readline)

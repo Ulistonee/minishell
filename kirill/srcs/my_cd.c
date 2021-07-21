@@ -49,18 +49,18 @@ void			go_home(char **envp_cp)
 	int			i;
 	char		*home_path;
 
-    char *pwd = (char *)malloc(sizeof (char) * 400);
-	pwd = getwd(pwd);
-	printf("%s\n", pwd);
-	free(pwd);
+//    char *pwd = (char *)malloc(sizeof (char) * 400);
+//	pwd = getwd(pwd);
+//	printf("%s\n", pwd);
+//	free(pwd);
 	home_path = get_home_path(envp_cp);
 	if ((i = chdir(home_path)) == -1)
 		printf("bash: cd: HOME not set\n");
-	printf("chdir status - %d\n", i);
-    char *wd = (char *)malloc(sizeof (char) * 400);
-	pwd = getwd(wd);
-	printf("%s\n", wd);
-	free(wd);
+//	printf("chdir status - %d\n", i);
+//    char *wd = (char *)malloc(sizeof (char) * 400);
+//	pwd = getwd(wd);
+//	printf("%s\n", wd);
+//	free(wd);
 }
 
 int			my_cd(char **argument, char ***envp_cp)
@@ -80,10 +80,10 @@ int			my_cd(char **argument, char ***envp_cp)
             go_home(*envp_cp);
 	    else
         {
-            char *pwd = (char *)malloc(sizeof (char) * 400);
-            pwd = getwd(pwd);
-            printf("%s\n", pwd);
-            free(pwd);
+//            char *pwd = (char *)malloc(sizeof (char) * 400);
+//            pwd = getwd(pwd);
+//            printf("%s\n", pwd);
+//            free(pwd);
             if (*(argument[1]) == '~')
             {
                 abs_path = get_absolute_path(*envp_cp, argument[1]);
@@ -94,11 +94,11 @@ int			my_cd(char **argument, char ***envp_cp)
             }
             else if ((i = chdir(argument[1])) == -1)
 				printf("%s\n", strerror(errno));
-            printf("chdir status - %d\n", i);
-            char *wd = (char *)malloc(sizeof (char) * 400);
-            pwd = getwd(wd);
-            printf("%s\n", wd);
-            free(wd);
+//            printf("chdir status - %d\n", i);
+//            char *wd = (char *)malloc(sizeof (char) * 400);
+//            pwd = getwd(wd);
+//            printf("%s\n", wd);
+//            free(wd);
         }
 	}
 	else if (argc != 2)

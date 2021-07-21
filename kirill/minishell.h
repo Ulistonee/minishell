@@ -10,6 +10,13 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <fcntl.h>
+
+typedef struct          s_fd
+{
+    int                 std_input;
+    int                 std_output;
+}                       t_fd;
 
 typedef struct			s_redirect{
 	int					redirect;
@@ -36,6 +43,7 @@ typedef struct			s_all
 	char				*old;
 	char				*to_red;
 	int                 exit_code;
+	t_fd                fd;
 }						t_all;
 
 
@@ -65,18 +73,27 @@ int                     my_echo(char **argv);
 int			            my_cd(char **argument, char ***envp_cp);
 void				    handle_error(char *message, t_all *all);
 int                     my_pwd();
-int                     my_export(t_all *all);
+int			            my_export(char **argv, char ***envp_cp);
 void		            read_envp(t_all *all, char const *envp[]);
 void                    my_fork(t_all *all);
 void                    print_arr_2x(char **array);
 char				    *get_value(char **envp_cp, char *key);
-int                     my_unset(t_all *all);
 char			        *check_arg(char **envp_cp, char **key);
-void                    sort_envp_cp(t_all *all);
-int 				    my_env(t_all *all);
+void                    sort_array_2x(char **array);
 int                     count_envp(char **envp_cp);
 void				    executor(t_all **all);
-int                     execute_binary(char *binary_path, char **argv, char ***envp_cp);
-int                     builtins(t_cmd *tmp, char ***envp);
+void                    execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exit_code);
+int                     builtins(t_cmd *tmp, char ***envp, int *exit_code);
 int                     fail(char *str, int res);
+int                     count_arguments(char **argv);
+int                     my_unset(char ***envp_cp, char *argument);
+int 				    my_env(char **envp_cp, char **argv);
+void                    another_exit(char **argv, int *exit_code);
+char		            **copy_arrays_2x(char **src_arr);
+void                    clear_arr_2x(char **a);
+
+
+
+
+
 

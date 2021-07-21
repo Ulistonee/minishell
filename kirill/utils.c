@@ -13,7 +13,11 @@ void output_all(t_all *all)
         printf("list%d:\n\n", n++);
        // printf("way = %s\n\n", all->cmd->way);
         while (++i < all->cmd->count)
+        {
             printf("argv[%d] = %s\n", i, all->cmd->argv[i]);
+        }
+        printf("way - %s\n", all->cmd->way);
+        printf("argv[%d] = %s\n", i, all->cmd->argv[i]);
         while(all->cmd->dir)
         {
             printf("redirect = %d\n", all->cmd->dir->redirect);
@@ -48,7 +52,7 @@ char *try_find(char *path, char **env)
         while(env[n][++i] != '=')
             ;
         if (ft_strlen(path) == i)
-            str = ft_strdup(&env[n][++i]);
+            str = ft_strdup(&(env[n][++i]));
         else
             str = ft_strdup("");
     }
@@ -125,6 +129,12 @@ size_t	ft_strlen2(const char *s)
 void make_null(char ***argv, int n)
 {
     int i = 0;
+//    char **tmp;
+//    tmp = *argv;
+//    while(*tmp) {
+//        *tmp = NULL;
+//        tmp++;
+//    }
     while (i <= n)
     {
         (*argv)[i] = NULL;

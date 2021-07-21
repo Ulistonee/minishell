@@ -221,7 +221,7 @@ void parse_line5_1(char *line, int *i, int *m, t_all **all)
                 (*i)++;
                 (*all)->f = 0;
                 (*all)->cmd->count = count_argv(line, *i);
-                (*all)->cmd->argv = (char**)malloc(sizeof(char*) * (*all)->cmd->count);
+                (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
                 make_null(&(*all)->cmd->argv, (*all)->cmd->count);
                 (*all)->to_red = NULL;
     }
@@ -282,8 +282,10 @@ void parse_line(char *line, t_all **all)
     (*all)->cmd = ft_listnew();
     first = (*all)->cmd;
     (*all)->cmd->count = count_argv(line, i);
-    (*all)->cmd->argv = (char**)malloc(sizeof(char*) * (*all)->cmd->count);
+    (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
+//    ft_strdup("hello1");
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
+//    strdup("hello");
     (*all)->path = try_find("PATH", (*all)->my_env);
     while (line[i])
     {
@@ -292,9 +294,9 @@ void parse_line(char *line, t_all **all)
         parse_line4(line, &i, &m, all);
         parse_line5(line, &i, &m, all);
     }
-    (*all)->cmd = first;
     if(!(*all)->cmd->way)
         (*all)->cmd->way = find_binary((*all)->cmd->argv[0], (*all)->path);
+    (*all)->cmd = first;
    // free(path);
 }
 
