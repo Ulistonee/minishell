@@ -88,8 +88,8 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     parse_line(line, &all);
-    output_all(all);
-//    executor(&all);
+//    output_all(all);
+    executor(&all);
     while (strcmp(line, "exit")) // исправить функцию на свою
     {
         line = readline("bash-3.2$ ");
@@ -98,8 +98,8 @@ int main(int argc, char const *argv[], char *env[])
         }
         add_history(line);
         parse_line(line, &all);
-        output_all(all);
-//        executor(&all);
+//        output_all(all);
+        executor(&all);
 //        check_fd();
 //        printf("exit_code - %d\n", all->exit_code);
     }

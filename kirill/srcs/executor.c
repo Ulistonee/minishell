@@ -109,6 +109,7 @@ void                execute_binary(char *binary_path, char **argv, char ***envp_
     {
         if (execve(binary_path, argv, *envp_cp) == -1)
         {
+            printf("binary_path - %s\n", binary_path);
             perror("Execve failed");
             exit(EXIT_FAILURE);
         }
@@ -142,7 +143,7 @@ void				executor(t_all **all)
     backup_stdout = dup(1);
     status = 0;
     tmp = (*all)->cmd;
-    if (!tmp)
+    if ((*all)->cmd->argv[0] == NULL)
         return;
     if (tmp->next == NULL)
         {
