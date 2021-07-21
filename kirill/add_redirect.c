@@ -29,7 +29,7 @@ void redirect3_1(char *line, int *i, t_all **all)
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]); 
                         (*i)++;
                     }
-                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env);
+                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env, all);
                      (*all)->old =  (*all)->to_red;
                     if (!(*all)->to_red)
                         (*all)->to_red = ft_strdup("");
@@ -67,7 +67,7 @@ void redirect4_1(char *line, int *i, t_all **all)
                         (*all)->dollar = ft_realloc((*all)->dollar, ft_strlen2((*all)->dollar) + 2);
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]); 
                     }
-                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env);
+                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env, all);
                     (*all)->old = (*all)->to_red;
                     if (!(*all)->to_red)
                         (*all)->to_red = ft_strdup("");

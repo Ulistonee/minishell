@@ -33,7 +33,7 @@ void output_all(t_all *all)
     }
 }
 
-char *try_find(char *path, char **env)
+char *try_find(char *path, char **env, t_all **all)
 {
     int i;
     int m;
@@ -57,7 +57,12 @@ char *try_find(char *path, char **env)
             str = ft_strdup("");
     }
     else
-        str = ft_strdup("");
+    {
+        if (!ft_strncmp(path, "?", ft_strlen(path)))
+            str = ft_itoa((*all)->exit_code);
+        else
+            str = ft_strdup("");
+    }
 //    free(path);
     return (str);
 }
@@ -159,6 +164,10 @@ char   *find_binary(char *cmnd, char *paths)
  char  **tmp;
  struct stat buf;
 
+    if (ft_strchr(cmnd, '/'))
+    {
+        return (cmnd);
+    }
  path = NULL;
  if (!cmnd || !paths)
   return NULL;
@@ -179,7 +188,36 @@ char   *find_binary(char *cmnd, char *paths)
  return (path);
 }
 
-void find_path(t_all **all)
+void init(t_all **all)
 {
+    (*all)->dollar = NULL;
+    (*all)->f = 0;
+	(*all)->to_red = NULL;
+    (*all)->cmd = ft_listnew();
+}
 
+void free_all(t_all **all)
+{
+    t_cmd   *c;
+    t_redirect *r;
+
+    free((*all)->dollar);
+    free((*all)->path);
+    free((*all)->old);
+    free((*all)->to_red);
+    c = (*all)->cmd;
+    while (c)
+    {
+        c = c->next;
+        r = (*all)->cmd->dir;
+        while(r)
+        {
+            r = r->next;
+            free((*all)->cmd->dir->argv);
+            free((*all)->cmd->dir);
+            (*all)->cmd->dir = r;
+        }
+        free((*all)->cmd);
+        (*all)->cmd = c;
+    }
 }
