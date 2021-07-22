@@ -55,7 +55,7 @@ void            output_sorted_env(char **envp_cp)
 
     p = copy_arrays_2x(envp_cp);
     p_orig = p;
-    sort_array_2x(envp_cp);
+    sort_array_2x(p);
     while (*p != NULL)
     {
         write(1, "declare -x ", 11);

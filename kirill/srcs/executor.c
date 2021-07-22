@@ -83,7 +83,7 @@ int                builtins(t_cmd *tmp, char ***envp, int *exit_code)
     else if(!(ft_strncmp(tmp->argv[0], "export", ft_strlen(tmp->argv[0]) + 1)))
         *exit_code = (my_export(tmp->argv, envp));
     else if(!(ft_strncmp(tmp->argv[0], "unset", ft_strlen(tmp->argv[0]) + 1)))
-        *exit_code = (my_unset(envp, tmp->argv[1]));
+        *exit_code = (my_unset(envp, tmp->argv));
     else if(!(ft_strncmp(tmp->argv[0], "env", ft_strlen(tmp->argv[0]) + 1)))
         *exit_code = my_env(*envp, tmp->argv);
     else if(!(ft_strncmp(tmp->argv[0], "exit", ft_strlen(tmp->argv[0]) + 1)))
@@ -168,6 +168,7 @@ void				executor(t_all **all)
     {
         while (tmp)
         {
+//            printf("way: %s\n", tmp->way);
             (*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd);
             pipe(fd);
             pid = fork();

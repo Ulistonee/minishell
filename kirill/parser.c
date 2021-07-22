@@ -224,6 +224,7 @@ void parse_line5_1(char *line, int *i, int *m, t_all **all)
                 (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
                 make_null(&(*all)->cmd->argv, (*all)->cmd->count);
                 (*all)->to_red = NULL;
+                (*all)->old = NULL;
     }
 }
 
@@ -281,8 +282,10 @@ void parse_line(char *line, t_all **all)
 	(*all)->to_red = NULL;
     (*all)->cmd = ft_listnew();
     first = (*all)->cmd;
+    (*all)->old = NULL;
     (*all)->cmd->count = count_argv(line, i);
     (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
+    (*all)->cmd->way = NULL;
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
     (*all)->path = try_find("PATH", (*all)->my_env, all);
     while (line[i])

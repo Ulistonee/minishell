@@ -4,33 +4,36 @@ void output_all(t_all *all)
 {
     int i;
     int n;
+    t_cmd *tmp;
 
     i = -1;
     n = 0;
-    while(all->cmd)
+    tmp = all->cmd;
+    while(tmp)
     {
         printf("------------------------------\n");
         printf("list%d:\n\n", n++);
-       // printf("way = %s\n\n", all->cmd->way);
-        while (++i < all->cmd->count)
+       // printf("way = %s\n\n", tmp->way);
+        while (++i < tmp->count)
         {
-            printf("argv[%d] = %s\n", i, all->cmd->argv[i]);
+            printf("argv[%d] = %s\n", i, tmp->argv[i]);
         }
-        printf("way - %s\n", all->cmd->way);
-        printf("argv[%d] = %s\n", i, all->cmd->argv[i]);
-        while(all->cmd->dir)
+        printf("way - %s\n", tmp->way);
+        printf("argv[%d] = %s\n", i, tmp->argv[i]);
+        while(tmp->dir)
         {
-            printf("redirect = %d\n", all->cmd->dir->redirect);
-            printf("argv = %s\n", all->cmd->dir->argv);
-            all->cmd->dir = all->cmd->dir->next;
+            printf("redirect = %d\n", tmp->dir->redirect);
+            printf("argv = %s\n", tmp->dir->argv);
+            tmp->dir = tmp->dir->next;
         }
         i = -1;
         printf("\n\n");
         //printf("redirect: \n\n<< - %d < - %d > - %d >> - %d\n\n",
-        //all->cmd->dir.d_back, all->cmd->dir.back, all->cmd->dir.next, all->cmd->dir.d_next);
-        all->cmd = all->cmd->next;
+        //tmp->dir.d_back, tmp->dir.back, tmp->dir.next, tmp->dir.d_next);
+        tmp = tmp->next;
         printf("------------------------------\n\n");
     }
+
 }
 
 char *try_find(char *path, char **env, t_all **all)
@@ -164,17 +167,16 @@ char   *find_binary(char *cmnd, char *paths)
  char  **tmp;
  struct stat buf;
 
-    if (ft_strchr(cmnd, '/'))
-    {
-        return (cmnd);
-    }
- path = NULL;
- if (!cmnd || !paths)
-  return NULL;
- arr = ft_split(paths, ':');
- tmp = arr;
- cmnd = ft_strjoin("/", cmnd);
- while(*tmp)
+
+path = NULL;
+if (!cmnd || !paths)
+    return NULL;
+if (ft_strchr(cmnd, '/'))
+    return (ft_strdup(cmnd));
+arr = ft_split(paths, ':');
+tmp = arr;
+cmnd = ft_strjoin("/", cmnd);
+while(*tmp)
  {
   path = ft_strjoin(*tmp, cmnd);
   if (stat(path, &buf) == 0)
@@ -201,10 +203,15 @@ void free_all(t_all **all)
     t_cmd   *c;
     t_redirect *r;
 
-    free((*all)->dollar);
-    free((*all)->path);
-    free((*all)->old);
-    free((*all)->to_red);
+    // TODO
+    if ((*all)->dollar)
+        free((*all)->dollar);
+    if ((*all)->path)
+        free((*all)->path);
+    if((*all)->old)
+        free((*all)->old);
+    if ((*all)->to_red)
+        free((*all)->to_red);
     c = (*all)->cmd;
     while (c)
     {

@@ -87,7 +87,7 @@ void                    execute_binary(char *binary_path, char **argv, char ***e
 int                     builtins(t_cmd *tmp, char ***envp, int *exit_code);
 int                     fail(char *str, int res);
 int                     count_arguments(char **argv);
-int                     my_unset(char ***envp_cp, char *argument);
+int                     my_unset(char ***envp_cp, char **argument);
 int 				    my_env(char **envp_cp, char **argv);
 void                    another_exit(char **argv, int *exit_code);
 char		            **copy_arrays_2x(char **src_arr);
