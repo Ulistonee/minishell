@@ -111,7 +111,7 @@ void                execute_binary(char *binary_path, char **argv, char ***envp_
         {
             printf("binary_path - %s\n", binary_path);
             perror("Execve failed");
-            exit(EXIT_FAILURE);
+            exit(127);
         }
     }
     else

@@ -1,5 +1,20 @@
 #include "../minishell.h"
 
+void 			update_pwd(char *old_pwd, char **envp_cp)
+{
+
+}
+
+char 			*get_pwd(char **envp_cp)
+{
+	char 		*old_pwd;
+
+	if (!(old_pwd = (char *) malloc(sizeof (char ) * 500)))
+		return (NULL);
+	old_pwd = getcwd(old_pwd, 500);
+	return (old_pwd);
+}
+
 int             count_arguments(char **argv)
 {
     int res;

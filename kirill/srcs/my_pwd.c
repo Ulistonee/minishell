@@ -4,8 +4,8 @@ int             my_pwd(void)
 {
     char        *pwd;
 
-    pwd = (char *)malloc(sizeof (char) * 50);
-    pwd = getwd(pwd);
+    pwd = (char *)malloc(sizeof (char) * 500);
+    pwd = getcwd(pwd, 500);
     printf("%s\n", pwd);
     free(pwd);
     return (EXIT_SUCCESS);

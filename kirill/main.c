@@ -89,9 +89,8 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->exit_code = 0;
     all->my_env = copy_env(env);
-
     parse_line(line, &all);
-    output_all(all);
+//    output_all(all);
     executor(&all);
     free_all(&all);
     while (1) // исправить функцию на свою
@@ -102,7 +101,7 @@ int main(int argc, char const *argv[], char *env[])
         }
         add_history(line);
         parse_line(line, &all);
-        output_all(all);
+//        output_all(all);
         executor(&all);
         free_all(&all);
     }

@@ -3,12 +3,33 @@ project(minishell C)
 
 set(CMAKE_C_STANDARD 99)
 
-include_directories(.)
+#add_library(readline)
 
-add_subdirectory(./srcs/libft)
+include_directories(/Users/rchalmer/.brew/opt/readline/lib/)
+
+link_directories(/Users/rchalmer/.brew/opt/readline/lib/)
+
+find_library(NAMES libreadline PATHS /Users/rchalmer/.brew/opt/readline/lib/ /Users/rchalmer/.brew/opt/readline/lib/)
+set(INCLUDE_DIR /Users/rchalmer/.brew/opt/readline/lib/)
+
+add_subdirectory(libft)
 
 add_executable(minishell
-        srcs/*.c
-        srcs/another_exit.c
+		add_redirect.c
+#		clear_arr.c
+		ft_list.c
+		main.c
+		parser.c
+		utils.c
+		srcs/my_env.c
+		srcs/another_exit.c
+		srcs/executor.c
+		srcs/my_cd.c
+		srcs/my_echo.c
+		srcs/my_export.c
+		srcs/my_fork.c
+		srcs/my_pwd.c
+		srcs/my_unset.c
+		srcs/utils.c
         )
-target_link_libraries(minishell termcap libft)
+target_link_libraries(minishell readline termcap libft)

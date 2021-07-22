@@ -225,6 +225,7 @@ void parse_line5_1(char *line, int *i, int *m, t_all **all)
                 make_null(&(*all)->cmd->argv, (*all)->cmd->count);
                 (*all)->to_red = NULL;
                 (*all)->old = NULL;
+				(*all)->cmd->way = NULL;
     }
 }
 
