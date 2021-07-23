@@ -48,8 +48,6 @@ int                scan_redirects(t_redirect *dir, t_fd *std_fd)
             dup2(file, std_fd->std_input);
             close(file);
         }
-//        tmp = tmp->next;
-//    }
     return (0);
 }
 
@@ -75,7 +73,7 @@ int                is_builtin(t_cmd *tmp)
 int                builtins(t_cmd *tmp, char ***envp, int *exit_code)
 {
     if(!(ft_strncmp(tmp->argv[0], "echo", ft_strlen(tmp->argv[0]) + 1)))
-        *exit_code =  (my_echo(tmp->argv));
+        *exit_code =  (my_echo(tmp->argv, *exit_code));
     else if(!(ft_strncmp(tmp->argv[0], "cd", ft_strlen(tmp->argv[0]) + 1)))
         *exit_code =  (my_cd(tmp->argv, envp));
     else if(!(ft_strncmp(tmp->argv[0], "pwd", ft_strlen(tmp->argv[0]) + 1)))
@@ -104,21 +102,17 @@ void                execute_binary(char *binary_path, char **argv, char ***envp_
         printf("%s\n", strerror(errno));
         *exit_code = 71;
     }
-//    binary_path = ft_strdup("/usr/bin/grep");
     if (pid == 0)
     {
         if (execve(binary_path, argv, *envp_cp) == -1)
         {
-            printf("binary_path - %s\n", binary_path);
             perror("Execve failed");
-            exit(127);
+            *exit_code = 127;
         }
     }
     else
     {
-//        printf("check0\n");
         wpid = waitpid(pid, &status, 0);
-//        printf("check1\n");
         if (WIFEXITED(status)) {
             *exit_code = WEXITSTATUS(status);
         }
@@ -147,9 +141,7 @@ void				executor(t_all **all)
         return;
     if (tmp->next == NULL)
         {
-//            printf("check_redirect1\n");
             (*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd));
-//            printf("check_redirect4\n");
 
             if (is_builtin(tmp) == 1)
             {
@@ -168,7 +160,6 @@ void				executor(t_all **all)
     {
         while (tmp)
         {
-//            printf("way: %s\n", tmp->way);
             (*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd);
             pipe(fd);
             pid = fork();

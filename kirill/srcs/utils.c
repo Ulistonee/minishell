@@ -1,5 +1,50 @@
 #include "../minishell.h"
 
+//int			set_value_arr_2x(char *str, char ***arr)
+//{
+//	char **old_line;
+//	char *equal;
+//	char *new_line;
+//
+//	if (!(new_line = ft_strdup(str)))
+//		return EXIT_FAILURE;
+//	if (!(equal = ft_strchr(new_line, '=')))
+//		return (fail("Don't work with shell variables", 1));
+//	*equal = 0;
+//	if ((old_line = check_key(*arr, new_line)))
+//	{
+//		*equal = '=';
+//		free(*old_line);
+//		*old_line = new_line;
+//	} else
+//	{
+//		*equal = '=';
+//		lineaddback(arr, new_line);
+//		free(new_line);
+//	}
+//	return 0;
+//}
+
+char			**check_key(char **envs, char *key)
+{
+	char		**tmp;
+	int			key_len;
+
+	tmp = envs;
+	if (!key)
+		return NULL;
+	key_len = (int)ft_strlen(key);
+	while(*tmp != NULL)
+	{
+		if (!ft_strncmp(*tmp, key, key_len) && *(*tmp + key_len) == '=')
+			return (tmp);
+		if (!ft_strncmp(*tmp, key, key_len + 1))
+			return (tmp);
+		tmp++;
+	}
+	return (NULL);
+}
+
 char		**copy_arrays_2x(char **src_arr)
 {
     int		i;

@@ -92,6 +92,7 @@ int main(int argc, char const *argv[], char *env[])
     parse_line(line, &all);
 //    output_all(all);
     executor(&all);
+//	printf("status: %d\n", all->exit_code);
     free_all(&all);
     while (1) // исправить функцию на свою
     {
@@ -103,6 +104,7 @@ int main(int argc, char const *argv[], char *env[])
         parse_line(line, &all);
 //        output_all(all);
         executor(&all);
+//        printf("status: %d\n", all->exit_code);
         free_all(&all);
     }
     return (0);

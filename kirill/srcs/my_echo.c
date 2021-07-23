@@ -19,7 +19,7 @@ int             is_flag(char *argv)
     return 0;
 }
 
-int             my_echo(char **argv)
+int             my_echo(char **argv, int exit_code)
 {
     int         flag;
     int         i;
@@ -27,9 +27,9 @@ int             my_echo(char **argv)
     i = 1;
     if ((flag = is_flag(argv[1]) == 1))
         argv++;
-    while(argv[i])
+	while(argv[i])
     {
-        printf("%s", argv[i]);
+		printf("%s", argv[i]);
         if (argv[i + 1])
             printf(" ");
         i++;

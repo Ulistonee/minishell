@@ -76,15 +76,6 @@ void            output_sorted_env(char **envp_cp)
     clear_arr_2x(p_orig);
 }
 
-void            replace_var(char *key, char **envp_cp, char *argument)
-{
-    char        *dup;
-
-//    dup = (char *) malloc(sizeof (char) * ft_strlen(argument));
-    free(key);
-    dup = ft_strdup(argument);
-    key = dup;
-}
 
 void			add_to_envp(char ***envp_cp, char *argument)
 {
@@ -106,6 +97,33 @@ void			add_to_envp(char ***envp_cp, char *argument)
 	free(*envp_cp);
 	*envp_cp = res;
 //	print_arr_2x(*envp_cp);
+}
+
+
+int            replace_var(char *key, char **envp_cp, char *argument)
+{
+	char **old_line = NULL;
+	char *equal;
+	char *new_line;
+
+	if (!(new_line = ft_strdup(argument)))
+		return EXIT_FAILURE;
+	if (!(equal = ft_strchr(new_line, '=')))
+		return (fail("Please add variable with \"=\"", 0));
+	*equal = 0;
+	if ((old_line = check_key(envp_cp, key)))
+	{
+		*equal = '=';
+		free(*old_line);
+		*old_line = new_line;
+	}
+	else
+	{
+		*equal = '=';
+		add_to_envp(&envp_cp, new_line);
+		free(new_line);
+	}
+	return 0;
 }
 
 void			add_quotes(char ***envp_cp)

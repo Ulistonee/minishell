@@ -70,7 +70,7 @@ void                    redirect4(char *line, int *i, t_all **all);
 void					free_all(t_all **all);
 
 // new below:
-int                     my_echo(char **argv);
+int                     my_echo(char **argv, int exit_code);
 int			            my_cd(char **argument, char ***envp_cp);
 void				    handle_error(char *message, t_all *all);
 int                     my_pwd();
@@ -92,6 +92,8 @@ int 				    my_env(char **envp_cp, char **argv);
 void                    another_exit(char **argv, int *exit_code);
 char		            **copy_arrays_2x(char **src_arr);
 void                    clear_arr_2x(char **a);
+int						set_value_arr_2x(char *str, char ***arr);
+char					**check_key(char **envs, char *key);
 
 
 
