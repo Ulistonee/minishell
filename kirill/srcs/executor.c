@@ -199,7 +199,9 @@ void				executor(t_all **all)
                 if (tmp->next == NULL)
                 {
                     dup2(backup_stdin, (*all)->fd.std_input);
-                    close(backup_stdin); // a где std_output?
+                    dup2(backup_stdout, (*all)->fd.std_output);
+                    close(backup_stdin); // a где std_output? их здесь нужно закрывать?
+                    close(backup_stdout); // a где std_output?
                 }
             }
 //            printf("endless cycle\n");

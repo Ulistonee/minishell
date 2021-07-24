@@ -83,19 +83,19 @@ void			go_home(char **envp_cp)
 //	free(wd);
 }
 
-int			my_cd(char **argument, char ***envp_cp)
+int				my_cd(char **argument, char ***envp_cp)
 {
 	char        *abs_path;
 	int         argc;
 	char 		*old_pwd;
 	int 		i;
 
-	old_pwd = (char *) malloc(sizeof (char) * 500);
+	old_pwd = (char *)malloc(sizeof (char) * 500);
 	old_pwd = getcwd(old_pwd, 500);
 	argc = count_arguments(argument);
 	if (argc < 2)
 		go_home(*envp_cp);
-	else if (argc == 2 && argument[1] != NULL)
+	else if (argc >= 2 && argument[1] != NULL)
 	{
 	    if (ft_strncmp(argument[1], "~", 2) == 0)
             go_home(*envp_cp);
@@ -122,7 +122,10 @@ int			my_cd(char **argument, char ***envp_cp)
 //            free(wd);
         }
 	}
-	else if (argc != 2)
-        fail("bash: cd: too many arguments", 1);
+//	else if (argc > 2)
+//	{
+//
+//	}
+//        fail("bash: cd: too many arguments", 1);// в каких случаях?
     return (EXIT_SUCCESS);
 }

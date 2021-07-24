@@ -58,11 +58,19 @@ char **copy_env(char **env)
 
 void         check_fd()
 {
-    int     fd;
+    int     fd[9];
+    int 	i;
 
-    fd = dup(0);
-    printf("leaked fd - %d\n", fd);
-    close(fd);
+    i = 0;
+    while (fd[i] != 0)
+	{
+    	fd[i] = dup(i);
+		printf("leaked fd - %d\n", fd[i]);
+//		close(fd[i]);
+    	i++;
+	}
+//    printf("leaked fd - %d\n", fd);
+//    close(fd);
 }
 
 
@@ -105,6 +113,7 @@ int main(int argc, char const *argv[], char *env[])
 //        output_all(all);
         executor(&all);
 //        printf("status: %d\n", all->exit_code);
+//		check_fd();
         free_all(&all);
     }
     return (0);
