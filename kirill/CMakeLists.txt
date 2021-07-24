@@ -22,12 +22,11 @@ add_executable(minishell
 		parser.c
 		utils.c
 		srcs/my_env.c
-		srcs/another_exit.c
+		srcs/my_exit.c
 		srcs/executor.c
 		srcs/my_cd.c
 		srcs/my_echo.c
 		srcs/my_export.c
-		srcs/my_fork.c
 		srcs/my_pwd.c
 		srcs/my_unset.c
 		srcs/utils.c

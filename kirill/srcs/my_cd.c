@@ -55,32 +55,23 @@ char			*get_home_path(char **envp_cp)
             home_path = ft_substr(envp_cp[n], 5, 100);
             return (home_path);
         }
-//		else if (ft_strncmp(envp_cp[n], "HOME=", ft_strlen("HOME=")) != 0)
-//        {
-//            printf("%s\n", strerror(errno));
-//        }
 		n++;
 	}
 	return (NULL);
 }
 
-void			go_home(char **envp_cp)
+int			go_home(char **envp_cp)
 {
 	int			i;
 	char		*home_path;
 
-//    char *pwd = (char *)malloc(sizeof (char) * 400);
-//	pwd = getwd(pwd);
-//	printf("%s\n", pwd);
-//	free(pwd);
 	home_path = get_home_path(envp_cp);
 	if ((i = chdir(home_path)) == -1)
+	{
 		printf("bash: cd: HOME not set\n");
-//	printf("chdir status - %d\n", i);
-//    char *wd = (char *)malloc(sizeof (char) * 400);
-//	pwd = getwd(wd);
-//	printf("%s\n", wd);
-//	free(wd);
+		return (EXIT_FAILURE);
+	}
+	return (EXIT_SUCCESS);
 }
 
 int				my_cd(char **argument, char ***envp_cp)
@@ -101,31 +92,23 @@ int				my_cd(char **argument, char ***envp_cp)
             go_home(*envp_cp);
 	    else
         {
-//            char *pwd = (char *)malloc(sizeof (char) * 400);
-//            pwd = getwd(pwd);
-//            printf("%s\n", pwd);
-//            free(pwd);
             if (*(argument[1]) == '~')
             {
                 abs_path = get_absolute_path(*envp_cp, argument[1]);
                 if ((i = chdir(abs_path)) == -1)
-                    printf("%s\n", strerror(errno));
-                if (abs_path)
-                    free(abs_path);
+				{
+					printf("%s\n", strerror(errno));
+					if (abs_path)
+						free(abs_path);
+					return (EXIT_FAILURE);
+				}
             }
             else if ((i = chdir(argument[1])) == -1)
+			{
 				printf("%s\n", strerror(errno));
-//            printf("chdir status - %d\n", i);
-//            char *wd = (char *)malloc(sizeof (char) * 400);
-//            pwd = getwd(wd);
-//            printf("%s\n", wd);
-//            free(wd);
+				return (EXIT_FAILURE);
+			}
         }
 	}
-//	else if (argc > 2)
-//	{
-//
-//	}
-//        fail("bash: cd: too many arguments", 1);// в каких случаях?
     return (EXIT_SUCCESS);
 }

@@ -19,7 +19,7 @@ int             is_flag(char *argv)
     return 0;
 }
 
-int             my_echo(char **argv, int exit_code)
+int             my_echo(char **argv)
 {
     int         flag;
     int         i;

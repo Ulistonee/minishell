@@ -37,17 +37,9 @@ void            sort_array_2x(char **array)
         }
         i++;
     }
-//    i = 0;
-//    while (envp_cp[i] != NULL)
-//    {
-//        temp_2 = envp_cp[i];
-//        envp_cp[i] = ft_strjoin("declare -x ", envp_cp[i]);
-//        free(temp_2);
-//        i++;
-//    }
 }
 
-void            output_sorted_env(char **envp_cp)
+void           output_sorted_env(char **envp_cp)
 {
     char	**p;
     char	**p_orig;
@@ -77,7 +69,7 @@ void            output_sorted_env(char **envp_cp)
 }
 
 
-void			add_to_envp(char ***envp_cp, char *argument)
+int			add_to_envp(char ***envp_cp, char *argument)
 {
 	char		**res;
 	int			n;
@@ -96,7 +88,7 @@ void			add_to_envp(char ***envp_cp, char *argument)
 	res[n + 1] = NULL;
 	free(*envp_cp);
 	*envp_cp = res;
-//	print_arr_2x(*envp_cp);
+	return (EXIT_SUCCESS);
 }
 
 
@@ -109,13 +101,14 @@ int            replace_var(char *key, char **envp_cp, char *argument)
 	if (!(new_line = ft_strdup(argument)))
 		return EXIT_FAILURE;
 	if (!(equal = ft_strchr(new_line, '=')))
-		return (fail("Please add variable with \"=\"", 0));
+		return (fail("Please add variable with \"=\"", EXIT_SUCCESS));
 	*equal = 0;
 	if ((old_line = check_key(envp_cp, key)))
 	{
 		*equal = '=';
 		free(*old_line);
 		*old_line = new_line;
+
 	}
 	else
 	{
@@ -123,7 +116,7 @@ int            replace_var(char *key, char **envp_cp, char *argument)
 		add_to_envp(&envp_cp, new_line);
 		free(new_line);
 	}
-	return 0;
+	return (EXIT_SUCCESS);
 }
 
 void			add_quotes(char ***envp_cp)
@@ -163,23 +156,30 @@ int			my_export(char **argv, char ***envp_cp)
 	char		*key;
 	int         count;
     int         i;
+    int			err_flag;
 
+    err_flag = 0;
 	count = count_envp(argv);
     if (count == 1)
-        output_sorted_env(*envp_cp);
+	{
+		output_sorted_env(*envp_cp);
+		return (EXIT_SUCCESS);
+	}
     i = 1;
 	if (count > 1)
 	{
-	    while (argv[i] != NULL)
+	    while (argv[i] != NULL && err_flag == 0)
 	    {
             if (!(check_var_validity(argv[i])))
-                return (0);
-            if ((key = check_arg(*envp_cp, &(argv[i]))))
-                replace_var(key, *envp_cp, argv[i]);
-            else
-                add_to_envp(envp_cp, argv[i]);
+				err_flag = 1;
+            if ((key = check_arg(*envp_cp, &(argv[i]))) && !err_flag)
+				err_flag = replace_var(key, *envp_cp, argv[i]);
+            else if (!err_flag)
+				err_flag = add_to_envp(envp_cp, argv[i]);
             i++;
         }
+	    if (err_flag == 0)
+			return (EXIT_SUCCESS);
 	}
-    return (1);
+    return (EXIT_FAILURE);
 }

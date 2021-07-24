@@ -7,11 +7,6 @@ int                 check_num(char *str)
     i = 0;
     while (str[i] != '\0')
     {
-//    	if ((str[0] == '-' || str[0] == '+') || ft_isdigit(str[1]))
-//    		i++;
-//			if(!(ft_isdigit(str[i])))
-//				return (0);
-//        i++;
 		while (*str == ' ')
 			str++;
 		if (*str == '-' || *str == '+')
@@ -29,7 +24,7 @@ int                 check_num(char *str)
     return (1);
 }
 
-void                 another_exit(char **argv, int *exit_code)
+void                 my_exit(char **argv, int *exit_code)
 {
     int             count;
 
@@ -43,7 +38,9 @@ void                 another_exit(char **argv, int *exit_code)
     else if (count > 2)
     {
     	*exit_code = 1;
-    	printf("exit: too many arguments\n");
+		write(0, "exit\n", 5);
+		write(0, "bash: exit: ", 12);
+		write(0, ":too many arguments\n", 28);
     	return;
     }
     if (check_num(argv[1]))
@@ -55,21 +52,24 @@ void                 another_exit(char **argv, int *exit_code)
 //        if (*exit_code < 0)
 //			*exit_code = 256 + (*exit_code % 256);
 		printf("exit\n");
-		printf("exit code - %d\n", *exit_code);
         exit((unsigned char)*exit_code);
     }
     else
     {
     	if (*argv[1] == '-')
 		{
-			printf("exit\n");
-			printf("numeric argument required\n");
+			write(0, "exit\n", 5);
+			write(0, "bash: exit: ", 12);
+			write(0, argv[1], ft_strlen(argv[1]));
+			write(0, ":numeric argument required\n", 28);
 			exit(255);
 		}
     	else
 		{
-			printf("exit\n");
-			printf("numeric argument required\n");
+			write(0, "exit\n", 5);
+			write(0, "bash: exit: ", 12);
+			write(0, argv[1], ft_strlen(argv[1]));
+			write(0, ":numeric argument required\n", 28);
 			*exit_code = 255;
 		}
     }
