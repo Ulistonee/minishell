@@ -1,12 +1,12 @@
 #include "../minishell.h"
 
-int             my_pwd(void)
+int				my_pwd(void)
 {
-    char        *pwd;
+	char		*pwd;
 
-    pwd = (char *)malloc(sizeof (char) * 500);
-    pwd = getcwd(pwd, 500);
-    printf("%s\n", pwd);
-    free(pwd);
-    return (EXIT_SUCCESS);
+	pwd = (char *)malloc(sizeof (char) * 500);
+	pwd = getcwd(pwd, 500);
+	printf("%s\n", pwd);
+	free(pwd);
+	return (EXIT_SUCCESS);
 }
