@@ -91,6 +91,9 @@ void                    clear_arr_2x(char **a);
 char					**check_key(char **envs, char *key);
 int						set_value_arr_2x(char *str, char ***arr);
 void					lineaddback(char ***src,char *addback);
+int						check_var_validity(char *argument);
+int						add_to_envp(char ***envp_cp, char *argument);
+int						replace_var(char *key, char **envp_cp, char *argument);
 
 
 

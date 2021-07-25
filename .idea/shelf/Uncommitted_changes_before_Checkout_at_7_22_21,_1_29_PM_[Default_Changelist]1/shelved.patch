@@ -1,0 +1,29 @@
+Index: todos.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1. предупредить Кирилла, чтобы он занулял все данные перед записью\n2. предупредить Кирилла, чтобы фришил указатели сразу\n3. реализовать echo $$\n4. реализовать echo &?\n5. отработать OLDPWD and PWD in cd function\n9. обработать вывод переменных при команде env -i bash\n10. проверить мейкфайл\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/todos.txt b/todos.txt
+--- a/todos.txt	
++++ b/todos.txt	
+@@ -5,3 +5,4 @@
+ 5. отработать OLDPWD and PWD in cd function
+ 9. обработать вывод переменных при команде env -i bash
+ 10. проверить мейкфайл
++11. $qw=ls      &qw --> ls
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Jul 11 19:22 MSK\n----------------------------------------------------------\nEnd testing: Jul 11 19:22 MSK\n
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	
+@@ -1,3 +1,3 @@
+-Start testing: Jul 11 19:22 MSK
++Start testing: Jul 22 13:26 MSK
+ ----------------------------------------------------------
+-End testing: Jul 11 19:22 MSK
++End testing: Jul 22 13:26 MSK
