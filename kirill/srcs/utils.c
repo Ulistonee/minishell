@@ -1,5 +1,51 @@
 #include "../minishell.h"
 
+void		lineaddback(char ***src,char *addback)
+{
+	int		i;
+	char	**arr;
+
+	i = 0;
+	if (!addback)
+		return;
+	while(*(*src + i) != NULL)
+		i++;
+	arr = (char **)malloc((i += 2) * sizeof(char *));//realloc for char** + 1 line
+	arr[--i] = NULL;
+	arr[--i] = ft_strdup((const char*)addback);
+	while (--i > -1)
+		*(arr + i) = *(*src + i);
+	free(*src);
+	*src = arr;
+}
+
+
+int			set_value_arr_2x(char *str, char ***arr)
+{
+	char **old_line;
+	char *equal;
+	char *new_line;
+
+	equal = NULL;
+	if (!(new_line = ft_strdup(str)))
+		return EXIT_FAILURE;
+	if (!(equal = ft_strchr(new_line, '=')))
+		return (fail("Don't work with shell variables", 1));
+	*equal = 0;
+	if ((old_line = check_key(*arr, new_line)))
+	{
+		*equal = '=';
+		free(*old_line);
+		*old_line = new_line;
+	} else
+	{
+		*equal = '=';
+		lineaddback(arr, new_line);
+		free(new_line);
+	}
+	return 0;
+}
+
 char			**check_key(char **envs, char *key)
 {
 	char		**tmp;

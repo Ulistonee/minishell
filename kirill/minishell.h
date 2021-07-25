@@ -89,6 +89,8 @@ void                    my_exit(char **argv, int *exit_code);
 char		            **copy_arrays_2x(char **src_arr);
 void                    clear_arr_2x(char **a);
 char					**check_key(char **envs, char *key);
+int						set_value_arr_2x(char *str, char ***arr);
+void					lineaddback(char ***src,char *addback);
 
 
 

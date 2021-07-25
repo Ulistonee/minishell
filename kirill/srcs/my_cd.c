@@ -1,13 +1,20 @@
 #include "../minishell.h"
 
-void			update_pwd(char *old_pwd, char **envp_cp)
+void			update_pwd(char *old_pwd, char ***envp_cp)
 {
 	char 		*new_pwd;
 	char 		*tmp;
 
-	new_pwd = (char *) malloc(sizeof (char) * 500);
+	new_pwd = (char *)malloc(sizeof (char) * 500);
 	new_pwd = getcwd(new_pwd, 500);
 	tmp = ft_strjoin("PWD=",new_pwd);
+	set_value_arr_2x(tmp, envp_cp);
+	free(tmp);
+	tmp = ft_strjoin("OLDPWD=", old_pwd);
+	set_value_arr_2x(tmp, envp_cp);
+	free(tmp);
+	free(old_pwd);
+	free(new_pwd);
 }
 
 char			*get_pwd(char **envp_cp)
@@ -110,5 +117,6 @@ int				my_cd(char **argument, char ***envp_cp)
 			}
 		}
 	}
+	update_pwd(old_pwd, envp_cp);
 	return (EXIT_SUCCESS);
 }

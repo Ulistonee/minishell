@@ -120,6 +120,7 @@ void				execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exi
 	}
 	else
 	{
+
 		wpid = waitpid(pid, &status, 0);
 		if (WIFEXITED(status)) {
 			*exit_code = WEXITSTATUS(status);
@@ -151,9 +152,7 @@ void				executor(t_all **all)
 	{
 		(*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd));
 		if ((*all)->exit_code == 1)
-		{
 			return;
-		}
 		if (is_builtin(tmp) == 1)
 		{
 			builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
