@@ -18,14 +18,30 @@ int move_probels(char *line, int i)
     return (i);
 }
 
-void wait_signal(int sign)
+static void	signal_handler(int sig_num)
 {
-    if (sign == SIGINT)
+    int		stat_loc;
+
+    wait(&stat_loc);
+    if (stat_loc == sig_num)
+    {
+        if (sig_num == SIGINT)
+        {
+            write(1, "\n", 1);
+            rl_on_new_line();
+            rl_replace_line("", 0);
+        }
+        else if (sig_num == SIGQUIT)
+            ft_putstr_fd("Quit: 3\n", 1);
+        g_status = 128 + sig_num;
+    }
+    else if (sig_num == SIGINT)
     {
         write(1, "\n", 1);
         rl_on_new_line();
         rl_replace_line("", 0);
         rl_redisplay();
+        g_status = 1;
     }
 }
 
@@ -76,23 +92,14 @@ int main(int argc, char const *argv[], char *env[])
     tcgetattr(0, &term);
     term.c_lflag &= ~(ECHOCTL);
     tcsetattr(0, TCSANOW, &term);
-    signal(SIGINT, wait_signal);
+    signal(SIGINT, signal_handler);
+    signal(SIGQUIT, signal_handler);
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
+    all->exit_code = 0;
     //parse_line("cat > 1 vwqc << 123 >", &all);
    // output_all(all);
    // free_all(&all);
-    line = readline("bash-3.2$ ");
-    if (!line)
-        ctrl_D();
-    add_history(line);
-    all = malloc(sizeof(t_all));
-    all->exit_code = 0;
-    all->my_env = copy_env(env);
-    parse_line(line, &all);
-//    output_all(all);
-    executor(&all);
-    free_all(&all);
     while (1) // исправить функцию на свою
     {
         line = readline("bash-3.2$ ");
@@ -103,8 +110,10 @@ int main(int argc, char const *argv[], char *env[])
         parse_line(line, &all);
 //        output_all(all);
         executor(&all);
+        free(line);
         free_all(&all);
     }
+
     return (0);
 }
 

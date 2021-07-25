@@ -39,6 +39,24 @@ void output_all(t_all *all)
 
 }
 
+int is_equal(char *path, char *env)
+{
+    int i;
+
+    i = 0;
+    while (env[i] != '\0')
+    {
+        if (env[i] == '=')
+        {
+            if (!ft_strncmp(env, path, i - 1))
+                return (1);
+            break;
+        }
+        i++;
+    }
+    return (0);
+}
+
 char *try_find(char *path, char **env, t_all **all)
 {
     int i;
@@ -50,8 +68,8 @@ char *try_find(char *path, char **env, t_all **all)
     m = -1;
     n = -1;
     if (!path)
-        return (ft_strdup(""));
-    while(env[++n] && (ft_strncmp(path, env[n], ft_strlen(path))))
+        return (ft_strdup("$"));
+    while(env[++n] && !(is_equal(path, env[n])))
         ;
     if (env[n] != NULL)
     {
@@ -69,7 +87,6 @@ char *try_find(char *path, char **env, t_all **all)
         else
             str = ft_strdup("");
     }
-//    free(path);
     return (str);
 }
 
@@ -201,6 +218,18 @@ void init(t_all **all)
     (*all)->cmd = ft_listnew();
 }
 
+void free_cmd(t_cmd *cmd)
+{
+    int i;
+
+    i = -1;
+    free(cmd->way);
+    while (++i < cmd->count + 1)
+        free(cmd->argv[i]);
+    free(cmd->argv);
+    free(cmd);
+}
+
 void free_all(t_all **all)
 {
     t_cmd   *c;
@@ -227,7 +256,8 @@ void free_all(t_all **all)
             free((*all)->cmd->dir);
             (*all)->cmd->dir = r;
         }
-        free((*all)->cmd);
+        free_cmd((*all)->cmd);
         (*all)->cmd = c;
     }
+    //free(*all);
 }

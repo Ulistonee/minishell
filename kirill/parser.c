@@ -123,13 +123,14 @@ void parse_line3_1(char *line, int *i, int *m, t_all **all)
                         (*i)++;
                     }
                      (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env, all);
-                     (*all)->old =  (*all)->cmd->argv[*m];
+                     (*all)->old = (*all)->cmd->argv[*m];
                     if (!(*all)->cmd->argv[*m])
                         (*all)->cmd->argv[*m] = ft_strdup("");
                      (*all)->cmd->argv[*m] = ft_strjoin( (*all)->cmd->argv[*m], (*all)->dollar);
                     free( (*all)->old);
                     free( (*all)->dollar);
                      (*all)->dollar = NULL;
+                    (*all)->old = NULL;
                 }
                 else
                 {
@@ -170,6 +171,7 @@ void parse_line4_1(char *line, int *i, int *m, t_all **all)
                     free((*all)->old);
                     free((*all)->dollar);
                     (*all)->dollar = NULL;
+                    (*all)->old = NULL;
     }
                 else
                 {
@@ -214,7 +216,6 @@ void parse_line5_1(char *line, int *i, int *m, t_all **all)
     if (line[*i] == '|')
     {
                 *m = 0;
-                (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env, all);
                 (*all)->cmd->way = find_binary((*all)->cmd->argv[0], (*all)->path);
                 ft_listadd_back(&(*all)->cmd, ft_listnew());
                 (*all)->cmd = ft_listlast((*all)->cmd);

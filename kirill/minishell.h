@@ -11,7 +11,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-
+int g_status;
 typedef struct          s_fd
 {
     int                 std_input;
@@ -68,6 +68,7 @@ void                    redirect2(char *line, int *i, t_all **all);
 void                    redirect3(char *line, int *i, t_all **all);
 void                    redirect4(char *line, int *i, t_all **all);
 void					free_all(t_all **all);
+int                     is_equal(char *path, char *env);
 
 // new below:
 int                     my_echo(char **argv);
