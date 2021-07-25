@@ -18,11 +18,10 @@ SRC = main.c parser.c ft_list.c utils.c add_redirect.c \
 			srcs/my_cd.c \
 			srcs/my_pwd.c \
 			srcs/my_export.c \
-			srcs/my_fork.c \
 			srcs/my_unset.c \
 			srcs/utils.c \
 			srcs/my_env.c \
-			srcs/another_exit.c
+			srcs/my_exit.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 

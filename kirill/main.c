@@ -74,11 +74,19 @@ char **copy_env(char **env)
 
 void         check_fd()
 {
-    int     fd;
+    int     fd[9];
+    int 	i;
 
-    fd = dup(0);
-    printf("leaked fd - %d\n", fd);
-    close(fd);
+    i = 0;
+    while (fd[i] != 0)
+	{
+    	fd[i] = dup(i);
+		printf("leaked fd - %d\n", fd[i]);
+//		close(fd[i]);
+    	i++;
+	}
+//    printf("leaked fd - %d\n", fd);
+//    close(fd);
 }
 
 
@@ -136,45 +144,3 @@ int main(int argc, char const *argv[], char *env[])
 
 
 
-/*#include <termios.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-#include <term.h>
-
-int putint(int c)
-{
-    c = (unsigned char)c;
-    return (write(1, &c, 1));
-}
-
-int main(int argc, char const *argv[])
-{
-    char str[2000];
-    char *term_name = "xterm-256color";
-    int l;
-    struct termios term;
-    tcgetattr(0, &term);
-    term.c_lflag &= ~(ECHO);
-    term.c_lflag &= ~(ICANON);
-    tgetent(0, term_name);
-    char *ks = tgetstr("ks", NULL);
-    tputs(ks, 1, &putint);
-    char *ke = tgetstr("ke", NULL);
-    tputs(ke, 1, &putint);
-    char *up = tgetstr("ku", 0);
-    char *down = tgetstr("kd", 0);
-    tcsetattr(0, TCSANOW, &term);
-    do{
-        l = read(0, str, 100);
-        if (!strcmp(up, str))
-            printf("previous\n");
-        else if (!strcmp(down, str))
-            printf("next\n");
-        else
-            write(1, str, l);
-    }  while (strcmp(str, "\n"));
-    write(1, "\n", 1);
-
-    return (0);
-}*/

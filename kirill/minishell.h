@@ -12,6 +12,9 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 int g_status;
+
+#define BACKUP_FD ".backup_file"
+
 typedef struct          s_fd
 {
     int                 std_input;
@@ -46,8 +49,6 @@ typedef struct			s_all
 	t_fd                fd;
 }						t_all;
 
-
-
 int						main();
 char					*ft_realloc(char *ptr, size_t size);
 char					*str_add_to_end(char *str, char c);
@@ -71,13 +72,10 @@ void					free_all(t_all **all);
 int                     is_equal(char *path, char *env);
 
 // new below:
-int                     my_echo(char **argv);
-int			            my_cd(char **argument, char ***envp_cp);
-void				    handle_error(char *message, t_all *all);
+int             		my_echo(char **argv);
+int						my_cd(char **argument, char ***envp_cp);
 int                     my_pwd();
 int			            my_export(char **argv, char ***envp_cp);
-void		            read_envp(t_all *all, char const *envp[]);
-void                    my_fork(t_all *all);
 void                    print_arr_2x(char **array);
 char				    *get_value(char **envp_cp, char *key);
 char			        *check_arg(char **envp_cp, char **key);
@@ -90,9 +88,12 @@ int                     fail(char *str, int res);
 int                     count_arguments(char **argv);
 int                     my_unset(char ***envp_cp, char **argument);
 int 				    my_env(char **envp_cp, char **argv);
-void                    another_exit(char **argv, int *exit_code);
+void                    my_exit(char **argv, int *exit_code);
 char		            **copy_arrays_2x(char **src_arr);
 void                    clear_arr_2x(char **a);
+char					**check_key(char **envs, char *key);
+int						set_value_arr_2x(char *str, char ***arr);
+void					lineaddback(char ***src,char *addback);
 
 
 
