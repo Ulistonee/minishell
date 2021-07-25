@@ -18,6 +18,7 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd)
 {
 	t_redirect		*tmp;
 	int				file;
+	int 			exit_code;
 
 	tmp = dir;
 	if (!(tmp))
@@ -54,6 +55,17 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd)
 		}
 		dup2(file, std_fd->std_input);
 		close(file);
+	}
+	else if (tmp->redirect == 4)
+	{
+		if ((exit_code = exec_heredoc(tmp->argv)) != EXIT_SUCCESS)
+		{
+			return (exit_code);
+		}
+		file = open(TMP_FILE, O_RDONLY, 0666);
+		dup2(file, std_fd->std_input);
+		close(file);
+		unlink(TMP_FILE);
 	}
 	return (0);
 }
