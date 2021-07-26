@@ -105,6 +105,7 @@ int						is_builtin(t_cmd *tmp);
 char 					*parse_dollar(char *line, t_all **all);
 int						count_arguments(char **argv);
 char					*get_absolute_path(char **envp_cp, char *relative_path);
+int						add_to_envp(char ***envp_cp, char *argument);
 
 
 

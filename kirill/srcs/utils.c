@@ -1,5 +1,37 @@
 #include "../minishell.h"
 
+void			add_quotes(char ***envp_cp)
+{
+	int			i;
+	int			j;
+	int			k;
+	char		*equal;
+	char		*res;
+
+	i = 0;
+	while ((*envp_cp)[i] != NULL)
+	{
+		equal = ft_strchr((*envp_cp)[i], '=');
+		res = (char *)ft_calloc(ft_strlen((*envp_cp)[i]) + 3, sizeof(char));
+		j = 0;
+		k = 0;
+		while ((*envp_cp)[i][j] != 0)
+		{
+			if (&((*envp_cp)[i][j]) == equal + 1)
+			{
+				k++;
+			}
+			res[k] = (*envp_cp)[i][j];
+			j++;
+			k++;
+		}
+		res[(equal - (*envp_cp)[i]) + 1] = '"';
+		res[ft_strlen((*envp_cp)[i]) + 1] = '"';
+		(*envp_cp)[i] = res;
+		i++;
+	}
+}
+
 //нужно фришить abs_path
 char	*get_absolute_path(char **envp_cp, char *relative_path)
 {
