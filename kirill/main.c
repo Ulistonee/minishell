@@ -175,17 +175,17 @@ int main(int argc, char const *argv[], char *env[])
     all->my_env = copy_env(env);
     all->exit_code = 0;
     //parse_line("cat > 1 vwqc << 123 >", &all);
-   // output_all(all);
-   // free_all(&all);
+//    output_all(all);
+//    free_all(&all);
     while (1) // исправить функцию на свою
     {
-        line = readline("bash-3.2$ ");
+        line = readline("minishell: ");
         if (!line) {
             ctrl_D();
         }
         add_history(line);
         parse_line(line, &all);
-//        output_all(all);
+        output_all(all);
         executor(&all);
         free(line);
         free_all(&all);

@@ -34,4 +34,5 @@ char *parse_dollar(char *line, t_all **all)
 			i++;
 		}
 	}
+	return (new);
 }

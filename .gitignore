@@ -4,3 +4,10 @@ a.out
 *.o
 kirill/srcs/minishell
 kirill/minishell
+/cmake-build-debug/
+/kirill/cmake-build-debug/
+.DS_Store
+*/.DS_Store
+*/.idea
+.idea
+/cmake-build-debug/

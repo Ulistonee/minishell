@@ -27,13 +27,17 @@ void output_all(t_all *all)
             printf("redirect = %d\n", tmp_red->redirect);
             printf("argv = %s\n", tmp_red->argv);
             tmp_red = tmp_red->next;
-        }
-        i = -1;
+		}
+		printf("argv[%d] = %s\n", i, tmp->argv[i]);
+		i = -1;
         printf("\n\n");
         //printf("redirect: \n\n<< - %d < - %d > - %d >> - %d\n\n",
         //tmp->dir.d_back, tmp->dir.back, tmp->dir.next, tmp->dir.d_next);
         tmp = tmp->next;
-        tmp_red = tmp->dir;
+        if (tmp != NULL)
+		{
+			tmp_red = tmp->dir;
+		}
         printf("------------------------------\n\n");
     }
 

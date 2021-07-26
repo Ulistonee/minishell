@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="minishell" targetName="libft" />
+      <config projectName="minishell" targetName="minishell" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93fe870d-6861-4020-aa5d-8ea9108e0a73" name="Default Changelist" comment="pulled master">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/add_redirect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/add_redirect.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/ft_list.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/ft_list.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/another_exit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_fork.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_unset.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_unset.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libft/liblibft.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libft/liblibft.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/minishell.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/minishell.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dollar_aizhan.c" beforeDir="false" afterPath="$PROJECT_DIR$/dollar_aizhan.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_calloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_isalnum.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_isalpha.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_isascii.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_isdigit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_isprint.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstadd_back.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstadd_front.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstclear.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstdelone.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstiter.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstlast.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstmap.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstnew.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstsize.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memccpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memcmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memmove.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strjoin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strlcat.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strlcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strmapi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strncmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strnstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strrchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_strtrim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_substr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_tolower.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_toupper.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minishell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/minishell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/executor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/my_echo.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/my_echo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/my_heredoc.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/my_heredoc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/utils.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1vfhzqfuV0spwsjR4ssuCzKlpI0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
+      <envs>
+        <env name="SHLVL" value="-1" />
+      </envs>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93fe870d-6861-4020-aa5d-8ea9108e0a73" name="Default Changelist" comment="" />
+      <created>1626959315307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626959315307</updated>
+      <workItem from="1626959316768" duration="2369000" />
+      <workItem from="1626970963132" duration="4944000" />
+      <workItem from="1626983387112" duration="4421000" />
+      <workItem from="1627310976583" duration="26000" />
+      <workItem from="1627311045664" duration="4104000" />
+    </task>
+    <task id="LOCAL-00001" summary="pulled master">
+      <created>1627308538455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627308538455</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="raw_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pulled master" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulled master" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.c</url>
+          <line>181</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/utils.c</url>
+          <line>18</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="argv[1]" language="ObjectiveC" />
+        <watch expression="argv[0]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

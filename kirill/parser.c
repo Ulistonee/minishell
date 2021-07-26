@@ -9,7 +9,7 @@ static void count_argv2(char *line, int *i, int *k, int *c)
         if (line[*i] == '\"')
                 (*i)++;
     }
-    while (ft_isalnum(line[*i]) || line[*i] == '_')
+    while (ft_isalnum(line[*i]) || line[*i] == '_' || line[*i])
     {
         (*i)++;
         if (line[*i] == '\'')
@@ -154,8 +154,9 @@ void parse_line3(char *line, int *i, int *m, t_all **all)
 void parse_line4_1(char *line, int *i, int *m, t_all **all)
 {
     if (line[*i] == '$')
-    {
-                    while (ft_isalnum(line[*i]) || line[*i] == '_')
+	{
+		(*i)++;
+                    while (ft_isalnum(line[*i]) || line[*i] == '_' || line[*i] == '?')
                     {
                         (*all)->dollar = ft_realloc((*all)->dollar, ft_strlen2((*all)->dollar) + 2);
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]);
@@ -180,7 +181,7 @@ void parse_line4_1(char *line, int *i, int *m, t_all **all)
 }
 void parse_line4(char *line, int *i, int *m, t_all **all)
 {
-           while (ft_isalnum(line[*i]) || line[*i] == '_')
+           while (ft_isalnum(line[*i]) || line[*i] == '_' || line[*i] == '$')
         {
             (*all)->f = 0;
             if (line[*i] == '\'')
