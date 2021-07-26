@@ -22,28 +22,29 @@ void	recover_fd(int backup_fd[2], t_fd *fd)
 	close(backup_fd[1]);
 }
 
-//void	init_child(t_fd *fd, int *exit_code, t_cmd *tmp, char ***envp, int fd_pipe[2])
-//{
-//	tmp_fd(fd->std_input, *exit_code);
-//	if (tmp->next != NULL)                 // ?
-//		dup2(fd_pipe[1], (fd->std_output);
-//	close(fd_pipe[1]);
-//	close(fd_pipe[0]);
-//	if (is_builtin(tmp) == 1) {
-//		builtins(tmp, envp, exit_code);
-//	}
-//	else
-//	{
-//		if (execve(tmp->way, tmp->argv, *envp) == -1)
-//		{
-//			write(0, "bash: ", 6);
-//			perror(tmp->way);
-//			exit(EXIT_FAILURE);
-//		}
-//	}
-//}
+void	init_child(t_fd *fd, int exit_code, t_cmd *tmp, char **envp, int fd_pipe[2])
+{
+	tmp_fd(fd->std_input, exit_code);
+	if (tmp->next != NULL)                 // ?
+		dup2(fd_pipe[1], fd->std_output);
+	close(fd_pipe[1]);
+	close(fd_pipe[0]);
+	if (is_builtin(tmp) == 1) {
+		builtins(tmp, &envp, &exit_code);
+		exit(exit_code);
+	}
+	else
+	{
+		if (execve(tmp->way, tmp->argv, envp) == -1)
+		{
+			write(0, "bash: ", 6);
+			perror(tmp->way);
+			exit(127);
+		}
+	}
+}
 
-int	scan_redirects(t_redirect *dir, t_fd *std_fd)
+int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 {
 	t_redirect		*tmp;
 	int				file;
@@ -89,7 +90,7 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd)
 		}
 		else if (tmp->redirect == 4)
 		{
-			if ((exit_code = exec_heredoc(tmp->argv)) != EXIT_SUCCESS)
+			if ((exit_code = exec_heredoc(tmp->argv, all)) != EXIT_SUCCESS)
 			{
 				return (exit_code);
 			}
@@ -176,7 +177,6 @@ void				execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exi
 void	executor(t_all **all)
 {
 	pid_t			pid;
-	pid_t			wpid;
 	int				status;
 	t_cmd			*tmp;
 	int				fd[2];
@@ -188,7 +188,7 @@ void	executor(t_all **all)
 	tmp = (*all)->cmd;
 	if (tmp->next == NULL)
 	{
-		(*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd));
+		(*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd), (*all));
 		if ((*all)->cmd->argv[0] == NULL || (*all)->exit_code == 1)
 		{
 			recover_fd(backup_fd, &(*all)->fd);
@@ -205,7 +205,7 @@ void	executor(t_all **all)
 	{
 		while (tmp)
 		{
-			(*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd);
+			(*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd, (*all));
 			{
 				pipe(fd);
 				pid = fork();
@@ -216,31 +216,34 @@ void	executor(t_all **all)
 				}
 				else if (pid == 0)
 				{
-					tmp_fd((*all)->fd.std_input, (*all)->exit_code);
-					if (tmp->next != NULL)                 // ?
-						dup2(fd[1], (*all)->fd.std_output);
-					close(fd[1]);
-					close(fd[0]);
-					if (is_builtin(tmp) == 1) {
-						builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
-					}
-					else
-					{
-						if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
-						{
-							write(0, "bash: ", 6);
-							perror(tmp->way);
-							exit(EXIT_FAILURE);
-						}
-					}
+					init_child(&(*all)->fd, (*all)->exit_code, tmp, (*all)->my_env, fd);
+//					tmp_fd((*all)->fd.std_input, (*all)->exit_code);
+//					if (tmp->next != NULL)                 // ?
+//						dup2(fd[1], (*all)->fd.std_output);
+//					close(fd[1]);
+//					close(fd[0]);
+//					if (is_builtin(tmp) == 1)
+//					{
+//						builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
+//						exit((*all)->exit_code);
+//					}
+//					else
+//					{
+//						if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
+//						{
+//							write(0, "bash: ", 6);
+//							perror(tmp->way);
+//							exit(127);
+//						}
+//					}
 				}
 				else
 				{
 					close(fd[ 1]);
 					dup2(fd[0], (*all)->fd.std_input);
-					wpid = waitpid(pid, &status, WUNTRACED);
-	//                    if (WIFEXITED(status))
-	//                        *exit_code = WEXITSTATUS(status);
+					pid = waitpid(pid, &status, 0);
+					if (WIFEXITED(status))
+						(*all)->exit_code = WEXITSTATUS(status);
 					close(fd[0]);
 					if (tmp->next == NULL)
 						recover_fd(backup_fd, &(*all)->fd); // a где std_output? их здесь нужно закрывать? a где std_output?

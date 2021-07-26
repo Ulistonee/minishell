@@ -99,9 +99,10 @@ void					lineaddback(char ***src,char *addback);
 int						check_var_validity(char *argument);
 int						add_to_envp(char ***envp_cp, char *argument);
 int						replace_var(char *key, char **envp_cp, char *argument);
-int 					my_heredoc(char *delimiter);
-int						exec_heredoc(char *delimeter);
+int						my_heredoc(char *delimiter, t_all *all);
+int						exec_heredoc(char *delimeter, t_all *all);
 int						is_builtin(t_cmd *tmp);
+char 					*parse_dollar(char *line, t_all **all);
 
 
 

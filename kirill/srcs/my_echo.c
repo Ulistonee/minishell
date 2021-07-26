@@ -27,7 +27,7 @@ int				my_echo(char **argv)
 	i = 1;
 	if ((flag = is_flag(argv[1]) == 1))
 		argv++;
-	while(argv[i])
+	while(argv[i] != NULL)
 	{
 		printf("%s", argv[i]);
 		if (argv[i + 1])

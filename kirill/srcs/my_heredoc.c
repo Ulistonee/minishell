@@ -1,6 +1,6 @@
 #include "../minishell.h"
 
-int	exec_heredoc(char *delimeter)
+int	exec_heredoc(char *delimeter, t_all *all)
 {
 	pid_t	pid;
 	int 	status;
@@ -14,7 +14,7 @@ int	exec_heredoc(char *delimeter)
 	}
 	else if (pid == 0)
 	{
-		my_heredoc(delimeter);
+		my_heredoc(delimeter, all);
 	}
 	else
 	{
@@ -30,7 +30,7 @@ int	exec_heredoc(char *delimeter)
 	return (EXIT_SUCCESS);
 }
 
-int	my_heredoc(char *delimiter)
+int	my_heredoc(char *delimiter, t_all *all)
 {
 	char	*line;
 	int 	fd;
@@ -46,7 +46,7 @@ int	my_heredoc(char *delimiter)
 			break;
 		}
 		if (line)
-			; // нужна функция которая ытаскивает доллар interpret_dollar(&line, ...)
+			line = parse_dollar(line, &all); // нужна функция которая ытаскивает доллар interpret_dollar(&line, ...)
 		ft_putstr_fd(line, fd);
 		ft_putstr_fd("\n", fd);
 		free(line);
