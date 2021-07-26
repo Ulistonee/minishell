@@ -1,6 +1,6 @@
 #include "../minishell.h"
 
-int 				my_env(char **envp_cp, char **argv)
+int	my_env(char **envp_cp, char **argv)
 {
 	int				count;
 
