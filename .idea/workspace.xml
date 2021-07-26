@@ -13,23 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b37345-9365-41c0-8c13-c888891ac042" name="Default Changelist" comment="pulled">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/libft.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/libft.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_cd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_echo.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_echo.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +91,7 @@
       <workItem from="1626020543891" duration="2000" />
       <workItem from="1627306174714" duration="306000" />
       <workItem from="1627322511461" duration="2858000" />
-      <workItem from="1627325568686" duration="262000" />
+      <workItem from="1627325568686" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="merged raw_1 and master">
       <created>1627241270402</created>
