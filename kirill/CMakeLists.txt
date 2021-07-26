@@ -30,5 +30,6 @@ add_executable(minishell
 		srcs/my_pwd.c
 		srcs/my_unset.c
 		srcs/utils.c
+		srcs/my_heredoc.c
         )
 target_link_libraries(minishell readline termcap libft)
