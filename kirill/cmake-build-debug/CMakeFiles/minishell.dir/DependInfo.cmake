@@ -25,7 +25,7 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/Users/cvirgin/.brew/opt/readline/lib"
+  "/Users/rchalmer/.brew/opt/readline/lib"
   )
 
 # Targets to which this target links.

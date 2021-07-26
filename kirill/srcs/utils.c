@@ -1,5 +1,37 @@
 #include "../minishell.h"
 
+//нужно фришить abs_path
+char	*get_absolute_path(char **envp_cp, char *relative_path)
+{
+	char		*home;
+	char		*abs_path;
+
+	abs_path = NULL;
+	home = get_value(envp_cp, "HOME");
+	abs_path = ft_strjoin(home, relative_path + 1);
+	return (abs_path);
+}
+
+int	count_arguments(char **argv)
+{
+	int			res;
+
+	res = 0;
+	while (*argv++)
+		res++;
+	return (res);
+}
+
+char			*get_pwd(char **envp_cp)
+{
+	char 		*old_pwd;
+
+	if (!(old_pwd = (char *) malloc(sizeof (char ) * 500)))
+		return (NULL);
+	old_pwd = getcwd(old_pwd, 500);
+	return (old_pwd);
+}
+
 int			set_value_arr_2x_dup(char *str, char ***arr)
 {
 	char **old_line;

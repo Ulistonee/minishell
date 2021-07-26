@@ -5,12 +5,16 @@ set(CMAKE_C_STANDARD 99)
 
 #add_library(readline)
 
-include_directories(/Users/cvirgin/.brew/opt/readline/lib/)
+#include_directories(/Users/cvirgin/.brew/opt/readline/lib/)
+include_directories(/Users/rchalmer/.brew/opt/readline/lib/)
 
-link_directories(/Users/cvirgin/.brew/opt/readline/lib/)
+#link_directories(/Users/cvirgin/.brew/opt/readline/lib/)
+link_directories(/Users/rchalmer/.brew/opt/readline/lib/)
 
-find_library(NAMES libreadline PATHS /Users/cvirgin/.brew/opt/readline/lib/ /Users/cvirgin/.brew/opt/readline/lib/)
-set(INCLUDE_DIR /Users/cvirgin/.brew/opt/readline/lib/)
+#find_library(NAMES libreadline PATHS /Users/cvirgin/.brew/opt/readline/lib/ /Users/cvirgin/.brew/opt/readline/lib/)
+find_library(NAMES libreadline PATHS /Users/rchalmer/.brew/opt/readline/lib/ /Users/rchalmer/.brew/opt/readline/lib/)
+#set(INCLUDE_DIR /Users/cvirgin/.brew/opt/readline/lib/)
+set(INCLUDE_DIR /Users/rchalmer/.brew/opt/readline/lib/)
 
 add_subdirectory(libft)
 

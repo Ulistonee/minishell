@@ -117,7 +117,7 @@ static void	signal_handler(int sig_num)
 void ctrl_D()
 {
     printf("\033[A");
-    printf("bash-3.2$ exit\n");
+    printf("minishell exit\n");
     exit(0);
 }
 
@@ -185,7 +185,7 @@ int main(int argc, char const *argv[], char *env[])
         }
         add_history(line);
         parse_line(line, &all);
-        output_all(all);
+//        output_all(all);
         executor(&all);
         free(line);
         free_all(&all);

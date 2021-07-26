@@ -12,10 +12,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="deleted cmake and fixed cmake list">
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" afterDir="false" />
+    <list default="true" id="43b37345-9365-41c0-8c13-c888891ac042" name="Default Changelist" comment="pulled">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/libft.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/libft.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_cd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +63,10 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -56,6 +74,11 @@
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
@@ -68,11 +91,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.minishell" />
       <item itemvalue="CMake Application.libft" />
@@ -81,13 +99,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="" />
+      <changelist id="43b37345-9365-41c0-8c13-c888891ac042" name="Default Changelist" comment="pulled" />
       <created>1626020541476</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626020541476</updated>
       <workItem from="1626020543891" duration="2000" />
       <workItem from="1627306174714" duration="306000" />
+      <workItem from="1627322511461" duration="2858000" />
+      <workItem from="1627325568686" duration="262000" />
     </task>
     <task id="LOCAL-00001" summary="merged raw_1 and master">
       <created>1627241270402</created>
@@ -103,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627317312519</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pulled">
+      <created>1627322018189</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627322018189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +164,8 @@
     <MESSAGE value="merged raw_1 and master" />
     <MESSAGE value="merged raw_1 and master again" />
     <MESSAGE value="deleted cmake and fixed cmake list" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted cmake and fixed cmake list" />
+    <MESSAGE value="pulled" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulled" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
