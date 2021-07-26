@@ -20,15 +20,14 @@ void output_all(t_all *all)
         {
             printf("argv[%d] = %s\n", i, tmp->argv[i]);
         }
-        printf("way - %s\n", tmp->way);
         printf("argv[%d] = %s\n", i, tmp->argv[i]);
+        printf("way - %s\n", tmp->way);
         while(tmp_red)
         {
             printf("redirect = %d\n", tmp_red->redirect);
             printf("argv = %s\n", tmp_red->argv);
             tmp_red = tmp_red->next;
 		}
-		printf("argv[%d] = %s\n", i, tmp->argv[i]);
 		i = -1;
         printf("\n\n");
         //printf("redirect: \n\n<< - %d < - %d > - %d >> - %d\n\n",
