@@ -12,68 +12,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="merged raw_1 and master again">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_fork.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_unset.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/minishell" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_atoi.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_bzero.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_calloc.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_free_mem.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_isalnum.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_isalpha.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_isascii.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_isdigit.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_isprint.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_itoa.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_itoa_base.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_itoa_u.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_itoa_uhex.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_lstnew.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memccpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memcmp.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memcpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memmove.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_memset.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_split.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strdup.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strjoin.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strlcat.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strlcpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strlen.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strmapi.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strncmp.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strnstr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strrchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_strtrim.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_substr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_tolower.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/CMakeFiles/libft.dir/ft_toupper.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/srcs/libft/liblibft.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Makefile" afterDir="false" />
+    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="deleted cmake and fixed cmake list">
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627241270403</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deleted cmake and fixed cmake list">
+      <created>1627317312519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627317312519</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +118,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="raw_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -175,7 +140,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merged raw_1 and master" />
     <MESSAGE value="merged raw_1 and master again" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged raw_1 and master again" />
+    <MESSAGE value="deleted cmake and fixed cmake list" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted cmake and fixed cmake list" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -184,6 +150,7 @@
         <watch expression="arvv[0]" language="ObjectiveC" />
         <watch expression="argv[0]" language="ObjectiveC" />
         <watch expression="(*all)-&gt;cmd-&gt;argv[1]" language="ObjectiveC" />
+        <watch expression="(*all)-&gt;cmd-&gt;argv[0]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
