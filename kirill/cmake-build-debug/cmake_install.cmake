@@ -1,4 +1,4 @@
-# Install script for directory: /Users/rchalmer/c/minishell/kirill
+# Install script for directory: /Users/cvirgin/Desktop/minishell/kirill
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/rchalmer/c/minishell/kirill/cmake-build-debug/libft/cmake_install.cmake")
+  include("/Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug/libft/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

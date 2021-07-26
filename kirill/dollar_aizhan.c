@@ -14,6 +14,7 @@ char *parse_dollar(char *line, t_all **all)
 	while(line[++i])
 	{
 		if (line[i] == '$') {
+		    i++;
 			while (ft_isalnum(line[i]) || line[i] == '_') {
 				dollar = ft_realloc(dollar, ft_strlen2(dollar) + 2);
 				dollar = str_add_to_end(dollar, line[i]);
@@ -31,8 +32,8 @@ char *parse_dollar(char *line, t_all **all)
 		} else {
 			new = ft_realloc(new, ft_strlen2(new) + 2);
 			new = str_add_to_end(new, line[i]);
-			i++;
 		}
 	}
+	free(line);
 	return (new);
 }

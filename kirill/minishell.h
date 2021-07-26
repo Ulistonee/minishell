@@ -72,6 +72,9 @@ void                    redirect3(char *line, int *i, t_all **all);
 void                    redirect4(char *line, int *i, t_all **all);
 void					free_all(t_all **all);
 int                     is_equal(char *path, char *env);
+int is_minishell(char *line);
+int	ft_strcmp(char *s1, char *s2);
+ void	signal_handler(int sig_num);
 
 // new below:
 int             		my_echo(char **argv);

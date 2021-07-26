@@ -97,7 +97,7 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 			file = open(TMP_FILE, O_RDONLY, 0666);
 			dup2(file, std_fd->std_input);
 			close(file);
-			unlink(TMP_FILE);
+//			unlink(TMP_FILE);
 		}
 		tmp = tmp->next;
 	}
@@ -166,8 +166,10 @@ void				execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exi
 	}
 	else
 	{
-
+	    if(is_minishell(argv[0]))
+	        signal(SIGINT, SIG_IGN);
 		wpid = waitpid(pid, &status, 0);
+        signal(SIGINT, signal_handler);
 		if (WIFEXITED(status)) {
 			*exit_code = WEXITSTATUS(status);
 		}
@@ -241,7 +243,9 @@ void	executor(t_all **all)
 				{
 					close(fd[ 1]);
 					dup2(fd[0], (*all)->fd.std_input);
+                    //signal(SIGINT, SIG_IGN);
 					pid = waitpid(pid, &status, 0);
+                    //signal(SIGINT, signal_hander);
 					if (WIFEXITED(status))
 						(*all)->exit_code = WEXITSTATUS(status);
 					close(fd[0]);

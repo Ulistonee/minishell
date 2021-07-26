@@ -51,9 +51,8 @@ int is_equal(char *path, char *env)
     {
         if (env[i] == '=')
         {
-            if (!ft_strncmp(env, path, i - 1))
+            if (!(ft_strncmp(env, path, i)))
                 return (1);
-            break;
         }
         i++;
     }
@@ -74,8 +73,10 @@ char *try_find(char *path, char **env, t_all **all)
         return (ft_strdup("$"));
     while(env[++n] && !(is_equal(path, env[n])))
         ;
+    printf("check3: %s\n", env[n]);
     if (env[n] != NULL)
     {
+        printf("check2\n");
         while(env[n][++i] != '=')
             ;
         if (ft_strlen(path) == i)
@@ -85,6 +86,7 @@ char *try_find(char *path, char **env, t_all **all)
     }
     else
     {
+        printf("check1\n");
         if (!ft_strncmp(path, "?", ft_strlen(path)))
             str = ft_itoa((*all)->exit_code);
         else
@@ -263,4 +265,23 @@ void free_all(t_all **all)
         (*all)->cmd = c;
     }
     //free(*all);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+    int i;
+
+    i = 0;
+    while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+        i++;
+    return (s1[i] - s2[i]);
+}
+
+int is_minishell(char *line)
+{
+    if (line == NULL || *line == '\0')
+        return (0);
+    if (!ft_strcmp(line, "./minishell"))
+        return (1);
+    return (0);
 }

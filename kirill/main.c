@@ -87,7 +87,7 @@ int move_probels(char *line, int i)
     return (i);
 }
 
-static void	signal_handler(int sig_num)
+ void	signal_handler(int sig_num)
 {
     int		stat_loc;
 
@@ -114,10 +114,10 @@ static void	signal_handler(int sig_num)
     }
 }
 
-void ctrl_D()
+void ctrl_d()
 {
     printf("\033[A");
-    printf("bash-3.2$ exit\n");
+    printf("minishell: exit\n");
     exit(0);
 }
 
@@ -170,7 +170,7 @@ int main(int argc, char const *argv[], char *env[])
     term.c_lflag &= ~(ECHOCTL);
     tcsetattr(0, TCSANOW, &term);
     signal(SIGINT, signal_handler);
-    signal(SIGQUIT, signal_handler);
+    signal(SIGQUIT, SIG_IGN);
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     all->exit_code = 0;
@@ -181,16 +181,17 @@ int main(int argc, char const *argv[], char *env[])
     {
         line = readline("minishell: ");
         if (!line) {
-            ctrl_D();
+            ctrl_d();
         }
         add_history(line);
+        signal(SIGQUIT, signal_handler);
         parse_line(line, &all);
         output_all(all);
         executor(&all);
         free(line);
         free_all(&all);
+        signal(SIGQUIT, SIG_IGN);
     }
-
     return (0);
 }
 

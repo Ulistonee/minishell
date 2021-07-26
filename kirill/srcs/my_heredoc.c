@@ -36,8 +36,8 @@ int	my_heredoc(char *delimiter, t_all *all)
 	int 	fd;
 
 	fd = open(TMP_FILE, O_CREAT | O_RDWR | O_TRUNC, 0666);
-//	signal(SIGINT, SIG_DFL);
-//	signal(SIGQUIT, SIG_IGN);
+	signal(SIGINT, SIG_DFL);
+	signal(SIGQUIT, SIG_IGN);
 	while (1)
 	{
 		line = readline("> ");
@@ -53,7 +53,8 @@ int	my_heredoc(char *delimiter, t_all *all)
 	}
 	if (line == NULL)
 	{
-		printf("minishell: warning: here-document is delimited by EOF\n");
+        printf("\033[A");
+		printf("> minishell: warning: here-document is delimited by EOF\n");
 		exit(0);
 	}
 	free(line);
