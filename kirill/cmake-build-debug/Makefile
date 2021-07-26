@@ -263,33 +263,6 @@ parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parser.c.s
 .PHONY : parser.c.s
 
-srcs/another_exit.o: srcs/another_exit.c.o
-
-.PHONY : srcs/another_exit.o
-
-# target to build an object file
-srcs/another_exit.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/another_exit.c.o
-.PHONY : srcs/another_exit.c.o
-
-srcs/another_exit.i: srcs/another_exit.c.i
-
-.PHONY : srcs/another_exit.i
-
-# target to preprocess a source file
-srcs/another_exit.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/another_exit.c.i
-.PHONY : srcs/another_exit.c.i
-
-srcs/another_exit.s: srcs/another_exit.c.s
-
-.PHONY : srcs/another_exit.s
-
-# target to generate assembly for a file
-srcs/another_exit.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/another_exit.c.s
-.PHONY : srcs/another_exit.c.s
-
 srcs/executor.o: srcs/executor.c.o
 
 .PHONY : srcs/executor.o
@@ -398,6 +371,33 @@ srcs/my_env.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_env.c.s
 .PHONY : srcs/my_env.c.s
 
+srcs/my_exit.o: srcs/my_exit.c.o
+
+.PHONY : srcs/my_exit.o
+
+# target to build an object file
+srcs/my_exit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_exit.c.o
+.PHONY : srcs/my_exit.c.o
+
+srcs/my_exit.i: srcs/my_exit.c.i
+
+.PHONY : srcs/my_exit.i
+
+# target to preprocess a source file
+srcs/my_exit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_exit.c.i
+.PHONY : srcs/my_exit.c.i
+
+srcs/my_exit.s: srcs/my_exit.c.s
+
+.PHONY : srcs/my_exit.s
+
+# target to generate assembly for a file
+srcs/my_exit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_exit.c.s
+.PHONY : srcs/my_exit.c.s
+
 srcs/my_export.o: srcs/my_export.c.o
 
 .PHONY : srcs/my_export.o
@@ -425,32 +425,32 @@ srcs/my_export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_export.c.s
 .PHONY : srcs/my_export.c.s
 
-srcs/my_fork.o: srcs/my_fork.c.o
+srcs/my_heredoc.o: srcs/my_heredoc.c.o
 
-.PHONY : srcs/my_fork.o
+.PHONY : srcs/my_heredoc.o
 
 # target to build an object file
-srcs/my_fork.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.o
-.PHONY : srcs/my_fork.c.o
+srcs/my_heredoc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_heredoc.c.o
+.PHONY : srcs/my_heredoc.c.o
 
-srcs/my_fork.i: srcs/my_fork.c.i
+srcs/my_heredoc.i: srcs/my_heredoc.c.i
 
-.PHONY : srcs/my_fork.i
+.PHONY : srcs/my_heredoc.i
 
 # target to preprocess a source file
-srcs/my_fork.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.i
-.PHONY : srcs/my_fork.c.i
+srcs/my_heredoc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_heredoc.c.i
+.PHONY : srcs/my_heredoc.c.i
 
-srcs/my_fork.s: srcs/my_fork.c.s
+srcs/my_heredoc.s: srcs/my_heredoc.c.s
 
-.PHONY : srcs/my_fork.s
+.PHONY : srcs/my_heredoc.s
 
 # target to generate assembly for a file
-srcs/my_fork.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_fork.c.s
-.PHONY : srcs/my_fork.c.s
+srcs/my_heredoc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/my_heredoc.c.s
+.PHONY : srcs/my_heredoc.c.s
 
 srcs/my_pwd.o: srcs/my_pwd.c.o
 
@@ -582,9 +582,6 @@ help:
 	@echo "... parser.o"
 	@echo "... parser.i"
 	@echo "... parser.s"
-	@echo "... srcs/another_exit.o"
-	@echo "... srcs/another_exit.i"
-	@echo "... srcs/another_exit.s"
 	@echo "... srcs/executor.o"
 	@echo "... srcs/executor.i"
 	@echo "... srcs/executor.s"
@@ -597,12 +594,15 @@ help:
 	@echo "... srcs/my_env.o"
 	@echo "... srcs/my_env.i"
 	@echo "... srcs/my_env.s"
+	@echo "... srcs/my_exit.o"
+	@echo "... srcs/my_exit.i"
+	@echo "... srcs/my_exit.s"
 	@echo "... srcs/my_export.o"
 	@echo "... srcs/my_export.i"
 	@echo "... srcs/my_export.s"
-	@echo "... srcs/my_fork.o"
-	@echo "... srcs/my_fork.i"
-	@echo "... srcs/my_fork.s"
+	@echo "... srcs/my_heredoc.o"
+	@echo "... srcs/my_heredoc.i"
+	@echo "... srcs/my_heredoc.s"
 	@echo "... srcs/my_pwd.o"
 	@echo "... srcs/my_pwd.i"
 	@echo "... srcs/my_pwd.s"

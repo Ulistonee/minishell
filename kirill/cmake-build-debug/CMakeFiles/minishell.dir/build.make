@@ -154,18 +154,18 @@ CMakeFiles/minishell.dir/srcs/my_env.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_env.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/my_env.c -o CMakeFiles/minishell.dir/srcs/my_env.c.s
 
-CMakeFiles/minishell.dir/srcs/another_exit.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/srcs/another_exit.c.o: ../srcs/another_exit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/minishell.dir/srcs/another_exit.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/another_exit.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/another_exit.c
+CMakeFiles/minishell.dir/srcs/my_exit.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/my_exit.c.o: ../srcs/my_exit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/minishell.dir/srcs/my_exit.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_exit.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/my_exit.c
 
-CMakeFiles/minishell.dir/srcs/another_exit.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/another_exit.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/another_exit.c > CMakeFiles/minishell.dir/srcs/another_exit.c.i
+CMakeFiles/minishell.dir/srcs/my_exit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/my_exit.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/my_exit.c > CMakeFiles/minishell.dir/srcs/my_exit.c.i
 
-CMakeFiles/minishell.dir/srcs/another_exit.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/another_exit.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/another_exit.c -o CMakeFiles/minishell.dir/srcs/another_exit.c.s
+CMakeFiles/minishell.dir/srcs/my_exit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_exit.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/my_exit.c -o CMakeFiles/minishell.dir/srcs/my_exit.c.s
 
 CMakeFiles/minishell.dir/srcs/executor.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/executor.c.o: ../srcs/executor.c
@@ -219,22 +219,9 @@ CMakeFiles/minishell.dir/srcs/my_export.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_export.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/my_export.c -o CMakeFiles/minishell.dir/srcs/my_export.c.s
 
-CMakeFiles/minishell.dir/srcs/my_fork.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/srcs/my_fork.c.o: ../srcs/my_fork.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/minishell.dir/srcs/my_fork.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_fork.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/my_fork.c
-
-CMakeFiles/minishell.dir/srcs/my_fork.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/my_fork.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/my_fork.c > CMakeFiles/minishell.dir/srcs/my_fork.c.i
-
-CMakeFiles/minishell.dir/srcs/my_fork.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_fork.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/my_fork.c -o CMakeFiles/minishell.dir/srcs/my_fork.c.s
-
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/my_pwd.c.o: ../srcs/my_pwd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_pwd.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/my_pwd.c
 
 CMakeFiles/minishell.dir/srcs/my_pwd.c.i: cmake_force
@@ -247,7 +234,7 @@ CMakeFiles/minishell.dir/srcs/my_pwd.c.s: cmake_force
 
 CMakeFiles/minishell.dir/srcs/my_unset.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/my_unset.c.o: ../srcs/my_unset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/minishell.dir/srcs/my_unset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/minishell.dir/srcs/my_unset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_unset.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/my_unset.c
 
 CMakeFiles/minishell.dir/srcs/my_unset.c.i: cmake_force
@@ -260,7 +247,7 @@ CMakeFiles/minishell.dir/srcs/my_unset.c.s: cmake_force
 
 CMakeFiles/minishell.dir/srcs/utils.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/srcs/utils.c.o: ../srcs/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/minishell.dir/srcs/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/minishell.dir/srcs/utils.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/utils.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/utils.c
 
 CMakeFiles/minishell.dir/srcs/utils.c.i: cmake_force
@@ -271,6 +258,19 @@ CMakeFiles/minishell.dir/srcs/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/utils.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/utils.c -o CMakeFiles/minishell.dir/srcs/utils.c.s
 
+CMakeFiles/minishell.dir/srcs/my_heredoc.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/my_heredoc.c.o: ../srcs/my_heredoc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/minishell.dir/srcs/my_heredoc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/my_heredoc.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/my_heredoc.c
+
+CMakeFiles/minishell.dir/srcs/my_heredoc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/my_heredoc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/my_heredoc.c > CMakeFiles/minishell.dir/srcs/my_heredoc.c.i
+
+CMakeFiles/minishell.dir/srcs/my_heredoc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/my_heredoc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/my_heredoc.c -o CMakeFiles/minishell.dir/srcs/my_heredoc.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/add_redirect.c.o" \
@@ -279,15 +279,15 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/parser.c.o" \
 "CMakeFiles/minishell.dir/utils.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_env.c.o" \
-"CMakeFiles/minishell.dir/srcs/another_exit.c.o" \
+"CMakeFiles/minishell.dir/srcs/my_exit.c.o" \
 "CMakeFiles/minishell.dir/srcs/executor.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_cd.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_echo.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_export.c.o" \
-"CMakeFiles/minishell.dir/srcs/my_fork.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_pwd.c.o" \
 "CMakeFiles/minishell.dir/srcs/my_unset.c.o" \
-"CMakeFiles/minishell.dir/srcs/utils.c.o"
+"CMakeFiles/minishell.dir/srcs/utils.c.o" \
+"CMakeFiles/minishell.dir/srcs/my_heredoc.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -298,15 +298,15 @@ minishell: CMakeFiles/minishell.dir/main.c.o
 minishell: CMakeFiles/minishell.dir/parser.c.o
 minishell: CMakeFiles/minishell.dir/utils.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_env.c.o
-minishell: CMakeFiles/minishell.dir/srcs/another_exit.c.o
+minishell: CMakeFiles/minishell.dir/srcs/my_exit.c.o
 minishell: CMakeFiles/minishell.dir/srcs/executor.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_cd.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_echo.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_export.c.o
-minishell: CMakeFiles/minishell.dir/srcs/my_fork.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_pwd.c.o
 minishell: CMakeFiles/minishell.dir/srcs/my_unset.c.o
 minishell: CMakeFiles/minishell.dir/srcs/utils.c.o
+minishell: CMakeFiles/minishell.dir/srcs/my_heredoc.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: libft/liblibft.a
 minishell: CMakeFiles/minishell.dir/link.txt

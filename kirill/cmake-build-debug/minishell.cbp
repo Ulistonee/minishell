@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/rchalmer/.brew/opt/readline/lib"/>
+					<Add directory="/Users/cvirgin/.brew/opt/readline/lib"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -65,7 +65,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/rchalmer/.brew/opt/readline/lib"/>
+					<Add directory="/Users/cvirgin/.brew/opt/readline/lib"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -86,7 +86,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/rchalmer/.brew/opt/readline/lib"/>
+					<Add directory="/Users/cvirgin/.brew/opt/readline/lib"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -107,7 +107,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/rchalmer/.brew/opt/readline/lib"/>
+					<Add directory="/Users/cvirgin/.brew/opt/readline/lib"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -266,9 +266,6 @@
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/parser.c">
 			<Option target="minishell"/>
 		</Unit>
-		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/another_exit.c">
-			<Option target="minishell"/>
-		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/executor.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -281,10 +278,13 @@
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_env.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_exit.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_export.c">
 			<Option target="minishell"/>
 		</Unit>
-		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_fork.c">
+		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_heredoc.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_pwd.c">

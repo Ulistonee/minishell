@@ -4,3 +4,4 @@ a.out
 *.o
 kirill/srcs/minishell
 kirill/minishell
+/cmake-build-debug/
