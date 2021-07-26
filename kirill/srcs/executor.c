@@ -1,12 +1,12 @@
 #include "../minishell.h"
 
-void	backup_fd(int input_fd, int exit_code)
+void	tmp_fd(int input_fd, int exit_code)
 {
 	int file;
 
 	if (exit_code != EXIT_SUCCESS)
 	{
-		file = open(BACKUP_FD, O_RDWR | O_CREAT | O_TRUNC, 0666);
+		file = open(TMP_FD, O_RDWR | O_CREAT | O_TRUNC, 0666);
 		if (file == -1)
 			return ;
 		dup2(file, input_fd);
@@ -14,46 +14,91 @@ void	backup_fd(int input_fd, int exit_code)
 	}
 }
 
+void	recover_fd(int backup_fd[2], t_fd *fd)
+{
+	dup2(backup_fd[0], fd->std_input);
+	dup2(backup_fd[1], fd->std_output);
+	close(backup_fd[0]); // a где std_output? их здесь нужно закрывать?
+	close(backup_fd[1]);
+}
+
+//void	init_child(t_fd *fd, int *exit_code, t_cmd *tmp, char ***envp, int fd_pipe[2])
+//{
+//	tmp_fd(fd->std_input, *exit_code);
+//	if (tmp->next != NULL)                 // ?
+//		dup2(fd_pipe[1], (fd->std_output);
+//	close(fd_pipe[1]);
+//	close(fd_pipe[0]);
+//	if (is_builtin(tmp) == 1) {
+//		builtins(tmp, envp, exit_code);
+//	}
+//	else
+//	{
+//		if (execve(tmp->way, tmp->argv, *envp) == -1)
+//		{
+//			write(0, "bash: ", 6);
+//			perror(tmp->way);
+//			exit(EXIT_FAILURE);
+//		}
+//	}
+//}
+
 int	scan_redirects(t_redirect *dir, t_fd *std_fd)
 {
 	t_redirect		*tmp;
 	int				file;
+	int 			exit_code;
 
 	tmp = dir;
 	if (!(tmp))
 		return (EXIT_SUCCESS);
-	if (tmp->redirect == 1)
+	while (tmp)
 	{
-		if ((file = open(tmp->argv, O_WRONLY | O_CREAT | O_TRUNC, 0666)) == -1)
+		if (tmp->redirect == 1)
 		{
-			write(0, "bash: ", 6);
-			perror(tmp->argv);
-			return (1);
+			if ((file = open(tmp->argv, O_WRONLY | O_CREAT | O_TRUNC, 0666)) == -1)
+			{
+				write(0, "bash: ", 6);
+				perror(tmp->argv);
+				return (1);
+			}
+			dup2(file, std_fd->std_output);
+			close(file);
 		}
-		dup2(file, std_fd->std_output);
-		close(file);
-	}
-	else if (tmp->redirect == 2)
-	{
-		if ((file = open(tmp->argv, O_WRONLY | O_CREAT | O_APPEND, 0666)) == -1)
+		else if (tmp->redirect == 2)
 		{
-			write(0, "bash: ", 6);
-			perror(tmp->argv);
-			return (1);
+			if ((file = open(tmp->argv, O_WRONLY | O_CREAT | O_APPEND, 0666)) == -1)
+			{
+				write(0, "bash: ", 6);
+				perror(tmp->argv);
+				return (1);
+			}
+			dup2(file, std_fd->std_output);
+			close(file);
 		}
-		dup2(file, std_fd->std_output);
-		close(file);
-	}
-	else if (tmp->redirect == 3)
-	{
-		if ((file = open(tmp->argv, O_RDONLY, 0666)) == -1)
+		else if (tmp->redirect == 3)
 		{
-			write(0, "bash: ", 6);
-			perror(tmp->argv);
-			return (1);
+			if ((file = open(tmp->argv, O_RDONLY, 0666)) == -1)
+			{
+				write(0, "bash: ", 6);
+				perror(tmp->argv);
+				return (1);
+			}
+			dup2(file, std_fd->std_input);
+			close(file);
 		}
-		dup2(file, std_fd->std_input);
-		close(file);
+		else if (tmp->redirect == 4)
+		{
+			if ((exit_code = exec_heredoc(tmp->argv)) != EXIT_SUCCESS)
+			{
+				return (exit_code);
+			}
+			file = open(TMP_FILE, O_RDONLY, 0666);
+			dup2(file, std_fd->std_input);
+			close(file);
+			unlink(TMP_FILE);
+		}
+		tmp = tmp->next;
 	}
 	return (0);
 }
@@ -128,50 +173,39 @@ void				execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exi
 	}
 }
 
-void				executor(t_all **all)
+void	executor(t_all **all)
 {
 	pid_t			pid;
 	pid_t			wpid;
 	int				status;
 	t_cmd			*tmp;
 	int				fd[2];
-	int				backup_stdin;
-	int				backup_stdout;
+	int				backup_fd[2];
 
-	(*all)->fd.std_input = 0;
-	(*all)->fd.std_output = 1;
-	dup2((*all)->fd.std_input, 0);
-	dup2((*all)->fd.std_output, 1);
-	backup_stdin = dup(0);
-	backup_stdout = dup(1);
+	(*all)->fd.std_input = 0, (*all)->fd.std_output = 1;
+	backup_fd[0] = dup(0), backup_fd[1] = dup(1);
 	status = 0;
 	tmp = (*all)->cmd;
-	if ((*all)->cmd->argv[0] == NULL)
-		return;
 	if (tmp->next == NULL)
 	{
 		(*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd));
-		if ((*all)->exit_code == 1)
+		if ((*all)->cmd->argv[0] == NULL || (*all)->exit_code == 1)
+		{
+			recover_fd(backup_fd, &(*all)->fd);
 			return;
+		}
 		if (is_builtin(tmp) == 1)
-		{
 			builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
-		}
 		else
-		{
 			execute_binary(tmp->way, tmp->argv, &(*all)->my_env, &(*all)->exit_code);
-
-		}
-		dup2(backup_stdin, (*all)->fd.std_input); // надо ли закрывать std_input/std_output?
-		dup2(backup_stdout, (*all)->fd.std_output);
+		dup2(backup_fd[0], (*all)->fd.std_input); // надо ли закрывать std_input/std_output?
+		dup2(backup_fd[1], (*all)->fd.std_output);
 	}
 	else if (tmp->next != NULL)
 	{
 		while (tmp)
 		{
 			(*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd);
-			if (1)
-	//            if ((*all)->exit_code == EXIT_SUCCESS)
 			{
 				pipe(fd);
 				pid = fork();
@@ -182,7 +216,7 @@ void				executor(t_all **all)
 				}
 				else if (pid == 0)
 				{
-					backup_fd((*all)->fd.std_input, (*all)->exit_code);
+					tmp_fd((*all)->fd.std_input, (*all)->exit_code);
 					if (tmp->next != NULL)                 // ?
 						dup2(fd[1], (*all)->fd.std_output);
 					close(fd[1]);
@@ -190,7 +224,8 @@ void				executor(t_all **all)
 					if (is_builtin(tmp) == 1) {
 						builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
 					}
-					else {
+					else
+					{
 						if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
 						{
 							write(0, "bash: ", 6);
@@ -208,18 +243,13 @@ void				executor(t_all **all)
 	//                        *exit_code = WEXITSTATUS(status);
 					close(fd[0]);
 					if (tmp->next == NULL)
-					{
-						dup2(backup_stdin, (*all)->fd.std_input);
-						dup2(backup_stdout, (*all)->fd.std_output);
-						close(backup_stdin); // a где std_output? их здесь нужно закрывать?
-						close(backup_stdout); // a где std_output?
-					}
+						recover_fd(backup_fd, &(*all)->fd); // a где std_output? их здесь нужно закрывать? a где std_output?
 				}
 			}
 			tmp = tmp->next;
 		}
 	}
-	close(backup_stdin);
-	close(backup_stdout);
+	close(backup_fd[0]);
+	close(backup_fd[1]);
 }
 

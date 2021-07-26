@@ -12,8 +12,10 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 int g_status;
+#include "readline/readline.h"
 
-#define BACKUP_FD ".backup_file"
+#define TMP_FD ".tmp_fd"
+#define TMP_FILE ".heredoc"
 
 typedef struct          s_fd
 {
@@ -94,6 +96,14 @@ void                    clear_arr_2x(char **a);
 char					**check_key(char **envs, char *key);
 int						set_value_arr_2x(char *str, char ***arr);
 void					lineaddback(char ***src,char *addback);
+int						check_var_validity(char *argument);
+int						add_to_envp(char ***envp_cp, char *argument);
+int						replace_var(char *key, char **envp_cp, char *argument);
+int 					my_heredoc(char *delimiter);
+int						exec_heredoc(char *delimeter);
+int						is_builtin(t_cmd *tmp);
+
+
 
 
 

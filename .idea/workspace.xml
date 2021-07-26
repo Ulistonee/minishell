@@ -12,8 +12,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="merged raw_1 and master">
+    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="merged raw_1 and master again">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21,_1_29_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21,_1_29_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21__1_29_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21__1_29_PM__Default_Changelist_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kirill/dollar_aizhan.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kirill/f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kirill/g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kirill/srcs/my_heredoc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_cd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +58,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="CMake Application.minishell">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -107,7 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merged raw_1 and master" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged raw_1 and master" />
+    <MESSAGE value="merged raw_1 and master again" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged raw_1 and master again" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
