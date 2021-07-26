@@ -12,30 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kirill/.back" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/srcs/my_exit.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/file" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/file" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/libft/libft.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.dSYM/Contents/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.dSYM/Contents/Resources/DWARF/minishell" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/another_exit.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_cd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_echo.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_echo.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_env.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_export.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_export.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_fork.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/my_fork.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_pwd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_pwd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_unset.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_unset.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/utils.c" afterDir="false" />
+    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="merged raw_1 and master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +41,12 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="CMake Application.minishell">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
@@ -99,7 +78,16 @@
       <option name="presentableId" value="Default" />
       <updated>1626020541476</updated>
       <workItem from="1626020543891" duration="2000" />
+      <workItem from="1627306174714" duration="306000" />
     </task>
+    <task id="LOCAL-00001" summary="merged raw_1 and master">
+      <created>1627241270402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627241270403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,5 +103,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merged raw_1 and master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged raw_1 and master" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="argv[1]" language="ObjectiveC" />
+        <watch expression="arvv[0]" language="ObjectiveC" />
+        <watch expression="argv[0]" language="ObjectiveC" />
+        <watch expression="(*all)-&gt;cmd-&gt;argv[1]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
