@@ -1,0 +1,24 @@
+CMakeLists.txt
+Makefile
+Minishell Tests.xlsx
+Minishell Tests1.xlsx
+add_redirect.c
+clear_arr.c
+cmake-build-debug
+ex.c
+f
+fork_sandbox.c
+ft_list.c
+g
+libft
+main.c
+minishell
+minishell.dSYM
+minishell.h
+my_fork.c
+parser.c
+pipex.c
+srcs
+test.c
+todos.txt
+utils.c

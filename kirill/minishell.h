@@ -98,6 +98,7 @@ int						add_to_envp(char ***envp_cp, char *argument);
 int						replace_var(char *key, char **envp_cp, char *argument);
 int 					my_heredoc(char *delimiter);
 int						exec_heredoc(char *delimeter);
+int						is_builtin(t_cmd *tmp);
 
 
 

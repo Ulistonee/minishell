@@ -69,7 +69,6 @@ char *try_find(char *path, char **env, t_all **all)
         else
             str = ft_strdup("");
     }
-//    free(path);
     return (str);
 }
 

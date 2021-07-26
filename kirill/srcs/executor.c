@@ -1,13 +1,5 @@
 #include "../minishell.h"
 
-void	recover_fd(int backup_fd[2], t_fd *fd)
-{
-	dup2(backup_fd[0], fd->std_input);
-	dup2(backup_fd[1], fd->std_output);
-	close(backup_fd[0]); // a где std_output? их здесь нужно закрывать?
-	close(backup_fd[1]);
-}
-
 void	tmp_fd(int input_fd, int exit_code)
 {
 	int file;
@@ -21,6 +13,35 @@ void	tmp_fd(int input_fd, int exit_code)
 		close(file);
 	}
 }
+
+void	recover_fd(int backup_fd[2], t_fd *fd)
+{
+	dup2(backup_fd[0], fd->std_input);
+	dup2(backup_fd[1], fd->std_output);
+	close(backup_fd[0]); // a где std_output? их здесь нужно закрывать?
+	close(backup_fd[1]);
+}
+
+//void	init_child(t_fd *fd, int *exit_code, t_cmd *tmp, char ***envp, int fd_pipe[2])
+//{
+//	tmp_fd(fd->std_input, *exit_code);
+//	if (tmp->next != NULL)                 // ?
+//		dup2(fd_pipe[1], (fd->std_output);
+//	close(fd_pipe[1]);
+//	close(fd_pipe[0]);
+//	if (is_builtin(tmp) == 1) {
+//		builtins(tmp, envp, exit_code);
+//	}
+//	else
+//	{
+//		if (execve(tmp->way, tmp->argv, *envp) == -1)
+//		{
+//			write(0, "bash: ", 6);
+//			perror(tmp->way);
+//			exit(EXIT_FAILURE);
+//		}
+//	}
+//}
 
 int	scan_redirects(t_redirect *dir, t_fd *std_fd)
 {
@@ -185,7 +206,6 @@ void	executor(t_all **all)
 		while (tmp)
 		{
 			(*all)->exit_code = scan_redirects(tmp->dir, &(*all)->fd);
-//			if (1)
 			{
 				pipe(fd);
 				pid = fork();
@@ -204,7 +224,8 @@ void	executor(t_all **all)
 					if (is_builtin(tmp) == 1) {
 						builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
 					}
-					else {
+					else
+					{
 						if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
 						{
 							write(0, "bash: ", 6);
