@@ -12,24 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="merged raw_1 and master again">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21,_1_29_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21,_1_29_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21__1_29_PM__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_22_21__1_29_PM__Default_Changelist_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/dollar_aizhan.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/g" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/srcs/my_heredoc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/my_cd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/utils.c" afterDir="false" />
+    <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="deleted cmake and fixed cmake list">
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +27,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="norm/kirill" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1vB1CYbLcQoWDV7EBlAH59m3num" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,9 +53,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="CMake Application.minishell">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
@@ -71,7 +63,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
+    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/kirill" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -104,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627241270403</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deleted cmake and fixed cmake list">
+      <created>1627317312519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627317312519</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +114,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="raw_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -125,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merged raw_1 and master" />
     <MESSAGE value="merged raw_1 and master again" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged raw_1 and master again" />
+    <MESSAGE value="deleted cmake and fixed cmake list" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted cmake and fixed cmake list" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -134,6 +146,8 @@
         <watch expression="arvv[0]" language="ObjectiveC" />
         <watch expression="argv[0]" language="ObjectiveC" />
         <watch expression="(*all)-&gt;cmd-&gt;argv[1]" language="ObjectiveC" />
+        <watch expression="(*all)-&gt;cmd-&gt;argv[2]" language="ObjectiveC" />
+        <watch expression="(*all)-&gt;cmd-&gt;argv[0]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,6 +1,9 @@
-cmake-build-debug
 kirill/cmake-build-debug
-a.out
+kirill/.idea
+*.idea
+*.dSYM
+.DS_Store
 *.o
-kirill/srcs/minishell
-kirill/minishell
+*.out
+*.a
+.idea
