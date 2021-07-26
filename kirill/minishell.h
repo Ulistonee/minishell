@@ -13,7 +13,7 @@
 #include <fcntl.h>
 #include "readline/readline.h"
 
-#define BACKUP_FD ".backup_fd"
+#define TMP_FD ".tmp_fd"
 #define TMP_FILE ".heredoc"
 
 typedef struct          s_fd
