@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/rchalmer/c/minishell/kirill/add_redirect.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/add_redirect.c.o"
+  "/Users/rchalmer/c/minishell/kirill/dollar_aizhan.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/dollar_aizhan.c.o"
   "/Users/rchalmer/c/minishell/kirill/ft_list.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/ft_list.c.o"
   "/Users/rchalmer/c/minishell/kirill/main.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o"
   "/Users/rchalmer/c/minishell/kirill/parser.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o"

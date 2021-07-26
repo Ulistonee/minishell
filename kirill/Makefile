@@ -12,7 +12,7 @@
 
 NAME = minishell
 
-SRC = main.c parser.c ft_list.c utils.c add_redirect.c \
+SRC = main.c parser.c ft_list.c utils.c add_redirect.c dollar_aizhan.c\
 			srcs/executor.c \
 			srcs/my_echo.c \
 			srcs/my_cd.c \

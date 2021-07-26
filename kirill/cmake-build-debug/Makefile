@@ -182,6 +182,33 @@ add_redirect.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/add_redirect.c.s
 .PHONY : add_redirect.c.s
 
+dollar_aizhan.o: dollar_aizhan.c.o
+
+.PHONY : dollar_aizhan.o
+
+# target to build an object file
+dollar_aizhan.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/dollar_aizhan.c.o
+.PHONY : dollar_aizhan.c.o
+
+dollar_aizhan.i: dollar_aizhan.c.i
+
+.PHONY : dollar_aizhan.i
+
+# target to preprocess a source file
+dollar_aizhan.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/dollar_aizhan.c.i
+.PHONY : dollar_aizhan.c.i
+
+dollar_aizhan.s: dollar_aizhan.c.s
+
+.PHONY : dollar_aizhan.s
+
+# target to generate assembly for a file
+dollar_aizhan.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/dollar_aizhan.c.s
+.PHONY : dollar_aizhan.c.s
+
 ft_list.o: ft_list.c.o
 
 .PHONY : ft_list.o
@@ -573,6 +600,9 @@ help:
 	@echo "... add_redirect.o"
 	@echo "... add_redirect.i"
 	@echo "... add_redirect.s"
+	@echo "... dollar_aizhan.o"
+	@echo "... dollar_aizhan.i"
+	@echo "... dollar_aizhan.s"
 	@echo "... ft_list.o"
 	@echo "... ft_list.i"
 	@echo "... ft_list.s"

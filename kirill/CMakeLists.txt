@@ -21,6 +21,7 @@ add_executable(minishell
 		main.c
 		parser.c
 		utils.c
+		dollar_aizhan.c
 		srcs/my_env.c
 		srcs/my_exit.c
 		srcs/executor.c

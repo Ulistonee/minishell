@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/add_redirect.c.o"
+  "CMakeFiles/minishell.dir/dollar_aizhan.c.o"
   "CMakeFiles/minishell.dir/ft_list.c.o"
   "CMakeFiles/minishell.dir/main.c.o"
   "CMakeFiles/minishell.dir/parser.c.o"
