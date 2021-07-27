@@ -190,6 +190,7 @@ void	executor(t_all **all)
 	tmp = (*all)->cmd;
 	if (tmp->next == NULL)
 	{
+	    g_status = 0;
 		(*all)->exit_code = scan_redirects(tmp->dir, &((*all)->fd), (*all));
 		if ((*all)->cmd->argv[0] == NULL || (*all)->exit_code == 1)
 		{

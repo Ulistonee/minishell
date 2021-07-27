@@ -73,10 +73,8 @@ char *try_find(char *path, char **env, t_all **all)
         return (ft_strdup("$"));
     while(env[++n] && !(is_equal(path, env[n])))
         ;
-    printf("check3: %s\n", env[n]);
     if (env[n] != NULL)
     {
-        printf("check2\n");
         while(env[n][++i] != '=')
             ;
         if (ft_strlen(path) == i)
@@ -86,12 +84,12 @@ char *try_find(char *path, char **env, t_all **all)
     }
     else
     {
-        printf("check1\n");
         if (!ft_strncmp(path, "?", ft_strlen(path)))
-            str = ft_itoa((*all)->exit_code);
+            str = ft_itoa(g_status);
         else
             str = ft_strdup("");
     }
+    free(path);
     return (str);
 }
 

@@ -163,12 +163,12 @@ void parse_line4_1(char *line, int *i, int *m, t_all **all)
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]);
 						(*i)++;
                     }
-                    printf("check$: '%s'\n", (*all)->dollar);
                     (*all)->dollar = try_find((*all)->dollar, (*all)->my_env, all);
-                    printf("check$: '%s'\n", (*all)->dollar);
                     (*all)->old = (*all)->cmd->argv[*m];
-                    if (!(*all)->cmd->argv[*m])
+                    if (!(*all)->cmd->argv[*m]) {
                         (*all)->cmd->argv[*m] = ft_strdup("");
+                        (*all)->old = (*all)->cmd->argv[*m];
+                    }
                    (*all)->cmd->argv[*m] = ft_strjoin((*all)->cmd->argv[*m], (*all)->dollar);
                     free((*all)->old);
                     free((*all)->dollar);
@@ -291,7 +291,7 @@ void parse_line(char *line, t_all **all)
     (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
     (*all)->cmd->way = NULL;
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
-    (*all)->path = try_find("PATH", (*all)->my_env, all);
+    (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env, all);
     while (line[i])
     {
         parse_line2(line, &i, &m, all);

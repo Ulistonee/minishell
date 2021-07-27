@@ -38,7 +38,7 @@ $(NAME): $(INCLUDE) $(SRC)
 	make bonus -C libft
 	gcc $(SRC) -g -Llibft -lft -lreadline -L/Users/cvirgin/.brew/opt/readline/lib -I/Users/cvirgin/.brew/opt/readline/include -o $(NAME)
 	#gcc $(SRC) -g -Llibft -lft -lreadline -L/usr/local/opt/readline/lib -I/usr/local/opt/readline/include -o $(NAME)
-
+# TODO use -W-W-Werror
 
 clean:
 	make clean -C libft

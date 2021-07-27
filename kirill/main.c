@@ -174,6 +174,7 @@ int main(int argc, char const *argv[], char *env[])
     all = malloc(sizeof(t_all));
     all->my_env = copy_env(env);
     all->exit_code = 0;
+    g_status = 0;
     //parse_line("cat > 1 vwqc << 123 >", &all);
 //    output_all(all);
 //    free_all(&all);
@@ -186,8 +187,10 @@ int main(int argc, char const *argv[], char *env[])
         add_history(line);
         signal(SIGQUIT, signal_handler);
         parse_line(line, &all);
-        output_all(all);
+        //output_all(all);
         executor(&all);
+        if ((g_status == 0 && all->exit_code != 0) || all->cmd->next)
+            g_status = all->exit_code;
         free(line);
         free_all(&all);
         signal(SIGQUIT, SIG_IGN);
