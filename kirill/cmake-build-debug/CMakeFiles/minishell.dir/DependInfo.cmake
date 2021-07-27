@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rchalmer/c/minishell/kirill/srcs/my_pwd.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/my_unset.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_unset.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/utils.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o"
+  "/Users/rchalmer/c/minishell/kirill/srcs/utils_export.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils_export.c.o"
   "/Users/rchalmer/c/minishell/kirill/utils.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

@@ -61,6 +61,10 @@ CMakeFiles/minishell.dir/srcs/utils.c.o
  /Users/rchalmer/c/minishell/kirill/libft/libft.h
  /Users/rchalmer/c/minishell/kirill/minishell.h
  /Users/rchalmer/c/minishell/kirill/srcs/utils.c
+CMakeFiles/minishell.dir/srcs/utils_export.c.o
+ /Users/rchalmer/c/minishell/kirill/libft/libft.h
+ /Users/rchalmer/c/minishell/kirill/minishell.h
+ /Users/rchalmer/c/minishell/kirill/srcs/utils_export.c
 CMakeFiles/minishell.dir/utils.c.o
  /Users/rchalmer/c/minishell/kirill/libft/libft.h
  /Users/rchalmer/c/minishell/kirill/minishell.h

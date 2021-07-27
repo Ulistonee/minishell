@@ -299,6 +299,9 @@
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/utils.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/utils_export.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/utils.c">
 			<Option target="minishell"/>
 		</Unit>
