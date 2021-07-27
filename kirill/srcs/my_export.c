@@ -1,45 +1,5 @@
 #include "../minishell.h"
 
-int	check_var_validity(char *argument)
-{
-	if (!ft_strchr(argument, '='))
-		return (fail("Please add variable with \"=\"", 0));
-	if ((!(ft_isalpha(argument[0])) && argument[0] != '_'))
-	{
-		printf("export: '%s': not a valid identifier\n", argument);
-		return (0);
-	}
-	return (1);
-}
-
-void	sort_array_2x(char **array)
-{
-	int		i;
-	int		j;
-	char	*temp;
-	char	*temp_2;
-	int		count;
-
-	count = count_envp(array);
-	i = 0;
-	while (array[i] != NULL)
-	{
-		j = count - 1;
-		while (j > i)
-		{
-			if (ft_strncmp(array[j - 1], array[j],
-					(ft_strlen(array[0]) + 1)) > 0)
-			{
-				temp = array[j - 1];
-				array[j - 1] = array[j];
-				array[j] = temp;
-			}
-			j--;
-		}
-		i++;
-	}
-}
-
 void	output_sorted_env(char **envp_cp)
 {
 	char	**p;
@@ -55,15 +15,13 @@ void	output_sorted_env(char **envp_cp)
 		i = 0;
 		while ((*p)[i] != 0 && (*p)[i] != '=')
 		{
-			write(1, &(*p)[i], 1);
+			write(1, &(*p)[i++], 1);
 			i++;
 		}
 		write(1, &(*p)[i++], 1);
 		write(1, "\"", 1);
 		while ((*p)[i])
-		{
 			write(1, &(*p)[i++], 1);
-		}
 		write(1, "\"\n", 2);
 		p++;
 	}
@@ -116,8 +74,7 @@ int	replace_var(char *key, char **envp_cp, char *argument)
 	else
 	{
 		*equal = '=';
-		add_to_envp(&envp_cp, new_line);
-		free(new_line);
+		add_to_envp(&envp_cp, new_line), free(new_line);
 	}
 	return (EXIT_SUCCESS);
 }
@@ -129,11 +86,13 @@ int	exec_export(char **argv, char ***envp_cp)
 	int		i;
 
 	i = 1;
+	err_flag = 0;
 	while (argv[i] != NULL && err_flag == 0)
 	{
 		if (!(check_var_validity(argv[i])))
 			err_flag = 1;
-		if ((key = check_arg(*envp_cp, &(argv[i]))) && !err_flag)
+		key = check_arg(*envp_cp, &(argv[i]));
+		if (key && !err_flag)
 			err_flag = replace_var(key, *envp_cp, argv[i]);
 		else if (!err_flag)
 			err_flag = add_to_envp(envp_cp, argv[i]);
@@ -144,9 +103,7 @@ int	exec_export(char **argv, char ***envp_cp)
 
 int	my_export(char **argv, char ***envp_cp)
 {
-	char		*key;
 	int			count;
-	int			i;
 	int			err_flag;
 
 	err_flag = 0;
@@ -156,21 +113,8 @@ int	my_export(char **argv, char ***envp_cp)
 		output_sorted_env(*envp_cp);
 		return (EXIT_SUCCESS);
 	}
-	i = 1;
 	if (count > 1)
-//		err_flag = exec_export(argv, envp_cp);
-	{
-		while (argv[i] != NULL && err_flag == 0)
-		{
-			if (!(check_var_validity(argv[i])))
-				err_flag = 1;
-			if ((key = check_arg(*envp_cp, &(argv[i]))) && !err_flag)
-				err_flag = replace_var(key, *envp_cp, argv[i]);
-			else if (!err_flag)
-				err_flag = add_to_envp(envp_cp, argv[i]);
-			i++;
-		}
-	}
+		err_flag = exec_export(argv, envp_cp);
 	if (err_flag == 0)
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
