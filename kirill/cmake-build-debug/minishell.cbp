@@ -299,6 +299,12 @@
 		<Unit filename="/Users/cvirgin/Desktop/minishell/kirill/srcs/utils.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/cvirgin/Desktop/minishell/kirill/srcs/utils_export.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/cvirgin/Desktop/minishell/kirill/srcs/utils_part_two.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/cvirgin/Desktop/minishell/kirill/utils.c">
 			<Option target="minishell"/>
 		</Unit>

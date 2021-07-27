@@ -65,6 +65,10 @@ CMakeFiles/minishell.dir/srcs/utils_export.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/srcs/utils_export.c.o: ../minishell.h
 CMakeFiles/minishell.dir/srcs/utils_export.c.o: ../srcs/utils_export.c
 
+CMakeFiles/minishell.dir/srcs/utils_part_two.c.o: ../libft/libft.h
+CMakeFiles/minishell.dir/srcs/utils_part_two.c.o: ../minishell.h
+CMakeFiles/minishell.dir/srcs/utils_part_two.c.o: ../srcs/utils_part_two.c
+
 CMakeFiles/minishell.dir/utils.c.o: ../libft/libft.h
 CMakeFiles/minishell.dir/utils.c.o: ../minishell.h
 CMakeFiles/minishell.dir/utils.c.o: ../utils.c
