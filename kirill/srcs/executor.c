@@ -2,7 +2,7 @@
 
 void	tmp_fd(int input_fd, int exit_code)
 {
-	int file;
+	int	file;
 
 	if (exit_code != EXIT_SUCCESS)
 	{
@@ -18,24 +18,25 @@ void	recover_fd(int backup_fd[2], t_fd *fd)
 {
 	dup2(backup_fd[0], fd->std_input);
 	dup2(backup_fd[1], fd->std_output);
-	close(backup_fd[0]); // a где std_output? их здесь нужно закрывать?
+	close(backup_fd[0]);
 	close(backup_fd[1]);
 }
 
-void	init_child(t_fd *fd, int exit_code, t_cmd *tmp, char **envp, int fd_pipe[2])
+//void	init_child(t_fd *fd, int excode, t_cmd *tmp, char **env, int fd_pipe[2])
+void	init_child(t_all **all, int excode, t_cmd *tmp, int fd_pipe[2])
 {
-	tmp_fd(fd->std_input, exit_code);
-	if (tmp->next != NULL)                 // ?
-		dup2(fd_pipe[1], fd->std_output);
+	tmp_fd((*all)->fd.std_input, excode);
+	if (tmp->next != NULL)
+		dup2(fd_pipe[1], (*all)->fd.std_output);
 	close(fd_pipe[1]);
 	close(fd_pipe[0]);
 	if (is_builtin(tmp) == 1) {
-		builtins(tmp, &envp, &exit_code);
-		exit(exit_code);
+		builtins(tmp, &(*all)->my_env, &excode);
+		exit(excode);
 	}
 	else
 	{
-		if (execve(tmp->way, tmp->argv, envp) == -1)
+		if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
 		{
 			write(0, "bash: ", 6);
 			perror(tmp->way);
@@ -97,14 +98,14 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 			file = open(TMP_FILE, O_RDONLY, 0666);
 			dup2(file, std_fd->std_input);
 			close(file);
-//			unlink(TMP_FILE);
+			unlink(TMP_FILE);
 		}
 		tmp = tmp->next;
 	}
 	return (0);
 }
 
-int					is_builtin(t_cmd *tmp)
+int	is_builtin(t_cmd *tmp)
 {
 	if(!(ft_strncmp(tmp->argv[0], "echo", ft_strlen(tmp->argv[0]) + 1)))
 		return (1);
@@ -123,7 +124,7 @@ int					is_builtin(t_cmd *tmp)
 	return (0);
 }
 
-int					builtins(t_cmd *tmp, char ***envp, int *exit_code)
+int	builtins(t_cmd *tmp, char ***envp, int *exit_code)
 {
 	if(!(ft_strncmp(tmp->argv[0], "echo", ft_strlen(tmp->argv[0]) + 1)))
 		*exit_code =  (my_echo(tmp->argv));
@@ -142,7 +143,7 @@ int					builtins(t_cmd *tmp, char ***envp, int *exit_code)
 	return (0);
 }
 
-void				execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exit_code)
+void	execute_binary(char *binary_path, char **argv, char ***envp_cp, int *exit_code)
 {
 	pid_t			pid;
 	pid_t			wpid;
@@ -218,7 +219,7 @@ void	executor(t_all **all)
 					(*all)->exit_code = 71;
 				}
 				else if (pid == 0)
-					init_child(&(*all)->fd, (*all)->exit_code, tmp, (*all)->my_env, fd);
+					init_child(&(*all), (*all)->exit_code, tmp, fd);
 				else
 				{
 					close(fd[ 1]);
