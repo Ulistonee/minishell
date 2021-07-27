@@ -28,7 +28,7 @@ void	sort_array_2x(char **array)
 		while (j > i)
 		{
 			if (ft_strncmp(array[j - 1], array[j],
-						   (ft_strlen(array[0]) + 1)) > 0)
+					(ft_strlen(array[0]) + 1)) > 0)
 			{
 				temp = array[j - 1];
 				array[j - 1] = array[j];
@@ -36,6 +36,18 @@ void	sort_array_2x(char **array)
 			}
 			j--;
 		}
+		i++;
+	}
+}
+
+void	print_arr_2x(char **array)
+{
+	int			i;
+
+	i = 0;
+	while (array[i] != NULL)
+	{
+		printf("%s\n", array[i]);
 		i++;
 	}
 }

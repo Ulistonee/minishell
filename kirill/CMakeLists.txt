@@ -37,5 +37,6 @@ add_executable(minishell
 		srcs/utils.c
 		srcs/my_heredoc.c
 		srcs/utils_export.c
+		srcs/utils_part_two.c
         )
 target_link_libraries(minishell readline termcap libft)
