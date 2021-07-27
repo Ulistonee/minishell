@@ -1,5 +1,17 @@
 #include "../minishell.h"
 
+//нужно фришить abs_path
+char	*get_absolute_path(char **envp_cp, char *relative_path)
+{
+	char		*home;
+	char		*abs_path;
+
+	abs_path = NULL;
+	home = get_value(envp_cp, "HOME");
+	abs_path = ft_strjoin(home, relative_path + 1);
+	return (abs_path);
+}
+
 char	*get_home_path(char **envp_cp)
 {
 	int			n;
@@ -85,6 +97,7 @@ int	update_pwd(char *old_pwd, char ***envp_cp)
 
 int	my_cd(char **argument, char ***envp_cp)
 {
+	char		*abs_path;
 	int			argc;
 	char		*old_pwd;
 
@@ -97,8 +110,23 @@ int	my_cd(char **argument, char ***envp_cp)
 	{
 		if (ft_strncmp(argument[1], "~", 2) == 0)
 			go_home(*envp_cp);
-		else
-		{
+		else {
+//			if (*(argument[1]) == '~')
+//			{
+//				abs_path = get_absolute_path(*envp_cp, argument[1]);
+//				if (chdir(abs_path) == -1)
+//				{
+//					printf("%s\n", strerror(errno));
+//					if (abs_path)
+//						free(abs_path);
+//					return (EXIT_FAILURE);
+//				}
+//			}
+//			else if (chdir(argument[1]) == -1)
+//			{
+//				printf("%s\n", strerror(errno));
+//				return (EXIT_FAILURE);
+//			}
 			if (exec_cd(argument, envp_cp) == 0)
 				return (EXIT_FAILURE);
 		}

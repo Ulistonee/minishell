@@ -22,7 +22,9 @@ SRC = main.c parser.c ft_list.c utils.c add_redirect.c dollar_aizhan.c\
 			srcs/utils.c \
 			srcs/my_env.c \
 			srcs/my_heredoc.c \
-			srcs/my_exit.c
+			srcs/my_exit.c \
+			srcs/utils_export.c \
+			srcs/utils_part_two.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 
@@ -36,7 +38,8 @@ all: $(NAME)
 
 $(NAME): $(INCLUDE) $(SRC)
 	make bonus -C libft
-	gcc $(SRC) -g -Llibft -lft -lreadline -L/Users/cvirgin/.brew/opt/readline/lib -I/Users/cvirgin/.brew/opt/readline/include -o $(NAME)
+	#gcc $(SRC) -g -Llibft -lft -lreadline -L/Users/cvirgin/.brew/opt/readline/lib -I/Users/cvirgin/.brew/opt/readline/include -o $(NAME)
+	gcc $(SRC) -g -Llibft -lft -lreadline -L/Users/rchalmer/.brew/opt/readline/lib -I/Users/rchalmer/.brew/opt/readline/include -o $(NAME)
 	#gcc $(SRC) -g -Llibft -lft -lreadline -L/usr/local/opt/readline/lib -I/usr/local/opt/readline/include -o $(NAME)
 # TODO use -W-W-Werror
 

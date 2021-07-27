@@ -3,7 +3,7 @@
 int	exec_heredoc(char *delimeter, t_all *all)
 {
 	pid_t	pid;
-	int 	status;
+	int		status;
 
 	status = 0;
 	pid = fork();
@@ -19,7 +19,8 @@ int	exec_heredoc(char *delimeter, t_all *all)
 	else
 	{
 		waitpid(pid, &status, 0);
-		if (WIFEXITED(status)) {
+		if (WIFEXITED(status))
+		{
 			return(WEXITSTATUS(status));
 		}
 		if (WIFSIGNALED(status))

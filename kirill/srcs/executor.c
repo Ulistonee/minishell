@@ -218,28 +218,7 @@ void	executor(t_all **all)
 					(*all)->exit_code = 71;
 				}
 				else if (pid == 0)
-				{
 					init_child(&(*all)->fd, (*all)->exit_code, tmp, (*all)->my_env, fd);
-//					tmp_fd((*all)->fd.std_input, (*all)->exit_code);
-//					if (tmp->next != NULL)                 // ?
-//						dup2(fd[1], (*all)->fd.std_output);
-//					close(fd[1]);
-//					close(fd[0]);
-//					if (is_builtin(tmp) == 1)
-//					{
-//						builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
-//						exit((*all)->exit_code);
-//					}
-//					else
-//					{
-//						if (execve(tmp->way, tmp->argv, (*all)->my_env) == -1)
-//						{
-//							write(0, "bash: ", 6);
-//							perror(tmp->way);
-//							exit(127);
-//						}
-//					}
-				}
 				else
 				{
 					close(fd[ 1]);

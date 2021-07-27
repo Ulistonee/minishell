@@ -173,7 +173,7 @@ void make_null(char ***argv, int n)
     }
 }
 
-void clear_arr_2x(char **a)
+void	clear_arr_2x(char **a)
 {
     int i;
 
