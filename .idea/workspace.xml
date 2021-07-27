@@ -13,9 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="deleted cmake and fixed cmake list">
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/.heredoc" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/.heredoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/1" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/utils.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/srcs/executor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +48,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1vB1CYbLcQoWDV7EBlAH59m3num" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,12 +73,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="CMake Application.minishell">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -66,11 +87,6 @@
     <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/kirill" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -88,6 +104,10 @@
       <updated>1626020541476</updated>
       <workItem from="1626020543891" duration="2000" />
       <workItem from="1627306174714" duration="306000" />
+      <workItem from="1627322773521" duration="8572000" />
+      <workItem from="1627333586934" duration="69000" />
+      <workItem from="1627393707533" duration="4594000" />
+      <workItem from="1627405495401" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="merged raw_1 and master">
       <created>1627241270402</created>
@@ -140,6 +160,35 @@
     <option name="LAST_COMMIT_MESSAGE" value="deleted cmake and fixed cmake list" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/kirill/srcs/my_heredoc.c</url>
+          <line>40</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/kirill/utils.c</url>
+          <line>237</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/kirill/main.c</url>
+          <line>193</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/kirill/main.c</url>
+          <line>188</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/kirill/parser.c</url>
+          <line>158</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="argv[1]" language="ObjectiveC" />
