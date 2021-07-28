@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="minishell" targetName="libft" />
-      <config projectName="minishell" targetName="minishell" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -13,8 +10,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="pushed but need to fix $">
-      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fork_sandbox.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/.back" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/.tmp_fd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/add_redirect.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/clear_arr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/add_redirect.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/ft_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_export.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_pwd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_unset.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/utils.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_atoi.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_bzero.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_calloc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_isalnum.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_isalpha.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_isdigit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_itoa.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_putchar_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_putendl_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_putnbr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_putstr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_split.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_strchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_strdup.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_strjoin.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_strlen.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_strncmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir/ft_substr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/libft.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/libft/liblibft.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/count_argv.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/dollar_aizhan.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/ft_list.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/ft_list2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_atoi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_bzero.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_calloc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_isalnum.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_isalpha.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_isdigit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_itoa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_putchar_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_putendl_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_putnbr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_putstr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_split.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_strchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_strdup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_strjoin.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_strlen.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_strncmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/ft_substr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/libft/libft.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/parser5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/redirect4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor_utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/executor_utils_two.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_cd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_echo.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_env.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_exit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_export.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_heredoc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_pwd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/my_unset.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils_export.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils_part_three.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/srcs/utils_part_two.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/todos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/utils4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todos_checklist.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +133,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -68,18 +176,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.minishell">
+  <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/kirill" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="minishell" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minishell" RUN_TARGET_NAME="minishell">
+    <configuration name="minishell" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="minishell" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="minishell">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -89,10 +192,6 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="CMake Application.minishell" />
-      <item itemvalue="CMake Application.libft" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

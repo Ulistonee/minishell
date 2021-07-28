@@ -1,3 +1,0 @@
-1. cat -> CTRL + C -> bash bash - Aizhan
-2. /bin/ls - abs path - Kirill
-3.
