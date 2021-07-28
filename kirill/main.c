@@ -1,13 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <readline/readline.h>
-#include <readline/history.h>
-#include <string.h>
-#include <signal.h>
-#include <unistd.h>
 #include "minishell.h"
-#include "term.h"
-#include "libft/libft.h"
 
 int 	is_number(char *value)
 {
@@ -78,13 +69,13 @@ char	**add_default_variables(char ***envp)
 	return (*envp);
 }
 
-int move_probels(char *line, int i)
+int	move_probels(char *line, int i)
 {
-    while (line[i] == ' ')
-    {
-        i++;
-    }
-    return (i);
+	while (line[i] == ' ')
+	{
+		i++;
+	}
+	return (i);
 }
 
 void	signal_handler(int sig_num)

@@ -11,8 +11,9 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-int g_status;
 #include "readline/readline.h"
+#include <readline/history.h>
+int g_status;
 
 #define TMP_FD ".tmp_fd"
 #define TMP_FILE ".heredoc"
@@ -75,6 +76,7 @@ int                     is_equal(char *path, char *env);
 int is_minishell(char *line);
 int	ft_strcmp(char *s1, char *s2);
  void	signal_handler(int sig_num);
+void	redirect3_12(char *line, int *i, t_all **all);
 
 // new below:
 int             		my_echo(char **argv);
