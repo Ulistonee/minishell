@@ -85,6 +85,7 @@ int	exec_export(char **argv, char ***envp_cp)
 	char	*key;
 	int		i;
 
+	err_flag = 0;
 	i = 1;
 	while (argv[i] != NULL && err_flag == 0)
 	{

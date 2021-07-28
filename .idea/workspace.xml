@@ -13,16 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="pushed but need to fix $">
-      <change afterPath="$PROJECT_DIR$/kirill/ft_list2.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kirill/redirect4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/add_redirect.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/add_redirect.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/dollar_aizhan.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/dollar_aizhan.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/ft_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/ft_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,10 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -73,9 +69,9 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.minishell">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
@@ -128,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627317312519</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pushed but need to fix $">
+      <created>1627495452933</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627495452933</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,30 +165,16 @@
     <MESSAGE value="merged raw_1 and master" />
     <MESSAGE value="merged raw_1 and master again" />
     <MESSAGE value="deleted cmake and fixed cmake list" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted cmake and fixed cmake list" />
+    <MESSAGE value="pushed but need to fix $" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushed but need to fix $" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/kirill/srcs/my_heredoc.c</url>
-          <line>40</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/kirill/utils.c</url>
-          <line>243</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/kirill/main.c</url>
-          <line>184</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/kirill/main.c</url>
-          <line>179</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/kirill/srcs/my_export.c</url>
+          <line>109</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

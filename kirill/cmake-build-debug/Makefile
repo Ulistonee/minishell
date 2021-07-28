@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cvirgin/Desktop/minishell/kirill
+CMAKE_SOURCE_DIR = /Users/rchalmer/c/minishell/kirill
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/rchalmer/c/minishell/kirill/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug/CMakeFiles /Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles /Users/rchalmer/c/minishell/kirill/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -236,6 +236,33 @@ ft_list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list.c.s
 .PHONY : ft_list.c.s
 
+ft_list2.o: ft_list2.c.o
+
+.PHONY : ft_list2.o
+
+# target to build an object file
+ft_list2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list2.c.o
+.PHONY : ft_list2.c.o
+
+ft_list2.i: ft_list2.c.i
+
+.PHONY : ft_list2.i
+
+# target to preprocess a source file
+ft_list2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list2.c.i
+.PHONY : ft_list2.c.i
+
+ft_list2.s: ft_list2.c.s
+
+.PHONY : ft_list2.s
+
+# target to generate assembly for a file
+ft_list2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/ft_list2.c.s
+.PHONY : ft_list2.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -290,6 +317,33 @@ parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parser.c.s
 .PHONY : parser.c.s
 
+redirect4.o: redirect4.c.o
+
+.PHONY : redirect4.o
+
+# target to build an object file
+redirect4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redirect4.c.o
+.PHONY : redirect4.c.o
+
+redirect4.i: redirect4.c.i
+
+.PHONY : redirect4.i
+
+# target to preprocess a source file
+redirect4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redirect4.c.i
+.PHONY : redirect4.c.i
+
+redirect4.s: redirect4.c.s
+
+.PHONY : redirect4.s
+
+# target to generate assembly for a file
+redirect4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/redirect4.c.s
+.PHONY : redirect4.c.s
+
 srcs/executor.o: srcs/executor.c.o
 
 .PHONY : srcs/executor.o
@@ -316,6 +370,60 @@ srcs/executor.s: srcs/executor.c.s
 srcs/executor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor.c.s
 .PHONY : srcs/executor.c.s
+
+srcs/executor_utils.o: srcs/executor_utils.c.o
+
+.PHONY : srcs/executor_utils.o
+
+# target to build an object file
+srcs/executor_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.o
+.PHONY : srcs/executor_utils.c.o
+
+srcs/executor_utils.i: srcs/executor_utils.c.i
+
+.PHONY : srcs/executor_utils.i
+
+# target to preprocess a source file
+srcs/executor_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.i
+.PHONY : srcs/executor_utils.c.i
+
+srcs/executor_utils.s: srcs/executor_utils.c.s
+
+.PHONY : srcs/executor_utils.s
+
+# target to generate assembly for a file
+srcs/executor_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.s
+.PHONY : srcs/executor_utils.c.s
+
+srcs/executor_utils_two.o: srcs/executor_utils_two.c.o
+
+.PHONY : srcs/executor_utils_two.o
+
+# target to build an object file
+srcs/executor_utils_two.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o
+.PHONY : srcs/executor_utils_two.c.o
+
+srcs/executor_utils_two.i: srcs/executor_utils_two.c.i
+
+.PHONY : srcs/executor_utils_two.i
+
+# target to preprocess a source file
+srcs/executor_utils_two.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.i
+.PHONY : srcs/executor_utils_two.c.i
+
+srcs/executor_utils_two.s: srcs/executor_utils_two.c.s
+
+.PHONY : srcs/executor_utils_two.s
+
+# target to generate assembly for a file
+srcs/executor_utils_two.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.s
+.PHONY : srcs/executor_utils_two.c.s
 
 srcs/my_cd.o: srcs/my_cd.c.o
 
@@ -587,6 +695,33 @@ srcs/utils_export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_export.c.s
 .PHONY : srcs/utils_export.c.s
 
+srcs/utils_part_three.o: srcs/utils_part_three.c.o
+
+.PHONY : srcs/utils_part_three.o
+
+# target to build an object file
+srcs/utils_part_three.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_three.c.o
+.PHONY : srcs/utils_part_three.c.o
+
+srcs/utils_part_three.i: srcs/utils_part_three.c.i
+
+.PHONY : srcs/utils_part_three.i
+
+# target to preprocess a source file
+srcs/utils_part_three.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_three.c.i
+.PHONY : srcs/utils_part_three.c.i
+
+srcs/utils_part_three.s: srcs/utils_part_three.c.s
+
+.PHONY : srcs/utils_part_three.s
+
+# target to generate assembly for a file
+srcs/utils_part_three.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_three.c.s
+.PHONY : srcs/utils_part_three.c.s
+
 srcs/utils_part_two.o: srcs/utils_part_two.c.o
 
 .PHONY : srcs/utils_part_two.o
@@ -660,15 +795,27 @@ help:
 	@echo "... ft_list.o"
 	@echo "... ft_list.i"
 	@echo "... ft_list.s"
+	@echo "... ft_list2.o"
+	@echo "... ft_list2.i"
+	@echo "... ft_list2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... parser.o"
 	@echo "... parser.i"
 	@echo "... parser.s"
+	@echo "... redirect4.o"
+	@echo "... redirect4.i"
+	@echo "... redirect4.s"
 	@echo "... srcs/executor.o"
 	@echo "... srcs/executor.i"
 	@echo "... srcs/executor.s"
+	@echo "... srcs/executor_utils.o"
+	@echo "... srcs/executor_utils.i"
+	@echo "... srcs/executor_utils.s"
+	@echo "... srcs/executor_utils_two.o"
+	@echo "... srcs/executor_utils_two.i"
+	@echo "... srcs/executor_utils_two.s"
 	@echo "... srcs/my_cd.o"
 	@echo "... srcs/my_cd.i"
 	@echo "... srcs/my_cd.s"
@@ -699,6 +846,9 @@ help:
 	@echo "... srcs/utils_export.o"
 	@echo "... srcs/utils_export.i"
 	@echo "... srcs/utils_export.s"
+	@echo "... srcs/utils_part_three.o"
+	@echo "... srcs/utils_part_three.i"
+	@echo "... srcs/utils_part_three.s"
 	@echo "... srcs/utils_part_two.o"
 	@echo "... srcs/utils_part_two.i"
 	@echo "... srcs/utils_part_two.s"
