@@ -12,7 +12,6 @@ static void count_argv2(char *line, int *i, int *k, int *c)
     while (line[*i] != ' ' && line[*i] && line[*i] != '>' &&
            line[*i] != '<' && line[*i] != '|')
     {
-        (*i)++;
         if (line[*i] == '\'')
         {
             while (line[++(*i)] && line[*i] != '\'')
@@ -28,6 +27,7 @@ static void count_argv2(char *line, int *i, int *k, int *c)
                 (*i)++;
         }
         *k = 1;
+        (*i)++;
     }
     if (line[*i] == '>' || line[*i] == '<')
     {
@@ -105,7 +105,6 @@ void parse_line2(char *line, int *i, int *m, t_all **all)
             }
             if (line[*i] == '\'')
                 (*i)++;
-            //(*m)++;
         }
 }
 

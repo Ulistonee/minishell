@@ -65,6 +65,7 @@ char *try_find(char *path, char **env, t_all **all)
     int m;
     int n;
     char *str;
+    char *old;
 
     i = -1;
     m = -1;
@@ -84,8 +85,13 @@ char *try_find(char *path, char **env, t_all **all)
     }
     else
     {
-        if (!ft_strncmp(path, "?", ft_strlen(path)))
+        if (!ft_strncmp(path, "?", 1))
+        {
             str = ft_itoa(g_status);
+            old = str;
+            str = ft_strjoin(str, &path[1]);
+            free (old);
+        }
         else
             str = ft_strdup("");
     }
