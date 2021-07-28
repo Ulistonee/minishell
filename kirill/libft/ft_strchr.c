@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cvirgin <cvirgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 22:54:44 by kirill            #+#    #+#             */
-/*   Updated: 2020/11/05 23:11:22 by kirill           ###   ########.fr       */
+/*   Updated: 2021/07/28 20:52:51 by cvirgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
+	char	*str;
 
-	str = (char*)s;
+	str = (char *)s;
 	while (*str != c)
 	{
 		if (*str == '\0')

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cvirgin <cvirgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 17:00:33 by kirill            #+#    #+#             */
-/*   Updated: 2020/11/18 14:38:30 by cvirgin          ###   ########.fr       */
+/*   Updated: 2021/07/28 20:49:28 by cvirgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count(int n)
+static int	count(int n)
 {
 	int		k;
 
@@ -27,7 +27,7 @@ static int		count(int n)
 	return (k);
 }
 
-static char		*copyofint(char *str, int n, int k)
+static char	*copyofint(char *str, int n, int k)
 {
 	str[k] = '\0';
 	while (k--)
@@ -49,13 +49,14 @@ static char		*copyofint(char *str, int n, int k)
 	return (str);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		k;
 
 	k = count(n);
-	if (!(str = (char*)malloc(sizeof(char) * (k + 1))))
+	str = (char *)malloc(sizeof(char) * (k + 1));
+	if (!str)
 		return (NULL);
 	str = copyofint(str, n, k);
 	return (str);

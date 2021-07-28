@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cvirgin <cvirgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 21:33:27 by kirill            #+#    #+#             */
-/*   Updated: 2020/11/21 16:08:50 by cvirgin          ###   ########.fr       */
+/*   Updated: 2021/07/28 20:52:31 by cvirgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		**mycopy(char **spl, char *s, char c, int n)
+static char	**mycopy(char **spl, char *s, char c, int n)
 {
-	int i;
-	int count;
-	int m;
+	int	i;
+	int	count;
+	int	m;
 
 	i = 0;
 	count = 0;
@@ -38,9 +38,9 @@ static char		**mycopy(char **spl, char *s, char c, int n)
 	return (spl);
 }
 
-static char		**myfree(char **spl, int n)
+static char	**myfree(char **spl, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < n)
@@ -52,10 +52,10 @@ static char		**myfree(char **spl, int n)
 	return (spl);
 }
 
-static char		**stroki(char **spl, int n, char c, char *str)
+static char	**stroki(char **spl, int n, char c, char *str)
 {
-	int m;
-	int j;
+	int	m;
+	int	j;
 
 	j = 0;
 	while (*str)
@@ -70,7 +70,8 @@ static char		**stroki(char **spl, int n, char c, char *str)
 		}
 		if (m != 0)
 		{
-			if (!(spl[j] = (char*)malloc(sizeof(char) * (m + 1))))
+			spl[j] = (char *)malloc(sizeof(char) * (m + 1));
+			if (!spl[j])
 				return (myfree(spl, n));
 		}
 		j++;
@@ -78,10 +79,10 @@ static char		**stroki(char **spl, int n, char c, char *str)
 	return (spl);
 }
 
-static int		words(char *s, char c)
+static int	words(char *s, char c)
 {
-	int count;
-	int i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
@@ -94,17 +95,18 @@ static int		words(char *s, char c)
 	return (count);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		n;
 	char	**spl;
 
 	if (!s)
 		return (NULL);
-	n = words((char*)s, c);
-	if (!(spl = (char**)malloc(sizeof(char*) * (n + 1))))
+	n = words((char *)s, c);
+	spl = (char **)malloc(sizeof(char *) * (n + 1));
+	if (!spl)
 		return (NULL);
-	spl = stroki(spl, n, c, (char*)s);
-	spl = mycopy(spl, (char*)s, c, n);
+	spl = stroki(spl, n, c, (char *)s);
+	spl = mycopy(spl, (char *)s, c, n);
 	return (spl);
 }

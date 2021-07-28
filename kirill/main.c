@@ -152,6 +152,7 @@ void	my_init(t_all **all, char **env)
 	signal(SIGQUIT, SIG_IGN);
 	*all = malloc(sizeof(t_all));
 	(*all)->my_env = copy_env(env);
+	(*all)->my_env = add_default_variables(&((*all)->my_env));
 	(*all)->exit_code = 0;
 	g_status = 0;
 }

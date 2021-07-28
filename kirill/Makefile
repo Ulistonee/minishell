@@ -6,13 +6,20 @@
 #    By: cvirgin <cvirgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 17:21:49 by cvirgin           #+#    #+#              #
-#    Updated: 2021/04/13 22:39:46 by cvirgin          ###   ########.fr        #
+#    Updated: 2021/07/28 20:06:12 by cvirgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = minishell
 
 SRC = main.c parser.c ft_list.c utils.c add_redirect.c dollar_aizhan.c redirect4.c ft_list2.c\
+			utils2.c\
+			utils3.c\
+			utils4.c\
+			parser3.c\
+			parser4.c\
+			parser5.c\
+			count_argv.c\
 			srcs/executor.c \
 			srcs/my_echo.c \
 			srcs/my_cd.c \

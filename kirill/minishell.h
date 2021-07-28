@@ -77,6 +77,10 @@ int is_minishell(char *line);
 int	ft_strcmp(char *s1, char *s2);
  void	signal_handler(int sig_num);
 void	redirect3_12(char *line, int *i, t_all **all);
+int	count_argv(char *line, int i);
+void	parse_line3(char *line, int *i, int *m, t_all **all);
+void	parse_line4(char *line, int *i, int *m, t_all **all);
+void	parse_line5(char *line, int *i, int *m, t_all **all);
 
 // new below:
 int             		my_echo(char **argv);
