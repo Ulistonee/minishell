@@ -26,6 +26,8 @@ int	exec_heredoc(char *delimeter, t_all *all)
 		if (WIFSIGNALED(status) && res != 0)
 			res = 128 + WTERMSIG(status);
 	}
+	if (g_status == 130)
+		g_status = 1;
 	return (res);
 }
 
@@ -52,7 +54,7 @@ int	my_heredoc(char *delimiter, t_all *all)
 	}
 	if (line == NULL)
 	{
-        printf("\033[A");
+		printf("\033[A");
 		printf("> minishell: warning: here-document is delimited by EOF\n");
 		exit(0);
 	}

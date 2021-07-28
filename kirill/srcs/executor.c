@@ -1,5 +1,20 @@
 #include "../minishell.h"
 
+int	reverse_redirect(t_redirect *tmp, t_all *all, t_fd *std_fd)
+{
+	int		exit_code;
+	int		file;
+
+	exit_code = exec_heredoc(tmp->argv, all);
+	if (g_status == 130)
+		g_status = 1;
+	if (exit_code != EXIT_SUCCESS)
+		return (exit_code);
+	file = open(TMP_FILE, O_RDONLY, 0666);
+	dup2(file, std_fd->std_input), close(file), unlink(TMP_FILE);
+	return (EXIT_SUCCESS);
+}
+
 int	perror_and_return(char *argv)
 {
 	perror(argv);
@@ -49,7 +64,6 @@ void	recover_fd(int backup_fd[2], t_fd *fd)
 	close(backup_fd[1]);
 }
 
-//void	init_child(t_fd *fd, int excode, t_cmd *tmp, char **env, int fd_pipe[2])
 void	init_child(t_all **all, int excode, t_cmd *tmp, int fd_pipe[2])
 {
 	tmp_fd((*all)->fd.std_input, excode);
@@ -78,6 +92,7 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 	t_redirect		*tmp;
 	int				file;
 	int				exit_code;
+
 
 	tmp = dir;
 	if (!(tmp))
@@ -197,7 +212,7 @@ void	executor(t_all **all)
 			builtins(tmp, &((*all)->my_env), &((*all)->exit_code));
 		else
 			execute_binary(tmp->way, tmp->argv, &(*all)->my_env, &(*all)->exit_code);
-		dup2(backup_fd[0], (*all)->fd.std_input); // надо ли закрывать std_input/std_output?
+		dup2(backup_fd[0], (*all)->fd.std_input);
 		dup2(backup_fd[1], (*all)->fd.std_output);
 	}
 	else if (tmp->next != NULL)
@@ -219,14 +234,12 @@ void	executor(t_all **all)
 				{
 					close(fd[ 1]);
 					dup2(fd[0], (*all)->fd.std_input);
-                    //signal(SIGINT, SIG_IGN);
-					pid = waitpid(pid, &status, 0);
-                    //signal(SIGINT, signal_handler);
+					waitpid(pid, &status, 0);
 					if (WIFEXITED(status))
 						(*all)->exit_code = WEXITSTATUS(status);
 					close(fd[0]);
 					if (tmp->next == NULL)
-						recover_fd(backup_fd, &(*all)->fd); // a где std_output? их здесь нужно закрывать? a где std_output?
+						recover_fd(backup_fd, &(*all)->fd);
 				}
 			}
 			tmp = tmp->next;
