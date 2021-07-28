@@ -60,7 +60,7 @@ void					ft_listadd_back(t_cmd **lst, t_cmd *new);
 t_cmd					*ft_listnew();
 t_cmd					*ft_listlast(t_cmd *lst);
 void					parse_line(char *line, t_all **all);
-char					*try_find(char *path, char **env, t_all **all);
+char					*try_find(char *path, char **env);
 void					output_all(t_all *all);
 char					*find_binary(char *cmnd, char *paths);
 void					find_path(t_all **all);

@@ -17,7 +17,6 @@ void	sort_array_2x(char **array)
 	int		i;
 	int		j;
 	char	*temp;
-	char	*temp_2;
 	int		count;
 
 	count = count_envp(array);

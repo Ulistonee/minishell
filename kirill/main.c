@@ -87,133 +87,109 @@ int move_probels(char *line, int i)
     return (i);
 }
 
- void	signal_handler(int sig_num)
+void	signal_handler(int sig_num)
 {
-    int		stat_loc;
+	int	stat_loc;
 
-    wait(&stat_loc);
-    if (stat_loc == sig_num)
-    {
-        if (sig_num == SIGINT)
-        {
-            write(1, "\n", 1);
-            rl_on_new_line();
-            rl_replace_line("", 0);
-        }
-        else if (sig_num == SIGQUIT)
-            ft_putstr_fd("Quit: 3\n", 1);
-        g_status = 128 + sig_num;
-    }
-    else if (sig_num == SIGINT)
-    {
-        write(1, "\n", 1);
-        rl_on_new_line();
-        rl_replace_line("", 0);
-        rl_redisplay();
-        g_status = 1;
-    }
-}
-
-void ctrl_d()
-{
-    printf("\033[A");
-    printf("minishell: exit\n");
-    exit(0);
-}
-
-char **copy_env(char **env)
-{
-    char **dst;
-    int  n;
-
-    dst = NULL;
-    n = 0;
-    while(env[n])
-        n++;
-    dst = (char**)malloc(sizeof(char*) * (n + 1));
-    n = 0;
-    while(env[n])
-    {
-        dst[n] = ft_strdup(env[n]);
-        n++;
-    }
-    dst[n] = NULL;
-    return (dst);
-}
-
-void         check_fd()
-{
-    int     fd[9];
-    int 	i;
-
-    i = 0;
-    while (fd[i] != 0)
+	wait(&stat_loc);
+	if (stat_loc == sig_num)
 	{
-    	fd[i] = dup(i);
-		printf("leaked fd - %d\n", fd[i]);
-//		close(fd[i]);
-    	i++;
+		if (sig_num == SIGINT)
+		{
+			write(1, "\n", 1);
+			rl_on_new_line();
+			rl_replace_line("", 0);
+		}
+		else if (sig_num == SIGQUIT)
+			ft_putstr_fd("Quit: 3\n", 1);
+		g_status = 128 + sig_num;
 	}
-//    printf("leaked fd - %d\n", fd);
-//    close(fd);
+	else if (sig_num == SIGINT)
+	{
+		write(1, "\n", 1);
+		rl_on_new_line();
+		rl_replace_line("", 0);
+		rl_redisplay();
+		g_status = 1;
+	}
 }
 
-
-int main(int argc, char const *argv[], char *env[])
+void	ctrl_d(void)
 {
-    char *line;
-    struct termios term;
-    t_cmd *list;
-    t_all *all;
-
-    tcgetattr(0, &term);
-    term.c_lflag &= ~(ECHOCTL);
-    tcsetattr(0, TCSANOW, &term);
-    signal(SIGINT, signal_handler);
-    signal(SIGQUIT, SIG_IGN);
-    all = malloc(sizeof(t_all));
-    all->my_env = copy_env(env);
-    all->exit_code = 0;
-    g_status = 0;
-    //parse_line("cat > 1 vwqc << 123 >", &all);
-//    output_all(all);
-//    free_all(&all);
-    while (1) // исправить функцию на свою
-    {
-        line = readline("minishell: ");
-        if (!line) {
-            ctrl_d();
-        }
-        add_history(line);
-        signal(SIGQUIT, signal_handler);
-        parse_line(line, &all);
-        //output_all(all);
-        executor(&all);
-        if ((g_status == 0 && all->exit_code != 0) || all->cmd->next)
-            g_status = all->exit_code;
-        free(line);
-        free_all(&all);
-        signal(SIGQUIT, SIG_IGN);
-    }
-    return (0);
+	printf("\033[A");
+	printf("minishell: exit\n");
+	exit(0);
 }
 
+char	**copy_env(char **env)
+{
+	char	**dst;
+	int		n;
 
+	dst = NULL;
+	n = 0;
+	while (env[n])
+		n++;
+	dst = (char **)malloc(sizeof(char *) * (n + 1));
+	n = 0;
+	while (env[n])
+	{
+		dst[n] = ft_strdup(env[n]);
+		n++;
+	}
+	dst[n] = NULL;
+	return (dst);
+}
 
+void	check_fd(void)
+{
+	int	fd[9];
+	int	i;
 
+	i = 0;
+	while (fd[i] != 0)
+	{
+		fd[i] = dup(i);
+		printf("leaked fd - %d\n", fd[i]);
+		i++;
+	}
+}
 
+void	my_init(t_all **all, char **env)
+{
+	signal(SIGINT, signal_handler);
+	signal(SIGQUIT, SIG_IGN);
+	*all = malloc(sizeof(t_all));
+	(*all)->my_env = copy_env(env);
+	(*all)->exit_code = 0;
+	g_status = 0;
+}
 
+int	main(int argc, char const *argv[], char *env[])
+{
+	char			*line;
+	struct termios	term;
+	t_all			*all;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	(void)argc, (void)argv;
+	tcgetattr(0, &term);
+	term.c_lflag &= ~(ECHOCTL);
+	tcsetattr(0, TCSANOW, &term);
+	my_init(&all, env);
+	while (1)
+	{
+		line = readline("minishell: ");
+		if (!line)
+			ctrl_d();
+		add_history(line);
+		signal(SIGQUIT, signal_handler);
+		parse_line(line, &all);
+		executor(&all);
+		if ((g_status == 0 && all->exit_code != 0) || all->cmd->next)
+			g_status = all->exit_code;
+		free(line);
+		free_all(&all);
+		signal(SIGQUIT, SIG_IGN);
+	}
+	return (0);
+}

@@ -59,9 +59,9 @@ int is_equal(char *path, char *env)
     return (0);
 }
 
-char *try_find(char *path, char **env, t_all **all)
+char *try_find(char *path, char **env)
 {
-    int i;
+    size_t i;
     int m;
     int n;
     char *str;
