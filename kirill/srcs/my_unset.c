@@ -10,11 +10,16 @@ int	check_argv(char *argument)
 	return (0);
 }
 
-void	remove_var(char ***envp_cp, char *dup_var, char **dup)
+void	remove_var(char ***envp_cp, char *dup_var)
 {
 	int		i;
 	int		j;
+	char	**dup;
+	int		count;
 
+	count = count_envp(*envp_cp);
+	dup = (char **) malloc(sizeof (char *) * count);
+	printf("dup : %p\n", dup);
 	i = 0;
 	j = 0;
 	while ((*envp_cp)[i] != NULL)
@@ -35,8 +40,6 @@ void	remove_var(char ***envp_cp, char *dup_var, char **dup)
 
 int	my_unset(char ***envp_cp, char **argument)
 {
-	char		**dup;
-	int			count;
 	char		*dup_var;
 	int			n;
 
@@ -44,13 +47,11 @@ int	my_unset(char ***envp_cp, char **argument)
 	n = 0;
 	while (argument[n] != NULL)
 	{
-		count = count_envp(*envp_cp);
-		dup = (char **) malloc(sizeof (char *) * count);
 		if (check_argv(argument[n]))
-			return (1);
+			return (EXIT_FAILURE);
 		dup_var = check_arg(*envp_cp, &argument[n]);
 		if (dup_var)
-			remove_var(envp_cp, dup_var, dup);
+			remove_var(envp_cp, dup_var);
 		n++;
 	}
 	return (EXIT_SUCCESS);

@@ -92,6 +92,8 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 		else
 		{
 			exit_code = exec_heredoc(tmp->argv, all);
+			if (exit_code == 130)
+				exit_code = 1;
 			if (exit_code != EXIT_SUCCESS)
 				return (exit_code);
 			file = open(TMP_FILE, O_RDONLY, 0666);
@@ -219,7 +221,7 @@ void	executor(t_all **all)
 					dup2(fd[0], (*all)->fd.std_input);
                     //signal(SIGINT, SIG_IGN);
 					pid = waitpid(pid, &status, 0);
-                    //signal(SIGINT, signal_hander);
+                    //signal(SIGINT, signal_handler);
 					if (WIFEXITED(status))
 						(*all)->exit_code = WEXITSTATUS(status);
 					close(fd[0]);

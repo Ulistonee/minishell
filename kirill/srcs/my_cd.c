@@ -24,7 +24,9 @@ int	go_home(char **envp_cp)
 	char		*home_path;
 
 	home_path = get_home_path(envp_cp);
+//	printf("hp: %p\n", home_path);
 	i = chdir(home_path);
+	ft_free(&home_path, 0);
 	if (i == -1)
 	{
 		printf("bash: cd: HOME not set\n");
@@ -47,10 +49,10 @@ int	exec_cd(char **argv, char ***envp_cp)
 			if (chdir(abs_path) == -1)
 			{
 				printf("%s\n", strerror(errno));
-				if (abs_path)
-					free(abs_path);
+				ft_free(&abs_path, 1);
 				return (EXIT_FAILURE);
 			}
+			ft_free(&abs_path, 0);
 		}
 		else if (chdir(argv[1]) == -1)
 		{
@@ -67,13 +69,16 @@ int	update_pwd(char *old_pwd, char ***envp_cp)
 	char		*tmp;
 
 	new_pwd = (char *)malloc(sizeof (char) * 500);
+//	printf("new: %p\n", new_pwd);
 	new_pwd = getcwd(new_pwd, 500);
 	tmp = ft_strjoin("PWD=", new_pwd);
+//	printf("tmp1: %p\n", tmp);
 	if (!tmp)
 		return (0);
 	set_value_arr_2x(tmp, envp_cp);
 	free(tmp);
 	tmp = ft_strjoin("OLDPWD=", old_pwd);
+//	printf("tmp2: %p\n", tmp);
 	if (!tmp)
 		return (0);
 	set_value_arr_2x(tmp, envp_cp);
@@ -89,6 +94,7 @@ int	my_cd(char **argument, char ***envp_cp)
 	char		*old_pwd;
 
 	old_pwd = (char *)malloc(sizeof (char) * 500);
+//	printf("old: %p\n", old_pwd);
 	old_pwd = getcwd(old_pwd, 500);
 	argc = count_arguments(argument);
 	if (argc < 2)
@@ -99,12 +105,12 @@ int	my_cd(char **argument, char ***envp_cp)
 			go_home(*envp_cp);
 		else
 		{
-			if (exec_cd(argument, envp_cp) == 0)
-				return (EXIT_FAILURE);
+			if (exec_cd(argument, envp_cp) != 0)
+				return (ft_free(&old_pwd, 1));
 		}
 	}
 	else if (argument[1] == NULL)
-		return (EXIT_FAILURE);
+		return (ft_free(&old_pwd, 1));
 	if (!update_pwd(old_pwd, envp_cp))
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
