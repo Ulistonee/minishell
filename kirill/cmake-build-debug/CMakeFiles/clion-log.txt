@@ -1,4 +1,16 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/cvirgin/Desktop/minishell/kirill
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/rchalmer/c/minishell/kirill
 -- Configuring done
--- Generating done
--- Build files have been written to: /Users/cvirgin/Desktop/minishell/kirill/cmake-build-debug
+CMake Error at libft/CMakeLists.txt:7 (add_library):
+  Cannot find source file:
+
+    ft_isascii.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .ispc
+
+
+CMake Error at libft/CMakeLists.txt:7 (add_library):
+  No SOURCES given to target: libft
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
