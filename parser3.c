@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser3.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rchalmer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/28 22:42:01 by rchalmer          #+#    #+#             */
+/*   Updated: 2021/07/28 22:42:04 by rchalmer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void	parse_line3_10(int *m, t_all **all)
@@ -5,7 +17,10 @@ void	parse_line3_10(int *m, t_all **all)
 	(*all)->dollar = try_find((*all)->dollar, (*all)->my_env);
 	(*all)->old = (*all)->cmd->argv[*m];
 	if (!(*all)->cmd->argv[*m])
+	{
 		(*all)->cmd->argv[*m] = ft_strdup("");
+		(*all)->old = (*all)->cmd->argv[*m];
+	}
 	(*all)->cmd->argv[*m] = ft_strjoin((*all)->cmd->argv[*m],
 			(*all)->dollar);
 	free((*all)->old);
