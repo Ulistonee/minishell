@@ -1,21 +1,23 @@
 #include "minishell.h"
 
-char *parse_dollar(char *line, t_all **all)
+char	*parse_dollar(char *line, t_all **all)
 {
-	char *dollar;
-	char *new;
-	char *old;
-	int i;
+	char	*dollar;
+	char	*new;
+	char	*old;
+	int		i;
 
 	i = -1;
 	dollar = NULL;
 	old = NULL;
 	new = NULL;
-	while(line[++i])
+	while (line[++i])
 	{
-		if (line[i] == '$') {
-		    i++;
-			while (ft_isalnum(line[i]) || line[i] == '_') {
+		if (line[i] == '$')
+		{
+			i++;
+			while (ft_isalnum(line[i]) || line[i] == '_')
+			{
 				dollar = ft_realloc(dollar, ft_strlen2(dollar) + 2);
 				dollar = str_add_to_end(dollar, line[i]);
 				i++;
@@ -29,7 +31,9 @@ char *parse_dollar(char *line, t_all **all)
 			free(dollar);
 			dollar = NULL;
 			old = NULL;
-		} else {
+		}
+		else
+		{
 			new = ft_realloc(new, ft_strlen2(new) + 2);
 			new = str_add_to_end(new, line[i]);
 		}

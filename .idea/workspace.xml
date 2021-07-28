@@ -13,14 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df61bd1c-af98-4105-8946-e3b027b92d4d" name="Default Changelist" comment="pushed but need to fix $">
+      <change afterPath="$PROJECT_DIR$/kirill/ft_list2.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kirill/redirect4.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/.heredoc" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/.heredoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/cmake-build-debug/minishell" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/minishell" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/add_redirect.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/add_redirect.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/dollar_aizhan.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/dollar_aizhan.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/ft_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/ft_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kirill/minishell.h" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/minishell.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kirill/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kirill/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/kirill/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +73,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.minishell">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minishell" TARGET_NAME="libft" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -172,18 +179,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/kirill/main.c</url>
-          <line>193</line>
+          <line>184</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/kirill/main.c</url>
-          <line>188</line>
+          <line>179</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/kirill/parser.c</url>
-          <line>157</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
