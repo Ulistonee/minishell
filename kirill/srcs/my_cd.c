@@ -24,7 +24,6 @@ int	go_home(char **envp_cp)
 	char		*home_path;
 
 	home_path = get_home_path(envp_cp);
-//	printf("hp: %p\n", home_path);
 	i = chdir(home_path);
 	ft_free(&home_path, 0);
 	if (i == -1)
@@ -69,16 +68,13 @@ int	update_pwd(char *old_pwd, char ***envp_cp)
 	char		*tmp;
 
 	new_pwd = (char *)malloc(sizeof (char) * 500);
-//	printf("new: %p\n", new_pwd);
 	new_pwd = getcwd(new_pwd, 500);
 	tmp = ft_strjoin("PWD=", new_pwd);
-//	printf("tmp1: %p\n", tmp);
 	if (!tmp)
 		return (0);
 	set_value_arr_2x(tmp, envp_cp);
 	free(tmp);
 	tmp = ft_strjoin("OLDPWD=", old_pwd);
-//	printf("tmp2: %p\n", tmp);
 	if (!tmp)
 		return (0);
 	set_value_arr_2x(tmp, envp_cp);
@@ -94,7 +90,6 @@ int	my_cd(char **argument, char ***envp_cp)
 	char		*old_pwd;
 
 	old_pwd = (char *)malloc(sizeof (char) * 500);
-//	printf("old: %p\n", old_pwd);
 	old_pwd = getcwd(old_pwd, 500);
 	argc = count_arguments(argument);
 	if (argc < 2)

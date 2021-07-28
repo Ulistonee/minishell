@@ -278,6 +278,12 @@
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/executor.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/executor_utils.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/executor_utils_two.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/rchalmer/c/minishell/kirill/srcs/my_cd.c">
 			<Option target="minishell"/>
 		</Unit>

@@ -371,6 +371,60 @@ srcs/executor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor.c.s
 .PHONY : srcs/executor.c.s
 
+srcs/executor_utils.o: srcs/executor_utils.c.o
+
+.PHONY : srcs/executor_utils.o
+
+# target to build an object file
+srcs/executor_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.o
+.PHONY : srcs/executor_utils.c.o
+
+srcs/executor_utils.i: srcs/executor_utils.c.i
+
+.PHONY : srcs/executor_utils.i
+
+# target to preprocess a source file
+srcs/executor_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.i
+.PHONY : srcs/executor_utils.c.i
+
+srcs/executor_utils.s: srcs/executor_utils.c.s
+
+.PHONY : srcs/executor_utils.s
+
+# target to generate assembly for a file
+srcs/executor_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils.c.s
+.PHONY : srcs/executor_utils.c.s
+
+srcs/executor_utils_two.o: srcs/executor_utils_two.c.o
+
+.PHONY : srcs/executor_utils_two.o
+
+# target to build an object file
+srcs/executor_utils_two.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o
+.PHONY : srcs/executor_utils_two.c.o
+
+srcs/executor_utils_two.i: srcs/executor_utils_two.c.i
+
+.PHONY : srcs/executor_utils_two.i
+
+# target to preprocess a source file
+srcs/executor_utils_two.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.i
+.PHONY : srcs/executor_utils_two.c.i
+
+srcs/executor_utils_two.s: srcs/executor_utils_two.c.s
+
+.PHONY : srcs/executor_utils_two.s
+
+# target to generate assembly for a file
+srcs/executor_utils_two.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/executor_utils_two.c.s
+.PHONY : srcs/executor_utils_two.c.s
+
 srcs/my_cd.o: srcs/my_cd.c.o
 
 .PHONY : srcs/my_cd.o
@@ -756,6 +810,12 @@ help:
 	@echo "... srcs/executor.o"
 	@echo "... srcs/executor.i"
 	@echo "... srcs/executor.s"
+	@echo "... srcs/executor_utils.o"
+	@echo "... srcs/executor_utils.i"
+	@echo "... srcs/executor_utils.s"
+	@echo "... srcs/executor_utils_two.o"
+	@echo "... srcs/executor_utils_two.i"
+	@echo "... srcs/executor_utils_two.s"
 	@echo "... srcs/my_cd.o"
 	@echo "... srcs/my_cd.i"
 	@echo "... srcs/my_cd.s"

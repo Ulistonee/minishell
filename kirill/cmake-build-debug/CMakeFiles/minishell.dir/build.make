@@ -349,6 +349,32 @@ CMakeFiles/minishell.dir/ft_list2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/ft_list2.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/ft_list2.c -o CMakeFiles/minishell.dir/ft_list2.c.s
 
+CMakeFiles/minishell.dir/srcs/executor_utils.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/executor_utils.c.o: ../srcs/executor_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/minishell.dir/srcs/executor_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/executor_utils.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/executor_utils.c
+
+CMakeFiles/minishell.dir/srcs/executor_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/executor_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/executor_utils.c > CMakeFiles/minishell.dir/srcs/executor_utils.c.i
+
+CMakeFiles/minishell.dir/srcs/executor_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/executor_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/executor_utils.c -o CMakeFiles/minishell.dir/srcs/executor_utils.c.s
+
+CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o: ../srcs/executor_utils_two.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o -c /Users/rchalmer/c/minishell/kirill/srcs/executor_utils_two.c
+
+CMakeFiles/minishell.dir/srcs/executor_utils_two.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/srcs/executor_utils_two.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rchalmer/c/minishell/kirill/srcs/executor_utils_two.c > CMakeFiles/minishell.dir/srcs/executor_utils_two.c.i
+
+CMakeFiles/minishell.dir/srcs/executor_utils_two.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/srcs/executor_utils_two.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rchalmer/c/minishell/kirill/srcs/executor_utils_two.c -o CMakeFiles/minishell.dir/srcs/executor_utils_two.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/add_redirect.c.o" \
@@ -371,7 +397,9 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/srcs/utils_part_two.c.o" \
 "CMakeFiles/minishell.dir/srcs/utils_part_three.c.o" \
 "CMakeFiles/minishell.dir/redirect4.c.o" \
-"CMakeFiles/minishell.dir/ft_list2.c.o"
+"CMakeFiles/minishell.dir/ft_list2.c.o" \
+"CMakeFiles/minishell.dir/srcs/executor_utils.c.o" \
+"CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -397,10 +425,12 @@ minishell: CMakeFiles/minishell.dir/srcs/utils_part_two.c.o
 minishell: CMakeFiles/minishell.dir/srcs/utils_part_three.c.o
 minishell: CMakeFiles/minishell.dir/redirect4.c.o
 minishell: CMakeFiles/minishell.dir/ft_list2.c.o
+minishell: CMakeFiles/minishell.dir/srcs/executor_utils.c.o
+minishell: CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: libft/liblibft.a
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -81,24 +81,5 @@ void	my_exit(char **argv, int *exit_code)
 		print_error(count, argv);
 		return ;
 	}
-//	if (check_num(argv[1]))
-//	{
-//		*exit_code = ft_atoi(argv[1]);
-//		printf("exit\n");
-//		exit((unsigned char)*exit_code);
-//	}
-//	else
-//	{
-//		if (*argv[1] == '-')
-//		{
-//			print_error(count, argv);
-//			exit(255);
-//		}
-//		else
-//		{
-//			print_error(count, argv);
-//			*exit_code = 255;
-//		}
-//	}
 	exec_exit(argv, exit_code, count);
 }

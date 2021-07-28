@@ -25,7 +25,9 @@ SRC = main.c parser.c ft_list.c utils.c add_redirect.c dollar_aizhan.c redirect4
 			srcs/my_exit.c \
 			srcs/utils_export.c \
 			srcs/utils_part_two.c \
-			srcs/utils_part_three.c
+			srcs/utils_part_three.c \
+			srcs/executor_utils.c \
+			srcs/executor_utils_two.c \
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 

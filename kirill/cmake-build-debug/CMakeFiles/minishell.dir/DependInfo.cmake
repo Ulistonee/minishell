@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rchalmer/c/minishell/kirill/parser.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/parser.c.o"
   "/Users/rchalmer/c/minishell/kirill/redirect4.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/redirect4.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/executor.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor.c.o"
+  "/Users/rchalmer/c/minishell/kirill/srcs/executor_utils.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor_utils.c.o"
+  "/Users/rchalmer/c/minishell/kirill/srcs/executor_utils_two.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/my_cd.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_cd.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/my_echo.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_echo.c.o"
   "/Users/rchalmer/c/minishell/kirill/srcs/my_env.c" "/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir/srcs/my_env.c.o"

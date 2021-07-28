@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/parser.c.o"
   "CMakeFiles/minishell.dir/redirect4.c.o"
   "CMakeFiles/minishell.dir/srcs/executor.c.o"
+  "CMakeFiles/minishell.dir/srcs/executor_utils.c.o"
+  "CMakeFiles/minishell.dir/srcs/executor_utils_two.c.o"
   "CMakeFiles/minishell.dir/srcs/my_cd.c.o"
   "CMakeFiles/minishell.dir/srcs/my_echo.c.o"
   "CMakeFiles/minishell.dir/srcs/my_env.c.o"

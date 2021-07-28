@@ -108,11 +108,20 @@ int						my_heredoc(char *delimiter, t_all *all);
 int						exec_heredoc(char *delimeter, t_all *all);
 int						is_builtin(t_cmd *tmp);
 char 					*parse_dollar(char *line, t_all **all);
-int						count_arguments(char **argv);
 char					*get_absolute_path(char **envp_cp, char *relative_path);
-int						add_to_envp(char ***envp_cp, char *argument);
 int						ft_free(char **ptr, int res);
-int						exec_heredoc(char *delimeter, t_all *all);
+int						call_exec_simple(t_all **all, t_cmd *tmp, int backup_fd[2]);
+void					init_child(t_all **all, int excode, t_cmd *tmp, int fd_pipe[2]);
+void					recover_fd(int backup_fd[2], t_fd *fd);
+void					tmp_fd(int input_fd, int exit_code);
+int						do_redirection(int redirect, char *argv, t_fd *std_fd);
+int						perror_and_return(char *argv);
+void					call_exec_complex(t_all **all, t_cmd *tmp, int backup_fd[2]);
+int						scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all);
+
+
+
+
 
 
 

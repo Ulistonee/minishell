@@ -41,5 +41,7 @@ add_executable(minishell
 		srcs/utils_part_three.c
 		redirect4.c
 		ft_list2.c
+		srcs/executor_utils.c
+		srcs/executor_utils_two.c
         )
 target_link_libraries(minishell readline termcap libft)

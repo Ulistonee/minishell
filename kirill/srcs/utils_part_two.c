@@ -21,7 +21,7 @@ int	count_arguments(char **argv)
 	return (res);
 }
 
-void	lineaddback(char ***src, char *addback)
+void	add_to_end(char ***src, char *addback)
 {
 	int		i;
 	char	**arr;
@@ -64,8 +64,7 @@ int	set_value_arr_2x(char *str, char ***arr)
 	else
 	{
 		*equal = '=';
-		lineaddback(arr, new_line);
-		free(new_line);
+		add_to_end(arr, new_line), free(new_line);
 	}
 	return (0);
 }
@@ -77,9 +76,9 @@ char	**check_key(char **envs, char *key)
 
 	tmp = envs;
 	if (!key)
-		return NULL;
+		return (NULL);
 	key_len = (int)ft_strlen(key);
-	while(*tmp != NULL)
+	while (*tmp != NULL)
 	{
 		if (!ft_strncmp(*tmp, key, key_len) && *(*tmp + key_len) == '=')
 		{
