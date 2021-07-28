@@ -102,9 +102,7 @@ int	exec_export(char **argv, char ***envp_cp)
 
 int	my_export(char **argv, char ***envp_cp)
 {
-	char		*key;
 	int			count;
-	int			i;
 	int			err_flag;
 
 	err_flag = 0;
@@ -114,7 +112,6 @@ int	my_export(char **argv, char ***envp_cp)
 		output_sorted_env(*envp_cp);
 		return (EXIT_SUCCESS);
 	}
-	i = 1;
 	if (count > 1)
 		err_flag = exec_export(argv, envp_cp);
 	if (err_flag == 0)

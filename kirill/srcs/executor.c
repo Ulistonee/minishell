@@ -92,8 +92,8 @@ int	scan_redirects(t_redirect *dir, t_fd *std_fd, t_all *all)
 		else
 		{
 			exit_code = exec_heredoc(tmp->argv, all);
-			if (exit_code == 130)
-				exit_code = 1;
+			if (g_status == 130)
+				g_status = 1;
 			if (exit_code != EXIT_SUCCESS)
 				return (exit_code);
 			file = open(TMP_FILE, O_RDONLY, 0666);

@@ -4,7 +4,9 @@ int	exec_heredoc(char *delimeter, t_all *all)
 {
 	pid_t	pid;
 	int		status;
+	int		res;
 
+	res = EXIT_SUCCESS;
 	status = 0;
 	pid = fork();
 	if (pid < 0)
@@ -20,15 +22,11 @@ int	exec_heredoc(char *delimeter, t_all *all)
 	{
 		waitpid(pid, &status, 0);
 		if (WIFEXITED(status))
-		{
-			return(WEXITSTATUS(status));
-		}
-		if (WIFSIGNALED(status))
-		{
-			return (128 + WTERMSIG(status));
-		}
+			res = WEXITSTATUS(status);
+		if (WIFSIGNALED(status) && res != 0)
+			res = 128 + WTERMSIG(status);
 	}
-	return (EXIT_SUCCESS);
+	return (res);
 }
 
 int	my_heredoc(char *delimiter, t_all *all)

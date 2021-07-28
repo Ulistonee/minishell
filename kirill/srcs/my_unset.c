@@ -19,7 +19,6 @@ void	remove_var(char ***envp_cp, char *dup_var)
 
 	count = count_envp(*envp_cp);
 	dup = (char **) malloc(sizeof (char *) * count);
-	printf("dup : %p\n", dup);
 	i = 0;
 	j = 0;
 	while ((*envp_cp)[i] != NULL)
