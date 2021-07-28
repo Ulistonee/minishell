@@ -3,6 +3,8 @@ project(minishell C)
 
 set(CMAKE_C_STANDARD 99)
 
+
+
 #add_library(readline)
 
 #include_directories(/Users/cvirgin/.brew/opt/readline/lib/)
