@@ -15,7 +15,7 @@ void	output_sorted_env(char **envp_cp)
 		i = 0;
 		while ((*p)[i] != 0 && (*p)[i] != '=')
 		{
-			write(1, &(*p)[i++], 1);
+			write(1, &(*p)[i], 1);
 			i++;
 		}
 		write(1, &(*p)[i++], 1);
@@ -86,7 +86,6 @@ int	exec_export(char **argv, char ***envp_cp)
 	int		i;
 
 	i = 1;
-	err_flag = 0;
 	while (argv[i] != NULL && err_flag == 0)
 	{
 		if (!(check_var_validity(argv[i])))
@@ -103,7 +102,9 @@ int	exec_export(char **argv, char ***envp_cp)
 
 int	my_export(char **argv, char ***envp_cp)
 {
+	char		*key;
 	int			count;
+	int			i;
 	int			err_flag;
 
 	err_flag = 0;
@@ -113,6 +114,7 @@ int	my_export(char **argv, char ***envp_cp)
 		output_sorted_env(*envp_cp);
 		return (EXIT_SUCCESS);
 	}
+	i = 1;
 	if (count > 1)
 		err_flag = exec_export(argv, envp_cp);
 	if (err_flag == 0)
