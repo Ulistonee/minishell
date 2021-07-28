@@ -587,6 +587,33 @@ srcs/utils_export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_export.c.s
 .PHONY : srcs/utils_export.c.s
 
+srcs/utils_part_two.o: srcs/utils_part_two.c.o
+
+.PHONY : srcs/utils_part_two.o
+
+# target to build an object file
+srcs/utils_part_two.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_two.c.o
+.PHONY : srcs/utils_part_two.c.o
+
+srcs/utils_part_two.i: srcs/utils_part_two.c.i
+
+.PHONY : srcs/utils_part_two.i
+
+# target to preprocess a source file
+srcs/utils_part_two.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_two.c.i
+.PHONY : srcs/utils_part_two.c.i
+
+srcs/utils_part_two.s: srcs/utils_part_two.c.s
+
+.PHONY : srcs/utils_part_two.s
+
+# target to generate assembly for a file
+srcs/utils_part_two.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/srcs/utils_part_two.c.s
+.PHONY : srcs/utils_part_two.c.s
+
 utils.o: utils.c.o
 
 .PHONY : utils.o
@@ -672,6 +699,9 @@ help:
 	@echo "... srcs/utils_export.o"
 	@echo "... srcs/utils_export.i"
 	@echo "... srcs/utils_export.s"
+	@echo "... srcs/utils_part_two.o"
+	@echo "... srcs/utils_part_two.i"
+	@echo "... srcs/utils_part_two.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

@@ -12,7 +12,6 @@ static void count_argv2(char *line, int *i, int *k, int *c)
     while (line[*i] != ' ' && line[*i] && line[*i] != '>' &&
            line[*i] != '<' && line[*i] != '|')
     {
-        (*i)++;
         if (line[*i] == '\'')
         {
             while (line[++(*i)] && line[*i] != '\'')
@@ -28,6 +27,7 @@ static void count_argv2(char *line, int *i, int *k, int *c)
                 (*i)++;
         }
         *k = 1;
+        (*i)++;
     }
     if (line[*i] == '>' || line[*i] == '<')
     {
@@ -105,7 +105,6 @@ void parse_line2(char *line, int *i, int *m, t_all **all)
             }
             if (line[*i] == '\'')
                 (*i)++;
-            //(*m)++;
         }
 }
 
@@ -121,7 +120,7 @@ void parse_line3_1(char *line, int *i, int *m, t_all **all)
                          (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]); 
                         (*i)++;
                     }
-                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env, all);
+                     (*all)->dollar = try_find( (*all)->dollar, (*all)->my_env);
                      (*all)->old = (*all)->cmd->argv[*m];
                     if (!(*all)->cmd->argv[*m])
                         (*all)->cmd->argv[*m] = ft_strdup("");
@@ -163,7 +162,7 @@ void parse_line4_1(char *line, int *i, int *m, t_all **all)
                         (*all)->dollar = str_add_to_end((*all)->dollar, line[*i]);
 						(*i)++;
                     }
-                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env, all);
+                    (*all)->dollar = try_find((*all)->dollar, (*all)->my_env);
                     (*all)->old = (*all)->cmd->argv[*m];
                     if (!(*all)->cmd->argv[*m]) {
                         (*all)->cmd->argv[*m] = ft_strdup("");
@@ -291,7 +290,7 @@ void parse_line(char *line, t_all **all)
     (*all)->cmd->argv = (char**)malloc(sizeof(char*) * ((*all)->cmd->count + 1));
     (*all)->cmd->way = NULL;
     make_null(&(*all)->cmd->argv, (*all)->cmd->count);
-    (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env, all);
+    (*all)->path = try_find(ft_strdup("PATH"), (*all)->my_env);
     while (line[i])
     {
         parse_line2(line, &i, &m, all);

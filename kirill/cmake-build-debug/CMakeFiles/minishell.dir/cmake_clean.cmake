@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/srcs/my_unset.c.o"
   "CMakeFiles/minishell.dir/srcs/utils.c.o"
   "CMakeFiles/minishell.dir/srcs/utils_export.c.o"
+  "CMakeFiles/minishell.dir/srcs/utils_part_two.c.o"
   "CMakeFiles/minishell.dir/utils.c.o"
   "minishell"
   "minishell.pdb"

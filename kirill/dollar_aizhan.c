@@ -20,7 +20,7 @@ char *parse_dollar(char *line, t_all **all)
 				dollar = str_add_to_end(dollar, line[i]);
 				i++;
 			}
-			dollar = try_find(dollar, (*all)->my_env, all);
+			dollar = try_find(dollar, (*all)->my_env);
 			old = new;
 			if (!new)
 				new = ft_strdup("");
