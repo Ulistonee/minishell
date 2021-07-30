@@ -1,6 +1,0 @@
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/CMakeFiles/minishell.dir
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
-/Users/rchalmer/c/minishell/kirill/cmake-build-debug/libft/CMakeFiles/libft.dir
